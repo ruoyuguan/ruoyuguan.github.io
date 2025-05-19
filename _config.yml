@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Ruo-Yu Guan"
+title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Ruo-Yu Guan"
 description              : &description "personal description"
