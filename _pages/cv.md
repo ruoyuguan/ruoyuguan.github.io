@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Physics, Huazhong University of Science and Technology, 2029 (expected)
+* Ph.D. in Physics, Huazhong University of Science and Technology, 2029 (expected)
 * M.S. in Physics, The University of Hong Kong, 2024
 * B.S., Jilin University, 2022
 
