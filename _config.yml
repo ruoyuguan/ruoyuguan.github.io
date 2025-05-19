@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Ruoyu's Homepage"
+title                    : "Ruo-Yu Guan"
 title_separator          : "-"
 name                     : &name "Ruo-Yu Guan"
 description              : &description "personal description"
@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Ruoyu Guan (关若禹)"
+  name             : "Ruo-Yu Guan (关若禹)"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar. Short biography for the left-hand sidebar. Short biography for the left-hand sidebar. Short biography for the left-hand sidebar"
   location         : "Wuhan, China"
