@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Ruo-Yu Guan (关若禹)"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar. Short biography for the left-hand sidebar. Short biography for the left-hand sidebar. Short biography for the left-hand sidebar"
+  bio              : #"Short biography for the left-hand sidebar."
   location         : "Wuhan, China"
   employer         : "Huazhong University of Sci. & Tech."
   uri              : # URL
