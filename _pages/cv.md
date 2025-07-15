@@ -11,13 +11,18 @@ redirect_from:
 
 Education
 ======
-* Ph.D. in Physics (in progress), Sep. 2025 -- Jun. 2029 (expected)
-  * Department of Astronomy, School of Physics, Huazhong University of Science and Technology
-  * Research Interest: Gravitational Wave Physics, Relativistic Astrophysics
-  * Supervisor: Prof. Yan Wang
+* Ph.D. in Physics (in progress), Sep. 2025 - Jun. 2029 (expected)
+ * Department of Astronomy, School of Physics, Huazhong University of Science and Technology
+ * Research Interest: Gravitational Wave Physics, Relativistic Astrophysics
+ * Supervisor: Prof. Yan Wang
 
-* M.Sc. in Physics, The University of Hong Kong, 2024
-* B.Sc., Jilin University, 2022
+* M.Sc. in Physics, Nov. 2024
+ * Department of Physics, Faculty of Science, The University of Hong Kong
+ * Identifying Sources in Cygnus OB2 Using Multiwavelength Observations
+ * Supervisor: Prof. Stephen Chi Yung Ng
+* B.Sc., June 2022
+ * Jilin University
+ * Study on the Prompt Emission of Gamma-ray Bursts and its Polarization
 
 Work experience
 ======
