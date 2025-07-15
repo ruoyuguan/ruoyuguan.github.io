@@ -31,6 +31,14 @@ Work experience
   * Research Focus: Gamma-ray Bursts, Time-series Analysis
   * Affiliated with [Prof. Yuan-Chuan Zou](http://faculty.hust.edu.cn/zouyc/zh_CN/index/1489801/list/index.htm)'s Group
 
+
+Publications
+======
+  <ul>{% for post in site.publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+
 Skills
 ======
 * Skill 1
@@ -40,12 +48,6 @@ Skills
   * Sub-skill 2.3
 * Skill 3
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
 Talks
 ======
   <ul>{% for post in site.talks reversed %}
