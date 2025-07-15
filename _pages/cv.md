@@ -11,7 +11,11 @@ redirect_from:
 
 Education
 ======
-* Ph.D. in Physics (in progress), Huazhong University of Science and Technology, 2029 (expected)
+* Ph.D. in Physics (in progress), Sep. 2025 -- Jun. 2029 (expected)
+Department of Astronomy, School of Physics, Huazhong University of Science and Technology
+Research Interest: Gravitational Wave Physics, Relativistic Astrophysics
+Supervisor: Prof. Yan Wang
+
 * M.Sc. in Physics, The University of Hong Kong, 2024
 * B.Sc., Jilin University, 2022
 
