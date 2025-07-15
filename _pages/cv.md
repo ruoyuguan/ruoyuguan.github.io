@@ -18,11 +18,11 @@ Education
 
 * M.Sc. in Physics, Nov. 2024
   * Department of Physics, Faculty of Science, The University of Hong Kong
-  * Identifying Sources in Cygnus OB2 Using Multiwavelength Observations
+  * *Identifying Sources in Cygnus OB2 Using Multiwavelength Observations*
   * Supervisor: Prof. Stephen Chi Yung Ng
 * B.Sc., June 2022
   * Jilin University
-  * Study on the Prompt Emission of Gamma-ray Bursts and its Polarization
+  * *Study on the Prompt Emission of Gamma-ray Bursts and its Polarization*
 
 Work experience
 ======
