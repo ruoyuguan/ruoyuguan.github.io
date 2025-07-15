@@ -11,38 +11,26 @@ redirect_from:
 
 Education
 ======
-* Ph.D. in Physics (in progress), Sep. 2025 - Jun. 2029 (expected)
+* Sep. 2025 - Jun. 2029 (expected), Ph.D. in Physics (in progress)
   * [Department of Astronomy](https://astro.hust.edu.cn/index.htm), [School of Physics](https://phys.hust.edu.cn/index.htm), [Huazhong University of Science and Technology](https://www.hust.edu.cn/)
   * Research Interest: Gravitational Wave Physics, Relativistic Astrophysics
   * Supervisor: [Prof. Yan Wang](http://faculty.hust.edu.cn/wangyan11/zh_CN/index.htm)
 
-* M.Sc. in Physics, Nov. 2024
+* Nov. 2024, M.Sc. in Physics
   * [Department of Physics](https://www.physics.hku.hk/), [Faculty of Science](https://www.scifac.hku.hk/), [The University of Hong Kong](https://www.hku.hk/)
   * *Identifying Sources in Cygnus OB2 Using Multiwavelength Observations*
   * Supervisor: [Prof. Stephen Chi Yung Ng](https://astro.physics.hku.hk/~ncy/)
-* B.Sc., June 2022
+* June 2022, B.Sc.
   * [Jilin University](https://www.jlu.edu.cn/)
   * *Study on the Prompt Emission of Gamma-ray Bursts and its Polarization*
 
 Work experience
 ======
-* Research Assistant, Huazhong University of Science and Technology, 2024 - 2025
-
-* Nov. 2024 - Aug. 2025: Research Assistant
+* Nov. 2024 - June 2025: Research Assistant (full-time employed, predoctoral)
   * Department of Astronomy, School of Physics, Huazhong University of Science and Technology
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Yuan-Chuan Zou
+  * Research Focus: Gamma-ray Bursts, Time-series Analysis
+  * Affiliated with [Prof. Yuan-Chuan Zou](http://faculty.hust.edu.cn/zouyc/zh_CN/index/1489801/list/index.htm)'s Group
 
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
 * Skill 1
