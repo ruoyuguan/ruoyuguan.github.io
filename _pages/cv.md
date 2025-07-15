@@ -21,7 +21,7 @@ Education
   * *Identifying Sources in Cygnus OB2 Using Multiwavelength Observations*
   * Supervisor: Prof. Stephen Chi Yung Ng
 * B.Sc., June 2022
-  * Jilin University
+  * [Jilin University](https://www.jlu.edu.cn/)
   * *Study on the Prompt Emission of Gamma-ray Bursts and its Polarization*
 
 Work experience
