@@ -26,7 +26,7 @@ Education
 
 Work experience
 ======
-* Nov. 2024 - June 2025: Research Assistant (full-time employed, predoctoral)
+* Nov. 2024 - June 2025, Research Assistant (full-time employed, predoctoral)
   * Department of Astronomy, School of Physics, Huazhong University of Science and Technology
   * Research Focus: Gamma-ray Bursts, Time-series Analysis
   * Affiliated with [Prof. Yuan-Chuan Zou](http://faculty.hust.edu.cn/zouyc/zh_CN/index/1489801/list/index.htm)'s Group
