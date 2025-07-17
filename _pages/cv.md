@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Sep. 2025 - Jun. 2029 (expected), Ph.D. in Physics (in progress)
+* Sep. 2025 - June 2029 (expected), Ph.D. in Physics (in progress)
   * [Department of Astronomy](https://astro.hust.edu.cn/index.htm), [School of Physics](https://phys.hust.edu.cn/index.htm), [Huazhong University of Science and Technology](https://www.hust.edu.cn/)
   * Research Interest: Gravitational Wave Physics, Relativistic Astrophysics
   * Supervisor: [Prof. Yan Wang](http://faculty.hust.edu.cn/wangyan11/zh_CN/index.htm)
