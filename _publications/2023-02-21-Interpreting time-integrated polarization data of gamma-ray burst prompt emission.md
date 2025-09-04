@@ -6,7 +6,7 @@ date: 2023-02-21
 venue: 'Astronomy & Astrophysics'
 paperurl: 'https://doi.org/10.1051/0004-6361/202243805'
 bibtexurl: 'http://ruoyuguan.github.io/files/bibtex1.bib'
-citation: 'Guan, R. Y. and Lan, M. X., “Interpreting time-integrated polarization data of gamma-ray burst prompt emission”, <i>Astronomy and Astrophysics</i>, vol. 670, Art. no. A160, 2023. doi:10.1051/0004-6361/202243805.'
+citation: 'Guan, R. Y., and M. X. Lan. “Interpreting Time-Integrated Polarization Data of Gamma-Ray Burst Prompt Emission.” Astronomy & Astrophysics 670 (February 2023): A160. https://doi.org/10.1051/0004-6361/202243805.'
 ---
 *Aims.* With the accumulation of polarization data in the gamma-ray burst (GRB) prompt phase, polarization models can be tested.\
 *Methods.* We predicted the time-integrated polarizations of 37 GRBs with polarization observation. We used their observed spectral parameters to do this. In the model, the emission mechanism is synchrotron radiation, and the magnetic field configuration in the emission region was assumed to be large-scale ordered. Therefore, the predicted polarization degrees (PDs) are upper limits.\
