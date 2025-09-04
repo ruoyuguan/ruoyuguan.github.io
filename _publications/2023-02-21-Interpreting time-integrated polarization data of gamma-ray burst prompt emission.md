@@ -1,6 +1,7 @@
 ---
 title: "Interpreting time-integrated polarization data of gamma-ray burst prompt emission"
 collection: publications
+category: manuscripts
 permalink: /publication/2023-02-21-Interpreting time-integrated polarization data of gamma-ray burst prompt emission
 date: 2023-02-21
 venue: 'Astronomy & Astrophysics'
