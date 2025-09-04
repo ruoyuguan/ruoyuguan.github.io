@@ -54,8 +54,8 @@ Professional Activities
 Outreach Activities
 ======
 * China Skywatcher Asteroid Search Campaign, Jan. 2025 - Feb. 2025
-* *International Astronomical Search Collaboration (IASC)*
+  * *International Astronomical Search Collaboration (IASC)*
   
 References
 ======
-* Available on request.
+Available on request.
