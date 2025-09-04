@@ -44,8 +44,9 @@ Skills
 * Programming: Python, C, R, IDL.
 * Software: Matlab, Mathematica, Origin.
 * Language:
-  * Chinese (Native)
-  * English (Fluent)
+  * Chinese (Mandarin): Native proficiency
+  * English: Professional Working Proficiency
+  * Chinese (Cantonese): Limited working proficiency
 
 Professional Activities
 ======
