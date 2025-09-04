@@ -21,7 +21,7 @@ Education
   * *Capstone Project: Identifying Sources in Cygnus OB2 Using Multiwavelength Observations*
   * Supervisor: [Prof. Stephen Chi Yung Ng](https://astro.physics.hku.hk/~ncy/)
 * Sep. 2018 - June 2022, B.Sc. in Materials Physics
-  * [Jilin University](https://www.jlu.edu.cn/)
+  * Department of Materials Science, [School of Materials Science and Engineering](https://dmse.jlu.edu.cn/index.htm), [Jilin University](https://www.jlu.edu.cn/)
   * *Graduation Thesis: Study on the Prompt Emission of Gamma-ray Bursts and its Polarization*
 
 Work experience
