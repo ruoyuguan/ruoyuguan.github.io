@@ -45,7 +45,7 @@ Skills
 * Software: Matlab, Mathematica, Origin.
 * Language:
   * Chinese (Mandarin): Native proficiency
-  * English: Professional Working Proficiency
+  * English: Professional working proficiency
   * Chinese (Cantonese): Limited working proficiency
 
 Professional Activities
