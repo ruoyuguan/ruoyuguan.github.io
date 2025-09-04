@@ -24,7 +24,7 @@ Education
   * Department of Materials Science, [School of Materials Science and Engineering](https://dmse.jlu.edu.cn/index.htm), [Jilin University](https://www.jlu.edu.cn/)
   * *Graduation Thesis: Study on the Prompt Emission of Gamma-ray Bursts and its Polarization*
 
-Work experience
+Work Experience
 ======
 * Nov. 2024 - June 2025, Research Assistant (contract, predoctoral)
   * Department of Astronomy, School of Physics, Huazhong University of Science and Technology
@@ -41,25 +41,21 @@ Publications
 
 Skills
 ======
-* skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming: Python, C, R, IDL.
+* Software: Matlab, Mathematica, Origin.
+* Language:
+  * Chinese (Native)
+  * English (Fluent)
 
-Talks
+Professional Activities
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
+* [Member](https://www.lsr.hku.hk/member/ruoyu-guan/), [Laboratory for Space Research](https://www.lsr.hku.hk/), The University of Hong Kong
   
-Teaching
+Outreach Activities
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* China Skywatcher Asteroid Search Campaign, Jan. 2025 - Feb. 2025
+* *International Astronomical Search Collaboration (IASC)*
   
-Service and leadership
+References
 ======
-* Currently signed in to 43 different slack teams
+* Available on request.
