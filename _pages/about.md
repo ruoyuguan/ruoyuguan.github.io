@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in the Department of Astronomy, School of Physics, Huazhong University of Science and Technology. I am passionate about uncovering fundamental physical laws from the extensive observations of various astrophysical phenomena. My research areas include high-energy astrophysics and gravitational wave physics.
+I am a Ph.D. student in Physics (Thretical Physics) at the School of Physics, Huazhong University of Science and Technology (HUST). I am also affiliated with the Gravitational-Wave Physics Group at the National Gravitation Laboratory (NGL), HUST.
 
-Prior to my doctoral studies, I focused on high-energy astrophysics, with an emphasis on gamma-ray bursts and X-ray astronomy. My doctoral research represents a transition from electromagnetic to gravitational-wave studies, broadening my focus to multi-messenger astronomy. Through a unified approach combining theory-informed and data-driven modeling, I explore binary systems of stellar remnants, particularly focusing on double white dwarf binaries as probes to enhance our understanding of the Milky Way and its spiral arms, focusing on their structure and evolutionary history.
+I am passionate about uncovering the fundamental physical laws of physics through extensive observations of diverse astrophysical phenomena. My research interests span high-energy astrophysics and gravitational wave physics.
+
+Before beginning my doctoral studies, my work focused on high-energy astrophysics, particularly gamma-ray bursts and X-ray astronomy. My current research represents a shift from electromagnetic to gravitational-wave studies, broadening my perspective toward multi-messenger astronomy. Through a unified methodology that integrates physics-based modeling with statistical inference, I investigate binary systems of stellar remnants. My research focuses particularly on double white dwarf binaries, which serve as probes to deepen our understanding of the Milky Way's structure, spiral-arm morphology, and evolutionary history.
