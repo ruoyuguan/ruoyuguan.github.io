@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * Sep. 2025 - Present, Ph.D. in Physics (in progress)
-  * [Department of Astronomy](https://astro.hust.edu.cn/index.htm), [School of Physics](https://phys.hust.edu.cn/index.htm), [Huazhong University of Science and Technology](https://www.hust.edu.cn/)
+  * [School of Physics](https://phys.hust.edu.cn/index.htm) and [National Gravitation Laboratory](https://ngl.hust.edu.cn/), [Huazhong University of Science and Technology](https://www.hust.edu.cn/)
   * Research Interest: Gravitational Wave Physics
   * Supervisor: [Prof. Yan Wang](http://faculty.hust.edu.cn/wangyan11/zh_CN/index.htm)
 
@@ -27,7 +27,7 @@ Education
 Work Experience
 ======
 * Nov. 2024 - June 2025, Research Assistant (contract, predoctoral)
-  * Department of Astronomy, School of Physics, Huazhong University of Science and Technology
+  * [Department of Astronomy](https://astro.hust.edu.cn/index.htm), School of Physics, Huazhong University of Science and Technology
   * Research Focus: Gamma-ray Bursts, Time-series Analysis
   * Affiliated with [Prof. Yuan-Chuan Zou](http://faculty.hust.edu.cn/zouyc/zh_CN/index/1489801/list/index.htm)'s Group
 
