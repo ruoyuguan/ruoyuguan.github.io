@@ -9,16 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
-Research Profile
-======
-* Gamma-ray burst astrophysics (prompt emission, polarization modeling, time-series analysis).
-* Multiwavelength data analysis (Chandra X-ray observations; Gaia astrometric cross-matches).
-* Compact stellar binaries (double white dwarfs) and Galactic structure inference via population synthesis and Bayesian methods (LISA/TianQin).
-
 Education
 ======
 * Sep. 2025 – Present, Ph.D. in Physics (Theoretical Physics, in progress; expected Jun. 2029)
-  * School of Physics; National Gravitation Laboratory, Huazhong University of Science and Technology (HUST), Wuhan, China
+  * School of Physics and National Gravitation Laboratory, Huazhong University of Science and Technology (HUST), Wuhan, China
   * Research focus: gravitational-wave astrophysics (Galactic double white dwarfs)
   * Supervisor: [Prof. Yan Wang](http://faculty.hust.edu.cn/wangyan11/zh_CN/index.htm)
 
@@ -38,6 +32,14 @@ Research Positions
   * Department of Astronomy, Huazhong University of Science and Technology (HUST), Wuhan, China
   * Supervisor: [Prof. Yuan-Chuan Zou](http://faculty.hust.edu.cn/zouyc/zh_CN/index/1489801/list/index.htm)
   * Research area: Gamma-ray bursts; time-series analysis (see “Research Experience” / “Publications”)
+
+Publications
+======
+<ul>
+{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}
+</ul>
 
 Research Experience
 ======
@@ -61,14 +63,6 @@ Research Experience
   * JLU, Changchun, China (Mentor: Prof. Mi-Xiang Lan)
   * Compiled GRB prompt-emission spectral parameters and polarization measurements from literature; modeled time-integrated polarization under synchrotron framework (IDL)
   * Supported by NSFC (Grants No. 11903014 and 12147217)
-
-Publications
-======
-<ul>
-{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
 
 Talks & Presentations
 ======
