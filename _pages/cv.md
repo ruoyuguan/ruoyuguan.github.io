@@ -23,12 +23,20 @@ redirect_from:
 .cv-right { white-space: nowrap; text-align: right; }
 .cv-sub {
   display: flex;
-  justify-content: space-between;   /* like \hfill */
+  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  font-style: italic;               /* like \textit{} */
-  color: #555;
+  font-style: italic;
+  color: var(--global-text-color, inherit); /* 默认跟主题文字 */
+  opacity: 0.82;                              /* 轻微弱化而非硬编码灰色 */
   margin-top: 0.1rem;
+}
+
+/* 深色模式增强对比 */
+@media (prefers-color-scheme: dark) {
+  .cv-sub {
+    opacity: 0.92;
+  }
 }
 .cv-sub-left  { }
 .cv-sub-right { white-space: nowrap; text-align: right; }
