@@ -51,13 +51,16 @@ redirect_from:
 
 /* inline code style to mimic LaTeX \code{} */
 .cv-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.92em;
-  padding: 0.08em 0.38em;
-  border-radius: 0.35em;
-  background: rgba(127, 127, 127, 0.14);
-  border: 1px solid rgba(127, 127, 127, 0.28);
+  font-family: "Courier New", Courier, "Nimbus Mono PS", "Liberation Mono", monospace;
+  font-size: 0.95em;
+  font-weight: 400;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   white-space: nowrap;
+  color: inherit;
 }
 
 /* dark mode tuning for better contrast */
@@ -153,11 +156,18 @@ Research Positions
 
 Publications
 ======
-<ul>
-{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
+
+**Refereed journal articles**
+
+1. **Ruo-Yu Guan** and Mi-Xiang Lan.  
+   “Interpreting time-integrated polarization data of gamma-ray burst prompt emission.”  
+   *Astronomy & Astrophysics*, **670**, A160 (2023).  
+   DOI: [10.1051/0004-6361/202243805](https://doi.org/10.1051/0004-6361/202243805)
+
+2. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou.  
+   “Hurst index of gamma-ray burst light curves and its statistical study.”  
+   *Journal of High Energy Astrophysics*, **51**, 100559 (2026).  
+   DOI: [10.1016/j.jheap.2026.100559](https://doi.org/10.1016/j.jheap.2026.100559)
 
 Research Experience
 ======
