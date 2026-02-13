@@ -48,6 +48,25 @@ redirect_from:
 @media (max-width: 640px) {
   .cv-right, .cv-sub-right { white-space: normal; text-align: left; }
 }
+
+/* inline code style to mimic LaTeX \code{} */
+.cv-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92em;
+  padding: 0.08em 0.38em;
+  border-radius: 0.35em;
+  background: rgba(127, 127, 127, 0.14);
+  border: 1px solid rgba(127, 127, 127, 0.28);
+  white-space: nowrap;
+}
+
+/* dark mode tuning for better contrast */
+@media (prefers-color-scheme: dark) {
+  .cv-code {
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+}
 </style>
 
 Research Profile
@@ -228,13 +247,12 @@ Research Experience
 
 Skills
 ======
-* **Languages:** Chinese (Mandarin: native; Cantonese: conversational); English (IELTS 6.5, 2023; completed an English-taught M.Sc. at The University of Hong Kong).
-* **Programming:** Python (primary); MATLAB, Mathematica, R (familiar); Interactive Data Language, C++ (prior experience).
-* **Methods:** time-series analysis; statistical correlation analysis; hierarchical Bayesian inference (GWpopulation; Markov chain Monte Carlo); Monte Carlo simulation and mock-catalog generation.
-* **Scientific computing:** NumPy, SciPy, pandas, Matplotlib; Jupyter; Flexible Image Transport System data handling; pipeline automation (bash/Python scripts).
-* **Astrophysics & gravitational-wave:** population synthesis (COSMIC); gravitational-wave population inference; catalog-based population studies.
-* **Scholarly writing:** LaTeX; BibTeX.
-* **Computing environment:** Git/GitHub; bash shell scripting; Windows, macOS, Linux (Ubuntu); high-performance computing (remote Linux servers, batch jobs); Secure Shell workflows.
+* **Programming:** <span class="cv-code">Python</span> (primary); <span class="cv-code">MATLAB</span>, <span class="cv-code">Mathematica</span>, <span class="cv-code">R</span> (familiar); <span class="cv-code">IDL</span>, <span class="cv-code">C++</span> (prior experience).
+* **Methods:** time-series analysis; statistical correlation analysis; hierarchical Bayesian inference (<span class="cv-code">GWpopulation</span>; Markov chain Monte Carlo); Monte Carlo simulation and mock-catalog generation.
+* **Scientific computing:** <span class="cv-code">NumPy</span>, <span class="cv-code">SciPy</span>, <span class="cv-code">pandas</span>, <span class="cv-code">Matplotlib</span>; <span class="cv-code">Jupyter</span>; Flexible Image Transport System data handling; pipeline automation (<span class="cv-code">bash</span>/<span class="cv-code">Python</span> scripts).
+* **Astrophysics & gravitational-wave:** population synthesis (<span class="cv-code">COSMIC</span>); gravitational-wave population inference; catalog-based population studies.
+* **Scholarly writing:** <span class="cv-code">LaTeX</span>; <span class="cv-code">BibTeX</span>.
+* **Computing environment:** <span class="cv-code">Git</span>/<span class="cv-code">GitHub</span>; <span class="cv-code">bash</span> shell scripting; Windows, macOS, Linux (Ubuntu); high-performance computing (remote Linux servers, batch jobs); <span class="cv-code">SSH</span> workflows.
 
 Talks and Presentations
 ======
