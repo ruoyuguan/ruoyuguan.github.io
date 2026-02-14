@@ -74,13 +74,14 @@ redirect_from:
 
 Research Profile
 ======
+---
 * Gamma-ray burst astrophysics (prompt emission, polarization modeling, time-series analysis).
 * Multiwavelength data analysis (Chandra X-ray observations and Gaia astrometric cross-matches).
 * Compact stellar binaries (double white dwarfs) and Galactic structure inference via population synthesis and Bayesian methods (Laser Interferometer Space Antenna / TianQin).
 
 Education
 ======
-
+---
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">Huazhong University of Science and Technology</span>
@@ -138,7 +139,7 @@ Education
 
 Research Positions
 ======
-
+---
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">Huazhong University of Science and Technology</span>
@@ -156,7 +157,7 @@ Research Positions
 
 Publications
 ======
-
+---
 **Refereed journal articles**
 
 1. **Ruo-Yu Guan** and Mi-Xiang Lan.  
@@ -171,7 +172,7 @@ Publications
 
 Research Experience
 ======
-
+---
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">Milky Way Structure Inference from Multi-Messenger Observations of Double White Dwarf Binaries</span>
@@ -257,6 +258,7 @@ Research Experience
 
 Skills
 ======
+---
 * **Programming:** <span class="cv-code">Python</span> (primary); <span class="cv-code">MATLAB</span>, <span class="cv-code">Mathematica</span>, <span class="cv-code">R</span> (familiar); <span class="cv-code">IDL</span>, <span class="cv-code">C++</span> (prior experience).
 * **Methods:** time-series analysis; statistical correlation analysis; hierarchical Bayesian inference (<span class="cv-code">GWpopulation</span>; Markov chain Monte Carlo); Monte Carlo simulation and mock-catalog generation.
 * **Scientific computing:** <span class="cv-code">NumPy</span>, <span class="cv-code">SciPy</span>, <span class="cv-code">pandas</span>, <span class="cv-code">Matplotlib</span>; <span class="cv-code">Jupyter</span>; Flexible Image Transport System data handling; pipeline automation (<span class="cv-code">bash</span>/<span class="cv-code">Python</span> scripts).
@@ -266,6 +268,7 @@ Skills
 
 Talks and Presentations
 ======
+---
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy</span>
@@ -280,6 +283,7 @@ Talks and Presentations
 
 Conferences and Workshops
 ======
+---
 * Aug. 2025 — Participant, Gravitational Wave Data Analysis Summer School (Lanzhou Center for Theoretical Physics)
 * Jun. 2025 — Participant, The First Edinburgh School for Extragalactic Astronomy (Institute for Astronomy, The University of Edinburgh)
 * May 2025 — Participant, Gravitational Wave Open Data Workshop 2025 (Gravitational Wave Open Science Center)
@@ -291,6 +295,7 @@ Conferences and Workshops
 
 Professional Activities
 ======
+---
 * Jan. 2026 – Present, Member — Laser Interferometer Space Antenna Consortium
 * Oct. 2023 – Nov. 2024, Member — Laboratory for Space Research, The University of Hong Kong
 * May 2021 – Apr. 2022, Student Member — Chinese Physical Society
@@ -302,4 +307,5 @@ Outreach Activities
 
 References
 ======
+---
 Available upon request.
