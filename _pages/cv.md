@@ -27,8 +27,8 @@ redirect_from:
   gap: 1rem;
   flex-wrap: wrap;
   font-style: italic;
-  color: var(--global-text-color, inherit); /* 默认跟主题文字 */
-  opacity: 0.82;                              /* 轻微弱化而非硬编码灰色 */
+  color: var(--global-text-color, inherit); /* default theme & text */
+  opacity: 0.82;                              /* weaken slightly & non-hard code gray */
   margin-top: 0.1rem;
 }
 
