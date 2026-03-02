@@ -1,20 +1,20 @@
 ---
-title: "失去形状的自由——在潮汐与江流之间 · The Freedom of Losing Form — Between Tides and River Flow"
+title: "失去形状的自由——在潮汐与江流之间 · The Freedom of Losing Shape — Between the Tide and the River"
 date: 2025-07-12
 permalink: /posts/2025/07/formless-freedom/
 tags:
   - essay
   - philosophy
+  - life
 toc: true
 ---
 
-<a id="top"></a>
+TL;DR: From the sea in Kennedy Town to the confluence of the Yangtze and Han in Wuhan, I’ve moved through solitude, rupture, and adaptation. Back by the ocean, I realize that water is free because it can forgo its shape—and I, too, will set out again in a river’s posture, still drawn toward the sea.
+{: #top }
 
-> **TL;DR:** From the sea in Kennedy Town to the confluence of the Yangtze and Han in Wuhan, I’ve moved through solitude, rupture, and adaptation. Back by the ocean, I realize that water is free because it can forgo its shape—and I, too, will set out again in a river’s posture, still drawn toward the sea.
+*English version below — click here to jump: [English Version](#english-version).*
 
-*English version is below — please scroll down or click here: [English Version](#english-version).*
-
-##  {#chinese-version}
+## 失去形状的自由——在潮汐与江流之间 {#chinese-version}
 
 一年前的今天是我的24岁生日，当时我还住在香港的坚尼地城。住所在半山腰，但下山就能见到海。新海旁的海滨长廊，盛放了我在港时的几乎所有独处时光。在我还称得上初涉世界的时候，面对环境的异化，我曾不只一次陷入存在主义危机。是这一片海接纳了我，她深沉而内敛，允许我在无数个夜晚来到这里短暂避世。当本应自由的海浪却一次次地漫上石阶，我也在解构水的过程中思考什么是我本该有的样子。
 
@@ -26,11 +26,11 @@ toc: true
 
 ---
 
-## English Version {#english-version}
+## The Freedom of Losing Shape — Between the Tide and the River {#english-version}
 
 A year ago today was my twenty-fourth birthday. Back then, I was still living in Kennedy Town, Hong Kong. My place sat halfway up the slope; walk downhill, and the sea came into view. The promenade by the New Praya Harbour—there, along that waterfront—held almost all my solitary hours in the city. When I could still be said to be newly initiated into the world, confronted with the estrangement of my surroundings, I fell into more than one existential crisis. It was this stretch of sea that took me in—deep and restrained—allowing me, on countless nights, to come here and withdraw from the world for a while. And when the waves, which ought to be free, time and again climbed the stone steps, I found myself, in the act of taking water apart, asking what it was that I was meant to become.
 
-Over the past year, I moved from Hong Kong to Wuhan. Leaving South China for the heartland, the constant was that I remained tens of millions of li away from my northeastern home. Study, work, the cadence of everyday life—all had to be recalibrated by choice rather than by drift. Food, climate, habits, regional temperaments: everything demanded reacquaintance. The shift in personal identity and in the social order one inhabits also sets new expectations for how I meet others and carry myself. Yet when the darkest hours of emotion arrived, I no longer had a sea within arm’s reach. Here, the Yangtze and the Han converge and mingle; I could only surge forward with them.
+Over the past year, I moved from Hong Kong to Wuhan. Leaving South China for the heartland, the constant was that I remained thousands of miles from my northeastern home. Study, work, the cadence of everyday life—all had to be recalibrated by choice rather than by drift. Food, climate, habits, regional temperaments: everything demanded reacquaintance. The shift in personal identity and in the social order one inhabits also sets new expectations for how I meet others and carry myself. Yet when the darkest hours of emotion arrived, I no longer had a sea within arm’s reach. Here, the Yangtze and the Han converge and mingle; I could only surge forward with them.
 
 The transformation of this year has been immense. Passing through different environments, touching many different fields, I have still been fortunate—luxuriously so—to keep satisfying my curiosity about the cosmos and about science. I have been sustained by the trust and support of mentors and benefactors, and by the steadfast help of family and friends. The year has not been squandered; my troubles have been neither too few nor too many, and in that balance I have, in a sense, won a measure of freedom. While my peers set themselves up in careers, I still want to venture into a wider world—because the world’s plurality is genuinely enthralling, and the unknown, though exhausting, is also full of surprise. Standing again by the Yangtze, it occurs to me that water’s freedom may lie precisely in its willingness to lose its shape: all great rivers have once wound and turned, yet none has ever forgotten the direction of the sea.
 
