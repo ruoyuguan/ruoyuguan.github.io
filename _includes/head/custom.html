@@ -1,5 +1,18 @@
 {% include base_path %}
 
+<script>
+(() => {
+  try {
+    const key = "theme";
+    // 只在“第一次访问、还没存过偏好”时设默认
+    if (!localStorage.getItem(key)) {
+      localStorage.setItem(key, "dark");              // 想默认亮色就改成 "light"
+      document.documentElement.setAttribute("data-theme", "dark"); // 尽量减少闪白
+    }
+  } catch (e) {}
+})();
+</script>
+
 <!-- start custom head snippets -->
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
