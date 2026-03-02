@@ -17,7 +17,7 @@ toc: true
 
 ## 失去形状的自由——在潮汐与江流之间 {#chinese-version}
 
-一年前的今天是我的24岁生日，当时我还住在香港的坚尼地城。住所在半山腰，但下山就能见到海。新海旁的海滨长廊，盛放了我在港时的几乎所有独处时光。在我还称得上初涉世界的时候，面对环境的异化，我曾不只一次陷入存在主义危机。是这一片海接纳了我，她深沉而内敛，允许我在无数个夜晚来到这里短暂避世。当本应自由的海浪却一次次地漫上石阶，我也在解构水的过程中思考什么是我本该有的样子。
+一年前的今天是我的二十四岁生日，当时我还住在香港的坚尼地城。住所在半山腰，但下山就能见到海。新海旁的海滨长廊，盛放了我在港时的几乎所有独处时光。在我还称得上初涉世界的时候，面对环境的异化，我曾不只一次陷入存在主义危机。是这一片海接纳了我，她深沉而内敛，允许我在无数个夜晚来到这里短暂避世。当本应自由的海浪却一次次地漫上石阶，浪花一下一下推来，声音并不激烈，却持续、耐心，像某种不问缘由的应答。而我也在解构水的过程中思考什么是我本该有的样子。
 
 这一年里，我从香港迁到武汉。离开华南、前往华中，共同之处是依旧离家乡东北千万里。学业、工作、生活节奏都要主动做出改变。饮食、气候、生活方式、地域文化都需要重新适应。个人身份和社会体制的切换，也对自己的待人接物等诸多方面提出了新的要求。但当情绪的至暗时刻来临时，我却不再有触手可及的海。长江与汉水在此相汇交融，我只能滚滚向前。
 
@@ -49,7 +49,7 @@ toc: true
 
 ## The Freedom of Losing Shape — Between the Tide and the River {#english-version}
 
-A year ago today was my twenty-fourth birthday. Back then, I was still living in Kennedy Town, Hong Kong. My place sat halfway up the slope; walk downhill, and the sea came into view. The promenade by the New Praya Harbour—there, along that waterfront—held almost all my solitary hours in the city. When I could still be said to be newly initiated into the world, confronted with the estrangement of my surroundings, I fell into more than one existential crisis. It was this stretch of sea that took me in—deep and restrained—allowing me, on countless nights, to come here and withdraw from the world for a while. And when the waves, which ought to be free, time and again climbed the stone steps, I found myself, in the act of taking water apart, asking what it was that I was meant to become.
+A year ago today was my twenty-fourth birthday. Back then, I was still living in Kennedy Town, Hong Kong. My place sat halfway up the slope; walk downhill, and the sea came into view. The promenade by the New Praya Harbour—there, along that waterfront—held almost all my solitary hours in the city. When I could still be said to be newly initiated into the world, confronted with the estrangement of my surroundings, I fell into more than one existential crisis. It was this stretch of sea that took me in—deep and restrained—allowing me, on countless nights, to come here and withdraw from the world for a while. When waves that ought to be free kept washing up the stone steps, each surge came again and again; the sound was not violent, yet it was steady and patient, like a reply that asked no reason. And as I tried to take water apart in my mind, I found myself asking what shape I, too, was meant to take.
 
 Over the past year, I moved from Hong Kong to Wuhan. Leaving South China for the heartland, the constant was that I remained thousands of miles from my northeastern home. Study, work, the cadence of everyday life—all had to be recalibrated by choice rather than by drift. Food, climate, habits, regional temperaments: everything demanded reacquaintance. The shift in personal identity and in the social order one inhabits also sets new expectations for how I meet others and carry myself. Yet when the darkest hours of emotion arrived, I no longer had a sea within arm’s reach. Here, the Yangtze and the Han converge and mingle; I could only surge forward with them.
 
