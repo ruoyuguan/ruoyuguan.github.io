@@ -9,8 +9,7 @@ tags:
 toc: true
 ---
 
-TL;DR: From the sea in Kennedy Town to the confluence of the Yangtze and Han in Wuhan, I’ve moved through solitude, rupture, and adaptation. Back by the ocean, I realize that water is free because it can forgo its shape—and I, too, will set out again in a river’s posture, still drawn toward the sea.
-{: #top }
+> **TL;DR:** From the sea in Kennedy Town to the confluence of the Yangtze and Han in Wuhan, I’ve moved through solitude, rupture, and adaptation. Back by the ocean, I realize that water is free because it can forgo its shape—and I, too, will set out again in a river’s posture, still drawn toward the sea.
 
 *English version below — click here to jump: [English Version](#english-version).*
 
@@ -36,4 +35,4 @@ The transformation of this year has been immense. Passing through different envi
 
 Today I am lucky enough to return once more to the waterfront and pause. This old acquaintance still offers lively waves to ease my mind. Do not ask where I am going. In the mist, the countless lights across the Kowloon Peninsula bloom into a warm glow that quiets the heart; spray pats the boats moored for the moment, sounding the echo of the ocean’s tides—and she says: set out, in the bearing of a river.
 
-[Back to top](#top)
+[Back to top](#page-title)
