@@ -30,19 +30,19 @@ toc: true
 <figure>
   <img src="{{ site.baseurl }}/images/posts/2025-07-12/kt1.jpg"
        alt="Kennedy Town waterfront at dusk.">
-  <figcaption>Kennedy Town waterfront, photographed at 19:15 on July 11, 2025—at the edge of dusk.</figcaption>
+  <figcaption>Kennedy Town waterfront, photographed at 19:15 on July 11, 2025 (local time)—at the edge of dusk.</figcaption>
 </figure>
 
 <figure>
   <img src="{{ site.baseurl }}/images/posts/2025-07-12/kt2.jpg"
        alt="Kennedy Town waterfront during the blue hour.">
-  <figcaption>Kennedy Town waterfront, photographed at 19:31 on July 11, 2025—during the blue hour.</figcaption>
+  <figcaption>Kennedy Town waterfront, photographed at 19:31 on July 11, 2025 (local time)—during the blue hour.</figcaption>
 </figure>
 
 <figure>
   <img src="{{ site.baseurl }}/images/posts/2025-07-12/kt3.jpg"
        alt="Boats moored at Kennedy Town waterfront at night.">
-  <figcaption>Kennedy Town waterfront, photographed at 20:10 on July 11, 2025. I love watching the boats moored here at night—they feel, in some way, like me.</figcaption>
+  <figcaption>Kennedy Town waterfront, photographed at 20:10 on July 11, 2025 (local time). I love watching the boats moored here at night—they feel, in some way, like me.</figcaption>
 </figure>
 
 ---
