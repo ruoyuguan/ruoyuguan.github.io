@@ -4,10 +4,20 @@
 (() => {
   try {
     const key = "theme";
-    // 只在“第一次访问、还没存过偏好”时设默认
-    if (!localStorage.getItem(key)) {
-      localStorage.setItem(key, "dark");              // 想默认亮色就改成 "light"
-      document.documentElement.setAttribute("data-theme", "dark"); // 尽量减少闪白
+    const stored = localStorage.getItem(key);
+
+    // 你想要的站点“默认值”：dark 或 light
+    const defaultTheme = "dark";
+
+    // 首次访问：写入默认值
+    const theme = stored || defaultTheme;
+    if (!stored) localStorage.setItem(key, theme);
+
+    // 尽早设置 <html data-theme>，减少“闪白/闪黑”
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
     }
   } catch (e) {}
 })();
