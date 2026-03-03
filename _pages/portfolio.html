@@ -1,16 +1,14 @@
 ---
-layout: collection
-title: "Gallery"          # 想叫 Portfolio 就改回去
-permalink: /portfolio/    # 你要保持原链接就用这个
-collection: portfolio
-entries_layout: grid
+layout: archive
+title: "Portfolio"
+permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<div class="entries-grid">
+  {% for post in site.portfolio %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
