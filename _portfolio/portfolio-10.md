@@ -1,6 +1,6 @@
 ---
 title: "A Farewell from Victoria Peak"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/portfolio/hk4.jpg'>"
+excerpt: "<br/><img src='/images/portfolio/hk4.jpg'>"
 collection: portfolio
 ---
 
