@@ -12,10 +12,10 @@ site_theme               : "default"
 title                    : "<strong>Ruo-Yu</strong> Guan"
 title_separator          : "-"
 name                     : &name "Ruo-Yu Guan"
-description              : &description "personal description"
+description              : &description "Personal website of Ruo-Yu Guan, PhD candidate in Theoretical Physics at HUST, working on gravitational-wave astrophysics."
 url                      : https://ruoyuguan.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"https://academicpages.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "ruoyuguan/ruoyuguan.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -60,7 +60,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "ruoyu-guan-physics/" # Username
+  linkedin         : "ruoyu-guan-physics" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
