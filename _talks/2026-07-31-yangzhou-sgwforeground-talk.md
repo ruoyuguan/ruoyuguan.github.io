@@ -1,5 +1,5 @@
 ---
-title: "Impact of the Galactic Binary Foreground on Stochastic Gravitational-Wave Background Amplitude Inference in the Millihertz Band"
+title: "Impact of the Galactic Compact-Binary Foreground on Stochastic Gravitational-Wave Background Amplitude Inference in the Millihertz Band"
 collection: talks
 type: "Talk"
 permalink: /talks/2026-07-31-yangzhou-sgwforeground-talk

@@ -8,4 +8,4 @@ date: 2024-12-01
 location: "Beijing, China"
 ---
 
-Poster presentation at the 2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy, based on the publication [Interpreting time-integrated polarization data of gamma-ray burst prompt emission](https://doi.org/10.1051/0004-6361/202243805) (*Astronomy & Astrophysics*, 670, A160, 2023).
+Review poster presented at the 2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy, on the time-integrated polarization of gamma-ray burst prompt emission.
