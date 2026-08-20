@@ -10,6 +10,6 @@ location: "Beijing, China"
 
 Review poster presented at the 2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy, on the time-integrated polarization of gamma-ray burst prompt emission.
 
-[Download the poster (PDF)](/files/2024_PKU_poster_Time_integrated_Polarizations_of_Gamma_ray_Burst_Prompt_Phase.pdf)
+[![Poster: Time-integrated Polarizations of Gamma-ray Burst Prompt Phase](/images/poster-2024-pku-grb-polarization.png)](/files/2024_PKU_poster_Time_integrated_Polarizations_of_Gamma_ray_Burst_Prompt_Phase.pdf)
 
-*Note: the contact email printed on the poster is no longer in use; please reach me at the email address shown in the sidebar.*
+*Click the image to download the poster (PDF).* Note: the contact email printed on the poster is no longer in use; please reach me at the email address shown in the sidebar.
