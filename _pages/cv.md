@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "CV"
+description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, talks, and professional activities."
 permalink: /cv/
 author_profile: true
 redirect_from:
