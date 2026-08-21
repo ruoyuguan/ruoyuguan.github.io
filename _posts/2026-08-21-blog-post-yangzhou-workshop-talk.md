@@ -1,5 +1,5 @@
 ---
-title: "Oral Presentation at the 2026 Mid-Year Workshop of the National Key R&D Program of China Project on Space Gravitational-Wave Detection"
+title: "Oral Presentation at the 2026 Mid-Year Workshop on Space Gravitational-Wave Detection (Yangzhou)"
 date: 2026-08-21
 permalink: /posts/2026/08/yangzhou-workshop-talk/
 tags:
