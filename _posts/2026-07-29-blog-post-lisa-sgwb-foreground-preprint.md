@@ -1,6 +1,6 @@
 ---
 title: "New Preprint: How Accurately Must the Residual Galactic-Binary Foreground Be Characterized for LISA SGWB Inference?"
-date: 2026-07-30
+date: 2026-07-29
 permalink: /posts/2026/07/lisa-sgwb-foreground-preprint/
 tags:
   - gravitational-waves
@@ -21,4 +21,4 @@ Preprint: [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
 
 Comments and feedback are very welcome.
 
-*This post is adapted from my [LinkedIn post](https://www.linkedin.com/in/ruoyu-guan-physics/) of July 30, 2026.*
+*This post is adapted from my [LinkedIn post](https://www.linkedin.com/feed/update/urn:li:activity:7488056280943616000/) of July 29, 2026.*
