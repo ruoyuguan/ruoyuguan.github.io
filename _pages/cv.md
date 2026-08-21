@@ -170,6 +170,13 @@ Publications
    *Journal of High Energy Astrophysics*, **51**, 100559 (2026).  
    DOI: [10.1016/j.jheap.2026.100559](https://doi.org/10.1016/j.jheap.2026.100559)
 
+**Preprints**
+
+1. **Ruo-Yu Guan** and Yan Wang.  
+   “Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy.”  
+   arXiv:2607.25349 [astro-ph.HE] (2026).  
+   [https://arxiv.org/abs/2607.25349](https://arxiv.org/abs/2607.25349)
+
 Research Experience
 ======
 ---
@@ -191,6 +198,7 @@ Research Experience
     <li>Building a simulation-based inference pipeline integrating population synthesis (COSMIC) with hierarchical Bayesian inference (GWpopulation).</li>
     <li>Quantifying selection effects, detector response, and observational uncertainties for space-based gravitational-wave observations (Laser Interferometer Space Antenna / TianQin context).</li>
     <li><strong>Milestone:</strong> Ph.D. proposal approved.</li>
+    <li><strong>Milestone:</strong> first-author preprint released (arXiv:2607.25349, with Prof. Yan Wang) and presented at the 2026 Mid-Year Workshop (Yangzhou).</li>
   </ul>
 </div>
 
