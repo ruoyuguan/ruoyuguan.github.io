@@ -309,7 +309,8 @@ Conferences and Workshops
 Professional Activities
 ======
 ---
-* Jan. 2026 – Present, Member — Laser Interferometer Space Antenna Consortium
+* Mar. 2026 – Present, Core Member (Astrophysics Working Group) — Laser Interferometer Space Antenna (LISA) Consortium
+* Jan. 2026 – Feb. 2026, Community Member — Laser Interferometer Space Antenna (LISA) Consortium
 * Oct. 2023 – Nov. 2024, Member — Laboratory for Space Research, The University of Hong Kong
 * May 2021 – Apr. 2022, Student Member — Chinese Physical Society
 
