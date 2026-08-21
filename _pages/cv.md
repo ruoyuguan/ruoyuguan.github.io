@@ -271,6 +271,18 @@ Talks and Presentations
 ---
 <div class="cv-block">
   <div class="cv-row">
+    <span class="cv-left">2026 Mid-Year Workshop of the National Key R&D Program Project on Space Gravitational-Wave Detection Signal Simulation, Processing, and Verification</span>
+    <span class="cv-right">Jul. 2026</span>
+  </div>
+  <div class="cv-sub">
+    <span class="cv-sub-left">Oral presentation: “Galactic Binary Residuals in LISA SGWB Amplitude Inference: Source Power Concentration and Spectral Degeneracy”</span>
+    <span class="cv-sub-right"></span>
+  </div>
+  <div class="cv-note"><em>Yangzhou, Jiangsu, China</em></div>
+</div>
+
+<div class="cv-block">
+  <div class="cv-row">
     <span class="cv-left">2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy</span>
     <span class="cv-right">Dec. 2024</span>
   </div>
@@ -284,6 +296,7 @@ Talks and Presentations
 Conferences and Workshops
 ======
 ---
+* Jul. 2026 — Oral presenter, 2026 Mid-Year Workshop of the National Key R&D Program Project on Space Gravitational-Wave Detection Signal Simulation, Processing, and Verification (Yangzhou, China)
 * Aug. 2025 — Participant, Gravitational Wave Data Analysis Summer School (Lanzhou Center for Theoretical Physics)
 * Jun. 2025 — Participant, The First Edinburgh School for Extragalactic Astronomy (Institute for Astronomy, The University of Edinburgh)
 * May 2025 — Participant, Gravitational Wave Open Data Workshop 2025 (Gravitational Wave Open Science Center)
