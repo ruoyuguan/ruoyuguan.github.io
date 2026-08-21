@@ -15,3 +15,7 @@ The talk presented the work reported in [arXiv:2607.25349](https://arxiv.org/abs
 [![Title slide: Galactic Binary Residuals in LISA SGWB Amplitude Inference](/images/talk-2026-yangzhou-preview.png)](/files/2026_Yangzhou_oral_presentation.pdf)
 
 *Click the image to download the full slides (PDF).*
+
+![Group photo of the workshop](/images/talk-2026-yangzhou-group-photo.jpg)
+
+*Group photo of the workshop (Yangzhou, Jiangsu, July 31, 2026).*

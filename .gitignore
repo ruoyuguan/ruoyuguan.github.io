@@ -17,3 +17,6 @@ vendor/
 .bundle/
 # macOS
 .DS_Store
+
+# Original full-res photo (web version lives in images/)
+files/IMG_0042.JPG
