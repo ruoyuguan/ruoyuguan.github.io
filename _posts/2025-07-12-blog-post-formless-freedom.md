@@ -1,6 +1,9 @@
 ---
 title: "失去形状的自由——在潮汐与江流之间 · The Freedom of Losing Shape: Between the Tide and the River"
 date: 2025-07-12
+news: false
+description: "A bilingual personal essay on moving between Hong Kong and Wuhan, the sea and the river, and finding freedom through change."
+excerpt: "A bilingual personal essay on change, belonging, and the waters between Hong Kong and Wuhan."
 permalink: /posts/2025/07/formless-freedom/
 tags:
   - essay

@@ -2,9 +2,10 @@
 title: "Portfolio item number 1"
 excerpt: "<br/><img src='/images/portfolio/tc2.jpg'>"
 collection: portfolio
+published: false
+sitemap: false
 ---
 
 ![]({{ site.baseurl }}/images/portfolio/tc2.jpg)
 
 This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
-

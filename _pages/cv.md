@@ -2,6 +2,7 @@
 layout: archive
 title: "CV"
 description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, talks, and professional activities."
+last_updated: 2026-09-05
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -73,16 +74,21 @@ redirect_from:
 }
 </style>
 
-Research Profile
-======
----
-* Gamma-ray burst astrophysics (prompt emission, polarization modeling, time-series analysis).
-* Multiwavelength data analysis (Chandra X-ray observations and Gaia astrometric cross-matches).
-* Compact stellar binaries (double white dwarfs) and Galactic structure inference via population synthesis and Bayesian methods (Laser Interferometer Space Antenna / TianQin).
+<p class="cv-download"><a class="btn" href="{{ '/files/ruoyu-guan-cv.pdf' | relative_url }}">Download CV (PDF)</a> <span>Last updated: {{ page.last_updated | date: "%B %d, %Y" }}</span></p>
 
-Education
-======
----
+<div class="cv-print-heading">
+  <div class="cv-print-name">Ruo-Yu Guan</div>
+  <p>Curriculum vitae · {{ page.last_updated | date: "%B %Y" }}<br><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></p>
+</div>
+
+## Research Profile
+
+* Galactic double white dwarfs and Galactic structure inference through population synthesis and Bayesian methods (LISA / TianQin).
+* Residual Galactic binary foregrounds and stochastic gravitational-wave background inference.
+* Earlier work: gamma-ray burst prompt emission, polarization modelling, time-series analysis, and multiwavelength source identification (Chandra / Gaia).
+
+## Education
+
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">Huazhong University of Science and Technology</span>
@@ -138,9 +144,8 @@ Education
   </ul>
 </div>
 
-Research Positions
-======
----
+## Research Positions
+
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">Huazhong University of Science and Technology</span>
@@ -156,34 +161,34 @@ Research Positions
   </ul>
 </div>
 
-Publications
-======
----
-**Refereed journal articles**
+## Publications
 
-1. **Ruo-Yu Guan** and Mi-Xiang Lan.  
-   “Interpreting time-integrated polarization data of gamma-ray burst prompt emission.”  
-   *Astronomy & Astrophysics*, **670**, A160 (2023).  
-   DOI: [10.1051/0004-6361/202243805](https://doi.org/10.1051/0004-6361/202243805)
+### Preprints
 
-2. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou.  
-   “Hurst index of gamma-ray burst light curves and its statistical study.”  
-   *Journal of High Energy Astrophysics*, **51**, 100559 (2026).  
+1. **Ruo-Yu Guan** and Yan Wang (2026).<br>
+   “[Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}).”<br>
+   arXiv:2607.25349 [astro-ph.HE].<br>
+   [arXiv](https://arxiv.org/abs/2607.25349)
+
+### Refereed Journal Articles
+
+1. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou (2026).<br>
+   “[Hurst index of gamma-ray burst light curves and its statistical study]({{ '/publications/grb-hurst-index/' | relative_url }}).”<br>
+   *Journal of High Energy Astrophysics*, **51**, 100559.<br>
    DOI: [10.1016/j.jheap.2026.100559](https://doi.org/10.1016/j.jheap.2026.100559)
 
-**Preprints**
+2. **Ruo-Yu Guan** and Mi-Xiang Lan (2023).<br>
+   “[Interpreting time-integrated polarization data of gamma-ray burst prompt emission]({{ '/publications/grb-time-integrated-polarization/' | relative_url }}).”<br>
+   *Astronomy & Astrophysics*, **670**, A160.<br>
+   DOI: [10.1051/0004-6361/202243805](https://doi.org/10.1051/0004-6361/202243805)
 
-1. **Ruo-Yu Guan** and Yan Wang.  
-   “Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy.”  
-   arXiv:2607.25349 [astro-ph.HE] (2026).  
-   [https://arxiv.org/abs/2607.25349](https://arxiv.org/abs/2607.25349)
+## Research Experience
 
-Research Experience
-======
----
+Project dates below describe the period of research activity; degree enrolment and employment dates are listed separately above.
+
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">Milky Way Structure Inference from Multi-Messenger Observations of Double White Dwarf Binaries</span>
+    <span class="cv-left">Galactic Double White Dwarfs and Space-Based Gravitational-Wave Inference</span>
     <span class="cv-right">Jul. 2025 – Present</span>
   </div>
   <div class="cv-sub">
@@ -191,15 +196,14 @@ Research Experience
     <span class="cv-sub-right">Wuhan, China</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">Ph.D. research (Supervisor: Prof. Yan Wang)</span>
+    <span class="cv-sub-left">Research with Prof. Yan Wang; Ph.D. enrolment from Sep. 2025</span>
     <span class="cv-sub-right"></span>
   </div>
   <ul class="cv-list">
     <li>Research focus: gravitational-wave astrophysics and Milky Way structure inference using Galactic double white dwarf binaries.</li>
     <li>Building a simulation-based inference pipeline integrating population synthesis (COSMIC) with hierarchical Bayesian inference (GWpopulation).</li>
     <li>Quantifying selection effects, detector response, and observational uncertainties for space-based gravitational-wave observations (Laser Interferometer Space Antenna / TianQin context).</li>
-    <li><strong>Milestone:</strong> Ph.D. proposal approved.</li>
-    <li><strong>Milestone:</strong> first-author preprint released (arXiv:2607.25349, with Prof. Yan Wang) and presented at the 2026 Mid-Year Workshop (Yangzhou).</li>
+    <li>First-author preprint on residual Galactic binary foregrounds (arXiv:2607.25349, with Prof. Yan Wang); presented at the 2026 Mid-Year Workshop in Yangzhou.</li>
   </ul>
 </div>
 
@@ -213,7 +217,7 @@ Research Experience
     <span class="cv-sub-right">Wuhan, China</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">Pre-Ph.D. research (Research Assistant, contract; Supervisor: Prof. Yuan-Chuan Zou)</span>
+    <span class="cv-sub-left">Research with Prof. Yuan-Chuan Zou; Research Assistant appointment Nov. 2024 – Jun. 2025</span>
     <span class="cv-sub-right"></span>
   </div>
   <ul class="cv-list">
@@ -254,7 +258,7 @@ Research Experience
     <span class="cv-sub-right">Changchun, China</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">Undergraduate research (Mentor: Prof. Mi-Xiang Lan)</span>
+    <span class="cv-sub-left">Research with Prof. Mi-Xiang Lan, originating in the B.Sc. thesis project</span>
     <span class="cv-sub-right"></span>
   </div>
   <ul class="cv-list">
@@ -265,9 +269,8 @@ Research Experience
   </ul>
 </div>
 
-Skills
-======
----
+## Skills
+
 * **Programming:** <span class="cv-code">Python</span> (primary); <span class="cv-code">MATLAB</span>, <span class="cv-code">Mathematica</span>, <span class="cv-code">R</span> (familiar); <span class="cv-code">IDL</span>, <span class="cv-code">C++</span> (prior experience).
 * **Methods:** time-series analysis; statistical correlation analysis; hierarchical Bayesian inference (<span class="cv-code">GWpopulation</span>; Markov chain Monte Carlo); Monte Carlo simulation and mock-catalog generation.
 * **Scientific computing:** <span class="cv-code">NumPy</span>, <span class="cv-code">SciPy</span>, <span class="cv-code">pandas</span>, <span class="cv-code">Matplotlib</span>; <span class="cv-code">Jupyter</span>; Flexible Image Transport System data handling; pipeline automation (<span class="cv-code">bash</span>/<span class="cv-code">Python</span> scripts).
@@ -275,9 +278,12 @@ Skills
 * **Scholarly writing:** <span class="cv-code">LaTeX</span>; <span class="cv-code">BibTeX</span>.
 * **Computing environment:** <span class="cv-code">Git</span>/<span class="cv-code">GitHub</span>; <span class="cv-code">bash</span> shell scripting; Windows, macOS, Linux (Ubuntu); high-performance computing (remote Linux servers, batch jobs); <span class="cv-code">SSH</span> workflows.
 
-Talks and Presentations
-======
----
+## Software and Open Science
+
+* **[Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill)** — Open-source pre-release for structured scientific textbook proofreading and errata auditing (May 2026). Includes report templates, a JSON schema, synthetic examples, evaluation cases, and CI checks; produces candidate errata for human expert review.
+
+## Talks and Presentations
+
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">2026 Mid-Year Workshop of the National Key R&D Program Project on Space Gravitational-Wave Detection Signal Simulation, Processing, and Verification</span>
@@ -287,7 +293,7 @@ Talks and Presentations
     <span class="cv-sub-left">Oral presentation: “Galactic Binary Residuals in LISA SGWB Amplitude Inference: Source Power Concentration and Spectral Degeneracy”</span>
     <span class="cv-sub-right"></span>
   </div>
-  <div class="cv-note"><em>Yangzhou, Jiangsu, China</em></div>
+  <div class="cv-note"><em>Yangzhou, Jiangsu, China</em> · <a href="{{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}">Talk and slides</a></div>
 </div>
 
 <div class="cv-block">
@@ -299,36 +305,27 @@ Talks and Presentations
     <span class="cv-sub-left">Poster presentation: “Time-integrated Polarizations of Gamma-ray Burst Prompt Phase”</span>
     <span class="cv-sub-right"></span>
   </div>
-  <div class="cv-note"><em>Kavli Institute for Astronomy and Astrophysics, Peking University</em></div>
+  <div class="cv-note"><em>Kavli Institute for Astronomy and Astrophysics, Peking University</em> · <a href="{{ '/talks/2024-12-01-pku-forum-poster' | relative_url }}">Poster</a></div>
 </div>
 
-Conferences and Workshops
-======
----
-* Jul. 2026 — Oral presenter, 2026 Mid-Year Workshop of the National Key R&D Program Project on Space Gravitational-Wave Detection Signal Simulation, Processing, and Verification (Yangzhou, China)
+## Additional Conferences and Schools
+
 * Aug. 2025 — Participant, Gravitational Wave Data Analysis Summer School (Lanzhou Center for Theoretical Physics)
 * Jun. 2025 — Participant, The First Edinburgh School for Extragalactic Astronomy (Institute for Astronomy, The University of Edinburgh)
 * May 2025 — Participant, Gravitational Wave Open Data Workshop 2025 (Gravitational Wave Open Science Center)
-* Dec. 2024 — Poster presenter, 2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy
 * Dec. 2024 — Volunteer (conference support), International Conference on Space Sustainability 2024
 * Jul. 2024 — Participant, Celestial Holography Summer School 2024 (Perimeter Institute for Theoretical Physics)
 * Nov. 2023 — Participant, International Symposium on Cosmology and Particle Astrophysics 2023
 * Nov. 2023 — Participant, Multimessenger Astronomy: Bridging Transients, Lensing, and Dark Matter (Cosmic Frontiers)
 
-Professional Activities
-======
----
+## Professional Activities
+
 * Mar. 2026 – Present, Core Member (Astrophysics Working Group) — Laser Interferometer Space Antenna (LISA) Consortium
 * Jan. 2026 – Feb. 2026, Community Member — Laser Interferometer Space Antenna (LISA) Consortium
 * Oct. 2023 – Nov. 2024, Member — Laboratory for Space Research, The University of Hong Kong
 * May 2021 – Apr. 2022, Student Member — Chinese Physical Society
 
-Outreach Activities
-======
+## Outreach Activities
+
 * Jan. 2025 – Feb. 2025, Participant — China Skywatcher Asteroid Search Campaign  
   *International Astronomical Search Collaboration*
-
-References
-======
----
-Available upon request.

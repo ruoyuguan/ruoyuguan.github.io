@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% if site.breadcrumbs %}{% include breadcrumbs.html %}{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <article class="page publication-detail">
+    <div class="page__inner-wrap">
+      <header>
+        <h1 class="page__title citation_title">{{ page.title | escape }}</h1>
+        {% include publication-authors.html publication=page %}
+        {% include publication-meta.html publication=page %}
+        {% include publication-links.html publication=page %}
+      </header>
+
+      <section class="page__content" aria-labelledby="abstract">
+        <h2 id="abstract">Abstract</h2>
+        {{ content }}
+      </section>
+
+      {% if page.related_talks %}
+      <section class="publication-related" aria-labelledby="related-presentations">
+        <h2 id="related-presentations">Related presentations</h2>
+        <ul>
+          {% for talk in page.related_talks %}<li><a href="{{ talk.url | relative_url }}">{{ talk.title | escape }}</a></li>{% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.citation %}
+      <section class="publication-citation" aria-labelledby="citation">
+        <h2 id="citation">Citation</h2>
+        <p>{{ page.citation | escape }}</p>
+        {% if page.bibtexurl %}<p><a href="{{ page.bibtexurl | relative_url }}">Download BibTeX</a></p>{% endif %}
+      </section>
+      {% endif %}
+
+      <p><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+    </div>
+  </article>
+</div>

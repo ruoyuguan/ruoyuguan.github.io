@@ -6,7 +6,7 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+var $btn = $('#navigation-toggle');
 var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
@@ -52,6 +52,7 @@ function updateNav() {
       $btn.addClass('hidden');
       $btn.removeClass('close');
       $hlinks.addClass('hidden');
+      $btn.attr('aria-expanded', 'false');
     }
   }
 
@@ -74,13 +75,21 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+if (screen.orientation && screen.orientation.addEventListener) {
+  screen.orientation.addEventListener('change', updateNav);
+}
 
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  $(this).attr('aria-expanded', !$hlinks.hasClass('hidden'));
+});
+
+$nav.on('keydown', function (event) {
+  if (event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close').attr('aria-expanded', 'false').trigger('focus');
+  }
 });
 
 updateNav();

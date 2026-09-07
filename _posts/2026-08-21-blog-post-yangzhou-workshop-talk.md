@@ -1,6 +1,9 @@
 ---
 title: "Oral Presentation at the 2026 Mid-Year Workshop on Space Gravitational-Wave Detection (Yangzhou)"
 date: 2026-08-21
+news: true
+description: "Slides and notes from Ruo-Yu Guan's July 2026 Yangzhou workshop talk on Galactic binary residuals in LISA stochastic-background inference."
+excerpt: "On July 31, I presented our work on residual Galactic binary foregrounds and LISA SGWB inference at the Yangzhou mid-year workshop."
 permalink: /posts/2026/08/yangzhou-workshop-talk/
 tags:
   - gravitational-waves
@@ -16,6 +19,7 @@ In my talk, "Galactic Binary Residuals in LISA SGWB Amplitude Inference: Source 
 Many thanks to the organizers for the opportunity, and to everyone who joined the session for the helpful discussions.
 
 - Preprint: [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
+- [Publication details and BibTeX]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }})
 - Slides: [talk page with full slides (PDF)](/talks/2026-07-31-yangzhou-sgwforeground-talk)
 
 ![Group photo of the workshop](/images/talk-2026-yangzhou-group-photo.jpg)

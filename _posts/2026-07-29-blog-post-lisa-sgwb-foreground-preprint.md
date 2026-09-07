@@ -1,6 +1,9 @@
 ---
 title: "New Preprint: How Accurately Must the Residual Galactic-Binary Foreground Be Characterized for LISA SGWB Inference?"
 date: 2026-07-29
+news: true
+description: "New preprint on residual Galactic binary foregrounds, source-power concentration, and spectral degeneracy in LISA stochastic-background inference."
+excerpt: "Our new preprint studies how residual Galactic binary foregrounds affect LISA stochastic-background inference under a catalog-level power model."
 permalink: /posts/2026/07/lisa-sgwb-foreground-preprint/
 tags:
   - gravitational-waves
@@ -18,6 +21,8 @@ Using the LISA Data Challenge 2A Sangria injections and the Erebor injection–r
 Under our baseline assumptions, marginalizing over the residual-foreground amplitude increases the uncertainty in a fiducial frequency-independent stochastic-background amplitude by 13.6%. We also find that this quantitative result depends on how the residual power is distributed across Fourier frequencies.
 
 Preprint: [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
+
+[Publication details and BibTeX]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}) · [Related talk and slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }})
 
 Comments and feedback are very welcome.
 

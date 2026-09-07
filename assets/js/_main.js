@@ -3,6 +3,9 @@
    ========================================================================== */
 
 $(document).ready(function () {
+  function savedTheme() {
+    try { return localStorage.getItem('theme'); } catch (error) { return null; }
+  }
   // detect OS/browser preference
   const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
@@ -12,7 +15,7 @@ $(document).ready(function () {
   var setTheme = function (theme) {
     const use_theme =
       theme ||
-      localStorage.getItem("theme") ||
+      savedTheme() ||
       $("html").attr("data-theme") ||
       browserPref;
 
@@ -23,6 +26,9 @@ $(document).ready(function () {
       $("html").removeAttr("data-theme");
       $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
     }
+    var dark = use_theme === 'dark';
+    $('#theme-toggle-button').attr('aria-pressed', dark).attr('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    $('meta[name="theme-color"]').attr('content', dark ? '#30363b' : '#ffffff');
   };
 
   setTheme();
@@ -31,7 +37,7 @@ $(document).ready(function () {
   window
     .matchMedia('(prefers-color-scheme: dark)')
     .addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
+      if (!savedTheme()) {
         setTheme(e.matches ? "dark" : "light");
       }
     });
@@ -40,11 +46,11 @@ $(document).ready(function () {
   var toggleTheme = function () {
     const current_theme = $("html").attr("data-theme");
     const new_theme = current_theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", new_theme);
+    try { localStorage.setItem("theme", new_theme); } catch (error) { /* Continue without persistence. */ }
     setTheme(new_theme);
   };
 
-  $('#theme-toggle').on('click', toggleTheme);
+  $('#theme-toggle-button').on('click', toggleTheme);
 
   // These should be the same as the settings in _variables.scss
   const scssLarge = 925; // pixels
@@ -74,6 +80,7 @@ $(document).ready(function () {
   $(".author__urls-wrapper button").on("click", function () {
     $(".author__urls").fadeToggle("fast", function () { });
     $(".author__urls-wrapper button").toggleClass("open");
+    $(this).attr('aria-expanded', $(this).hasClass('open'));
   });
 
   // Restore the follow menu if toggled on a window resize

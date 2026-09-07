@@ -1,0 +1,7 @@
+{% assign publication = include.publication %}
+<p class="publication-meta">
+  <span class="publication-status">{% if publication.status == 'preprint' %}Preprint{% elsif publication.status == 'accepted' %}Accepted{% else %}Published{% endif %}</span>
+  · <cite>{{ publication.venue | escape }}</cite>{% if publication.volume %}, {{ publication.volume | escape }}{% endif %}{% if publication.article_number %}, {{ publication.article_number | escape }}{% endif %}
+  {% if publication.status == 'preprint' %} · arXiv:{{ publication.arxiv_id | escape }}{% endif %}
+  · {% if publication.status == 'preprint' %}<time datetime="{{ publication.date | date: '%Y-%m-%d' }}">{{ publication.date | date: '%B %-d, %Y' }}</time>{% elsif publication.issue_date %}{{ publication.issue_date | escape }}{% else %}<time datetime="{{ publication.date | date: '%Y' }}">{{ publication.date | date: '%Y' }}</time>{% endif %}
+</p>

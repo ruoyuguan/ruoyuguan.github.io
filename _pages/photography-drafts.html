@@ -1,0 +1,15 @@
+---
+title: "Photography drafts"
+permalink: /photography-drafts/
+published: false
+sitemap: false
+---
+
+<p>This local preview lists unfinished entries. They are excluded from the production website.</p>
+<ul>
+  {% for photo in site.portfolio %}
+    {% if photo.published == false %}
+    <li><a href="{{ photo.url | relative_url }}">{{ photo.path }}</a> · <a href="https://github.com/{{ site.repository }}/edit/master/{{ photo.path }}">Edit source</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

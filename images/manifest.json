@@ -1,5 +1,10 @@
 {
-	"name": "OOjs UI icon academic-progressive",
+	"name": "Ruo-Yu Guan — Academic Website",
+	"short_name": "Ruo-Yu Guan",
+	"start_url": "/",
+	"display": "browser",
+	"background_color": "#ffffff",
+	"theme_color": "#ffffff",
 	"icons": [
 		{
 			"src": "/images/favicon-192x192.png",

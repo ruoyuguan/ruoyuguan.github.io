@@ -10,7 +10,7 @@
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}"{% if author.avatar == 'profile-350.webp' %} srcset="{{ '/images/profile-175.webp' | relative_url }} 175w, {{ '/images/profile-350.webp' | relative_url }} 350w" sizes="(min-width: 1024px) 175px, 80px"{% endif %} width="350" height="350" class="author__avatar" alt="{{ author.name | escape }}" decoding="async">
     {% endif %}
   </div>
 
@@ -21,8 +21,8 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
+    <button type="button" class="btn btn--inverse" aria-expanded="false" aria-controls="author-links">Contact &amp; profiles</button>
+    <ul id="author-links" class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>

@@ -189,7 +189,7 @@
     }
   }
 
-  button {
+  #navigation-toggle {
     position: absolute;
     height: 2.5rem;
     right: 0;
@@ -226,11 +226,19 @@
     }
 
     #theme-toggle {
-      a {
+      button {
         width: 25px;
         display: flex;
         justify-content: center;
         cursor: pointer;
+        position: static;
+        height: 2.5rem;
+        margin: 0 0 0 1rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--global-masthead-link-color);
+        align-items: center;
       }
     }
 
@@ -268,7 +276,7 @@
     padding: 5px;
     border: 1px solid var(--global-border-color);
     border-radius: $border-radius;
-    background: #fff;
+    background: var(--global-bg-color);
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
@@ -303,7 +311,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #fff transparent;
+      border-color: var(--global-bg-color) transparent;
       display: block;
       z-index: 1;
     }

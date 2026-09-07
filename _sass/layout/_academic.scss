@@ -1,0 +1,59 @@
+/* Shared academic content and accessible controls. */
+:focus-visible { outline: 3px solid var(--global-link-color); outline-offset: 4px; }
+.navicon { display: block; }
+.greedy-nav #navigation-toggle:focus-visible { outline: 3px solid var(--global-link-color); }
+.skip-link { position: fixed; top: -6rem; left: 1rem; z-index: 1000; padding: .6rem 1rem; background: var(--global-bg-color); }
+.skip-link:focus { top: .5rem; }
+.publication-card { padding: 0 0 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--global-border-color); }
+.publication-card__title { margin-top: .5rem; line-height: 1.4; }
+.publication-authors, .publication-meta { margin: .4rem 0; font-size: .88em; line-height: 1.6; }
+.publication-card__summary { margin: .7rem 0; font-size: .9em; line-height: 1.65; }
+.publication-status { display: inline-block; padding: .05rem .45rem; border: 1px solid var(--global-border-color); border-radius: 3px; font-size: .85em; }
+ul.publication-links { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: .7rem 0 0; padding: 0; }
+.publication-links li { margin: 0; }
+.publication-links a { display: inline-block; padding: .2rem .6rem; border: 1px solid var(--global-link-color); border-radius: 4px; font-size: .8em; text-decoration: none; }
+.publication-links a:hover { text-decoration: underline; }
+.publication-detail .publication-authors { font-size: 1em; }
+.publication-detail { overflow-wrap: anywhere; }
+.news-list { padding-left: 1.2em; }
+.news-list li { margin-bottom: .7em; }
+.news-list time { font-size: .85em; white-space: nowrap; color: var(--global-text-color-light); }
+.photography-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.photography-card img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.photography-card h2 { margin: .65rem 0; font-size: 1.1em; line-height: 1.4; }
+.photography-card a { text-decoration: none; }
+.photograph img { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+.maintenance-link { margin-top: 2rem; font-size: .75em; }
+.cv-download { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: .8em; }
+.cv-print-heading { display: none; }
+.privacy-controls { display: flex; flex-wrap: wrap; gap: .7rem; }
+.privacy-controls button { cursor: pointer; }
+@media (max-width: 640px) {
+  .photography-grid { grid-template-columns: 1fr; }
+  .photography-card img { height: auto; max-height: 440px; object-fit: contain; }
+  .publication-card__title { font-size: 1.15em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+@media print {
+  @page { size: A4; margin: 16mm 15mm; }
+  html, body { background: white !important; color: #202020 !important; font-size: 10pt !important; padding: 0 !important; margin: 0 !important; }
+  .masthead, .sidebar, .page__footer, .skip-link, .cv-download, .page__meta, .pagination { display: none !important; }
+  #main, .archive, .page { float: none !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  a { color: #24465a !important; text-decoration: none !important; }
+  h1 { font-size: 20pt !important; }
+  .archive:has(.cv-print-heading) > .page__title { display: none; }
+  .cv-print-heading { display: block; margin-bottom: 1.3em; }
+  .cv-print-heading p { margin: .3em 0; font-size: 9pt; }
+  .cv-print-name { font-size: 22pt; font-weight: 700; }
+  h2 { font-size: 13pt !important; margin-top: 1.2em !important; break-after: avoid; }
+  h3, .cv-row, .cv-sub { break-after: avoid; }
+  .cv-block, .publication-card { break-inside: avoid; }
+  .cv-sub { color: #333 !important; opacity: 1 !important; }
+  .archive .cv-row, .archive .cv-sub { display: flex; flex-wrap: nowrap; gap: .6rem; }
+  .cv-left, .cv-sub-left { flex: 1 1 auto; min-width: 0; }
+  .cv-right, .cv-sub-right { flex: 0 0 auto; max-width: 45%; white-space: normal; }
+  #additional-conferences-and-schools { break-before: page; }
+  p, li { orphans: 2; widows: 2; }
+}

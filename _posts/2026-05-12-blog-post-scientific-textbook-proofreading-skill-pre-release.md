@@ -1,6 +1,9 @@
 ---
 title: "Scientific Textbook Proofreading Skill: A Pre-release of an AI-agent Skill for Scientific Errata Auditing"
 date: 2026-05-12
+news: true
+description: "An open-source pre-release for scientific textbook proofreading and traceable candidate errata auditing, designed for human expert review."
+excerpt: "An open-source AI-agent skill for structured scientific textbook proofreading and traceable candidate errata for human expert review."
 permalink: /posts/2026/05/scientific-textbook-proofreading-skill-pre-release/
 tags:
   - open-source

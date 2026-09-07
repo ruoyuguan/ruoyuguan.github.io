@@ -1,0 +1,9 @@
+{% assign photo = include.photo %}
+<figure class="photograph">
+  <a href="{{ '/images/photography/' | append: photo.image | append: '-2400.webp' | relative_url }}" class="image-popup">
+    <img src="{{ '/images/photography/' | append: photo.image | append: '-960.webp' | relative_url }}"
+         srcset="{{ '/images/photography/' | append: photo.image | append: '-480.webp' | relative_url }} 480w, {{ '/images/photography/' | append: photo.image | append: '-960.webp' | relative_url }} 960w, {{ '/images/photography/' | append: photo.image | append: '-1600.webp' | relative_url }} 1600w"
+         sizes="(min-width: 1280px) 900px, (min-width: 1024px) 70vw, 95vw"
+         width="{{ photo.image_width }}" height="{{ photo.image_height }}" alt="{{ photo.title | escape }}" decoding="async">
+  </a>
+</figure>

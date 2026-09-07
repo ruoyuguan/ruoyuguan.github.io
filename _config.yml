@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "<strong>Ruo-Yu</strong> Guan"
+title                    : "Ruo-Yu Guan"
 title_separator          : "-"
 name                     : &name "Ruo-Yu Guan"
 description              : &description "Personal website of Ruo-Yu Guan, PhD candidate in Theoretical Physics at HUST, working on gravitational-wave astrophysics."
@@ -22,7 +22,7 @@ repository               : "ruoyuguan/ruoyuguan.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile-350.webp"
   name             : "Ruo-Yu Guan (关若禹)"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate in Theoretical Physics, HUST; Core Member of the LISA Consortium (Astrophysics Working Group)"
@@ -78,22 +78,18 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
   preprints:
     title: 'Preprints'
+  manuscripts:
+    title: 'Journal Articles'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
+talkmap_link             : true
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -180,6 +176,7 @@ exclude:
   - config
   - Dockerfile
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -187,8 +184,24 @@ exclude:
   - log
   - node_modules
   - package.json*
+  - package-lock.json
   - Rakefile
   - README
+  - README.md
+  - CONTRIBUTING.md
+  - MAINTENANCE.md
+  - docker-compose.yaml
+  - markdown_generator
+  - scripts
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - talkmap/leaflet_dist
+  - images/portfolio
+  - files/IMG_0042.JPG
+  - _config.preview.yml
+  - output
+  - _site-preview
   - tmp
   - vendor
 keep_files:
@@ -220,9 +233,6 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
@@ -244,7 +254,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: false
       related: true
   # _pages
@@ -254,24 +264,16 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: false
-      share: false
-      comments: true
   # _publications
   - scope:
       path: ""
       type: publications
     values:
-      layout: single
+      layout: publication
       author_profile: true
       share: false
-      comments: true
+      comments: false
+      math: true
   # _portfolio
   - scope:
       path: ""
@@ -280,7 +282,8 @@ defaults:
       layout: single
       author_profile: false
       share: false
-      comment: true
+      comments: false
+      published: false
   # _talks
   - scope:
       path: ""
@@ -307,8 +310,6 @@ timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 # Plugins
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
@@ -316,8 +317,6 @@ plugins:
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji

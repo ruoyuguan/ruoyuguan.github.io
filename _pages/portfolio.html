@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Gallery"
-description: "Photography gallery of Ruo-Yu Guan."
+title: "Photography"
+description: "Photography by Ruo-Yu Guan."
 permalink: /portfolio/
 author_profile: true
 ---
@@ -13,8 +13,19 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="entries-grid">
-  {% for post in site.portfolio %}
-    {% include archive-single.html type="grid" %}
+<div class="photography-grid">
+  {% assign photographs = site.portfolio | where: 'published', true | sort: 'date' | reverse %}
+  {% for photo in photographs %}
+  <article class="photography-card">
+    <a href="{{ photo.url | relative_url }}">
+      <img src="{{ '/images/photography/' | append: photo.image | append: '-480.webp' | relative_url }}"
+           srcset="{{ '/images/photography/' | append: photo.image | append: '-480.webp' | relative_url }} 480w, {{ '/images/photography/' | append: photo.image | append: '-960.webp' | relative_url }} 960w"
+           sizes="(min-width: 1280px) 480px, (min-width: 1024px) 36vw, (min-width: 641px) 45vw, 90vw" width="{{ photo.image_width }}" height="{{ photo.image_height }}"
+           alt="{{ photo.title | escape }}" loading="lazy" decoding="async">
+      <h2>{{ photo.title }}</h2>
+    </a>
+  </article>
   {% endfor %}
 </div>
+
+<p class="maintenance-link"><a href="https://github.com/{{ site.repository }}/tree/master/_portfolio">Manage photographs</a> · <a href="https://github.com/{{ site.repository }}/blob/master/MAINTENANCE.md#photography">Editing guide</a>{% if site.unpublished %} · <a href="{{ '/photography-drafts/' | relative_url }}">Preview unfinished entries</a>{% endif %}</p>

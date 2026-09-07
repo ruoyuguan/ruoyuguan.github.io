@@ -1,0 +1,4 @@
+{% assign publication = include.publication %}
+<p class="publication-authors citation_author">
+  {% for author in publication.authors %}{% unless forloop.first %}, {% endunless %}{% if author.self %}<strong>{{ author.name | escape }}</strong>{% else %}{{ author.name | escape }}{% endif %}{% endfor %}
+</p>

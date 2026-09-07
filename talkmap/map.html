@@ -1,45 +1,95 @@
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-    	<title>Leaflet debug page</title>
-
-    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<link rel="stylesheet" href="leaflet_dist/screen.css" />
-
-    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
-    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
-    	<script src="leaflet_dist/leaflet.markercluster-src.js"></script>
-    	<script src="org-locations.js"></script>
-
-    </head>
-    <body>
-
-    	<div id="map"></div>
-    	<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>
-    	<script type="text/javascript">
-    		var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-              maxZoom: 18,
-              attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-                    }),
-    			latlng = L.latLng(30, 10);
-    		var map = L.map('map', {center: latlng, zoom: 0.7, layers: [tiles]});
-    		var markers = L.markerClusterGroup({
-    			showCoverageOnHover: false,
-    			maxClusterRadius: 80
-    			});
-    		for (var i = 0; i < addressPoints.length; i++) {
-    			var a = addressPoints[i];
-    			var title = a[0];
-    			var marker = L.marker(new L.LatLng(a[1], a[2]), { title: title });
-    			marker.bindPopup(title);
-    			markers.addLayer(marker);
-    		}
-    		map.addLayer(markers);
-    		map.zoomIn();
-    	</script>
-    </body>
-    </html>
-    
+---
+layout: null
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>Research talk locations — Ruo-Yu Guan</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    :root { color-scheme: light dark; font: 16px/1.5 system-ui, sans-serif; }
+    body { margin: 0; color: #24292f; background: #fff; }
+    #map { height: min(65vh, 30rem); min-height: 18rem; width: 100%; }
+    #map:focus-visible, a:focus-visible { outline: 3px solid #16739a; outline-offset: 3px; }
+    .map-note, .talk-list { margin: .75rem 1rem; }
+    .talk-list { padding-left: 1.25rem; }
+    .talk-list li { margin-bottom: .65rem; }
+    a { color: #006b91; }
+    .leaflet-popup-content { line-height: 1.5; }
+    .leaflet-popup-content a { color: #006b91; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #eceff1; background: #2b2e31; }
+      a { color: #7bc7e0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="map" role="region" aria-label="Interactive map of research talk locations" aria-describedby="map-help" tabindex="0"></div>
+  <p id="map-help" class="map-note">Markers show approximate city locations, not exact venues. Select a marker or a talk below for details. Map tiles: © <a href="https://www.openstreetmap.org/copyright" target="_top">OpenStreetMap contributors</a>.</p>
+  <p id="map-status" class="map-note" role="status"></p>
+  <ul id="talk-list" class="talk-list" aria-label="Talks shown on this map"></ul>
+  <noscript><p class="map-note">The interactive map requires JavaScript. See the <a href="../talks/" target="_top">talks list</a> for all presentations and locations.</p></noscript>
+  <script src="org-locations.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    (function () {
+      "use strict";
+      var talks = window.talkLocations || [];
+      var list = document.getElementById("talk-list");
+      var root = new URL("../", window.location.href);
+      function talkLink(talk) {
+        var link = document.createElement("a");
+        link.href = new URL(talk.url.replace(/^\//, ""), root).href;
+        link.target = "_top";
+        link.textContent = talk.title;
+        return link;
+      }
+      talks.forEach(function (talk) {
+        var item = document.createElement("li");
+        item.appendChild(talkLink(talk));
+        item.appendChild(document.createTextNode(" — " + talk.type + ", " + talk.date + "; " + talk.location));
+        list.appendChild(item);
+      });
+      if (!window.L) {
+        document.getElementById("map-status").textContent = "The map could not load. All talk links remain available below.";
+        document.getElementById("map").hidden = true;
+        return;
+      }
+      var map = L.map("map", {scrollWheelZoom: false});
+      var tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_top">OpenStreetMap</a>'
+      }).addTo(map);
+      tiles.on("tileerror", function () {
+        document.getElementById("map-status").textContent = "Some map tiles could not load. Talk locations and links are listed below.";
+      });
+      var positions = [];
+      talks.forEach(function (talk) {
+        var position = [talk.latitude, talk.longitude];
+        positions.push(position);
+        var popup = document.createElement("div");
+        popup.appendChild(talkLink(talk));
+        popup.appendChild(document.createElement("br"));
+        popup.appendChild(document.createTextNode(talk.type + " · " + talk.date));
+        popup.appendChild(document.createElement("br"));
+        popup.appendChild(document.createTextNode(talk.venue + "; " + talk.location));
+        L.marker(position, {title: talk.title, alt: talk.location + ": " + talk.title})
+          .addTo(map).bindPopup(popup);
+      });
+      if (positions.length) {
+        map.fitBounds(positions, {padding: [35, 35], maxZoom: 7});
+      } else {
+        map.setView([30, 110], 3);
+        document.getElementById("map-status").textContent = "No mapped talks yet.";
+      }
+    }());
+  </script>
+</body>
+</html>

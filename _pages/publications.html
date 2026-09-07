@@ -6,32 +6,21 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+<p>Journal articles and preprints on gravitational-wave and gamma-ray burst astrophysics. Open a title for the full abstract and citation.{% if site.author.googlescholar %} See also <a href="{{ site.author.googlescholar }}">Google Scholar</a>.{% endif %}</p>
+
+{% assign publications = site.publications | sort: 'date' | reverse %}
+{% assign preprints = publications | where: 'status', 'preprint' %}
+{% if preprints.size > 0 %}
+<section aria-labelledby="preprints">
+  <h2 id="preprints">Preprints</h2>
+  {% for post in preprints %}{% include publication-card.html post=post %}{% endfor %}
+</section>
 {% endif %}
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+{% assign journal_articles = publications | where_exp: 'publication', 'publication.status != "preprint"' %}
+{% if journal_articles.size > 0 %}
+<section aria-labelledby="journal-articles">
+  <h2 id="journal-articles">Journal articles</h2>
+  {% for post in journal_articles %}{% include publication-card.html post=post %}{% endfor %}
+</section>
 {% endif %}
-
-
-

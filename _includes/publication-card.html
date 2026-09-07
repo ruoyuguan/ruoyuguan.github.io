@@ -1,0 +1,11 @@
+{% assign publication = include.post | default: post %}
+{% assign publication_heading = include.heading_level | default: 3 %}
+<div class="list__item">
+  <article class="archive__item publication-card">
+    <h{{ publication_heading }} class="archive__item-title publication-card__title"><a href="{{ publication.url | relative_url }}">{{ publication.title | escape }}</a></h{{ publication_heading }}>
+    {% include publication-authors.html publication=publication %}
+    {% include publication-meta.html publication=publication %}
+    {% if publication.summary %}<p class="publication-card__summary">{{ publication.summary | escape }}</p>{% endif %}
+    {% include publication-links.html publication=publication %}
+  </article>
+</div>

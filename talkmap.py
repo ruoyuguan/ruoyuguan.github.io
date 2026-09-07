@@ -1,56 +1,115 @@
-# Leaflet cluster map of talk locations
-#
-# Run this from the _talks/ directory, which contains .md files of all your
-# talks. This scrapes the location YAML field from each .md file, geolocates it
-# with geopy/Nominatim, and uses the getorg library to output data, HTML, and
-# Javascript for a standalone cluster map. This is functionally the same as the
-# #talkmap Jupyter notebook.
-import frontmatter
-import glob
-import getorg
-from geopy import Nominatim
-from geopy.exc import GeocoderTimedOut
+#!/usr/bin/env python3
+"""Build talkmap/org-locations.js from explicit talk coordinates, without a network.
 
-# Set the default timeout, in seconds
-TIMEOUT = 5
+Run `python3 talkmap.py` from any directory, or `python3 talkmap.py --check`
+to check the committed data without writing it. Map metadata must use one-line
+YAML scalars; other front-matter fields are ignored. Coordinates are city-level
+unless map_precision explicitly says otherwise. Set map: false to omit a talk
+that has no verified coordinates. No online geocoding or Python packages needed.
+"""
 
-# Collect the Markdown files
-g = glob.glob("_talks/*.md")
+import argparse
+import datetime as dt
+import json
+import math
+from pathlib import Path
+import re
+import sys
 
-# Prepare to geolocate
-geocoder = Nominatim(user_agent="academicpages.github.io")
-location_dict = {}
-location = ""
-permalink = ""
-title = ""
 
-# Perform geolocation
-for file in g:
-    # Read the file
-    data = frontmatter.load(file)
-    data = data.to_dict()
+ROOT = Path(__file__).resolve().parent
+FIELDS = {
+    "title", "venue", "location", "permalink", "date", "type", "latitude",
+    "longitude", "map_precision", "published", "map",
+}
 
-    # Press on if the location is not present
-    if 'location' not in data:
-        continue
 
-    # Prepare the description
-    title = data['title'].strip()
-    venue = data['venue'].strip()
-    location = data['location'].strip()
-    description = f"{title}<br />{venue}; {location}"
+def scalar(value, path, key):
+    """Read the deliberately small scalar subset used by map metadata."""
+    value = value.strip()
+    if value.startswith('"'):
+        parsed, end = json.JSONDecoder().raw_decode(value)
+        remainder = value[end:].strip()
+        if remainder and not remainder.startswith("#"):
+            raise ValueError(f"{path}: unexpected text after {key}")
+        return parsed
+    if value.startswith("'"):
+        match = re.fullmatch(r"'((?:[^']|'')*)'\s*(?:#.*)?", value)
+        if not match:
+            raise ValueError(f"{path}: invalid single-quoted {key}")
+        return match[1].replace("''", "'")
+    value = re.split(r"\s+#", value, maxsplit=1)[0].strip()
+    if value.startswith(("|", ">", "[", "{", "&", "*", "!")):
+        raise ValueError(f"{path}: use a one-line scalar for map field {key}")
+    return value
 
-    # Geocode the location and report the status
+
+def read_metadata(path):
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if not lines or lines[0] != "---":
+        raise ValueError(f"{path}: missing YAML front matter")
+    metadata = {}
+    for line in lines[1:]:
+        if line == "---":
+            return metadata
+        match = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+        if match and match[1] in FIELDS:
+            metadata[match[1]] = scalar(match[2], path, match[1])
+    raise ValueError(f"{path}: unclosed YAML front matter")
+
+
+def build_data(source):
+    talks = []
+    for path in sorted(source.glob("*.md")):
+        meta = read_metadata(path)
+        if any(str(meta.get(key, "true")).lower() == "false" for key in ("published", "map")):
+            continue
+        if not meta.get("location"):
+            continue
+        required = ("title", "venue", "permalink", "date", "latitude", "longitude")
+        missing = [key for key in required if not meta.get(key)]
+        if missing:
+            raise ValueError(f"{path}: missing {', '.join(missing)}; add coordinates or set map: false")
+        lat, lon = float(meta["latitude"]), float(meta["longitude"])
+        if not (math.isfinite(lat) and -90 <= lat <= 90 and math.isfinite(lon) and -180 <= lon <= 180):
+            raise ValueError(f"{path}: invalid latitude/longitude")
+        permalink = meta["permalink"]
+        if not permalink.startswith("/") or permalink.startswith("//") or ".." in permalink.split("/"):
+            raise ValueError(f"{path}: permalink must be a site-relative path")
+        date = dt.date.fromisoformat(meta["date"]).isoformat()
+        precision = meta.get("map_precision", "city")
+        if precision not in ("city", "venue"):
+            raise ValueError(f"{path}: map_precision must be city or venue")
+        talks.append({
+            "title": meta["title"], "venue": meta["venue"],
+            "location": meta["location"], "date": date,
+            "type": meta.get("type", "Talk"), "url": permalink,
+            "latitude": lat, "longitude": lon, "precision": precision,
+        })
+    talks.sort(key=lambda item: (item["date"], item["url"]), reverse=True)
+    return "// Generated by python3 talkmap.py; edit _talks/*.md, not this file.\nwindow.talkLocations = " + json.dumps(talks, ensure_ascii=False, indent=2) + ";\n"
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="fail if generated map data is stale; do not write")
+    args = parser.parse_args()
+    output = ROOT / "talkmap" / "org-locations.js"
     try:
-        location_dict[description] = geocoder.geocode(location, timeout=TIMEOUT)
-        print(description, location_dict[description])
-    except ValueError as ex:
-        print(f"Error: geocode failed on input {location} with message {ex}")
-    except GeocoderTimedOut as ex:
-        print(f"Error: geocode timed out on input {location} with message {ex}")
-    except Exception as ex:
-        print(f"An unhandled exception occurred while processing input {location} with message {ex}")
+        expected = build_data(ROOT / "_talks")
+        if args.check:
+            if not output.exists() or output.read_text(encoding="utf-8") != expected:
+                print("Talk map data is stale. Run: python3 talkmap.py", file=sys.stderr)
+                return 1
+            print("Talk map data matches the published talk metadata.")
+        else:
+            output.write_text(expected, encoding="utf-8")
+            print(f"Updated {output.relative_to(ROOT)}")
+    except (ValueError, OSError) as error:
+        print(error, file=sys.stderr)
+        return 1
+    return 0
 
-# Save the map
-m = getorg.orgmap.create_map_obj()
-getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
+
+if __name__ == "__main__":
+    sys.exit(main())

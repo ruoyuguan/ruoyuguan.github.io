@@ -1,0 +1,12 @@
+{% assign publication = include.publication %}
+<ul class="publication-links" aria-label="Publication resources">
+  {% if publication.doi %}<li><a href="https://doi.org/{{ publication.doi | escape }}">DOI</a></li>{% endif %}
+  {% if publication.arxiv_id %}<li><a href="https://arxiv.org/abs/{{ publication.arxiv_id | escape }}">arXiv</a></li>{% endif %}
+  {% if publication.pdfurl %}<li><a href="{{ publication.pdfurl | relative_url }}">{% if publication.pdfurl contains 'arxiv.org' %}arXiv PDF{% else %}PDF{% endif %}</a></li>{% endif %}
+  {% if publication.adsurl %}<li><a href="{{ publication.adsurl | escape }}">ADS</a></li>{% endif %}
+  {% if publication.bibtexurl %}<li><a href="{{ publication.bibtexurl | relative_url }}">BibTeX</a></li>{% endif %}
+  {% if publication.codeurl %}<li><a href="{{ publication.codeurl | relative_url }}">Code</a></li>{% endif %}
+  {% if publication.dataurl %}<li><a href="{{ publication.dataurl | relative_url }}">Data</a></li>{% endif %}
+  {% if publication.slidesurl %}<li><a href="{{ publication.slidesurl | relative_url }}">Slides (PDF)</a></li>{% endif %}
+  {% if publication.posterurl %}<li><a href="{{ publication.posterurl | relative_url }}">Poster (PDF)</a></li>{% endif %}
+</ul>

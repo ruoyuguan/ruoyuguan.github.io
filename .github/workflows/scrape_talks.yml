@@ -1,36 +1,39 @@
-name: Scrape Talk Locations
+name: Validate Academic Site
 
 on:
   push:
-    paths:
-      - 'talks/**'
-      - 'talkmap.ipynb'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-site-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      JEKYLL_ENV: production
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'  # Specify the Python version you need
+      - name: Set up Ruby and locked dependencies
+        uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1.321.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
 
-    - name: Install dependencies
-      run: |
-        pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
-        pip install getorg --upgrade
+      - name: Check deterministic talk map
+        run: python3 talkmap.py --check
 
-    - name: Run Jupyter Notebook
-      run: |
-        jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb
+      - name: Build production site
+        run: bundle exec jekyll build --trace
 
-    - name: Commit changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Automated update of talk locations" || echo "No changes to commit"
-        git push
+      - name: Check links, scholarly metadata, and unpublished content
+        run: python3 scripts/validate_site.py _site

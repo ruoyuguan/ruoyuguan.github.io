@@ -1,9 +1,20 @@
 ---
 layout: archive
-title: "Talk map"
+title: "Talk Map"
+description: "Locations of Ruo-Yu Guan's research talks and posters, with links to presentations and abstracts."
 permalink: /talkmap.html
 author_profile: true
 ---
 
-<p>This map is generated from a Jupyter Notebook file in <a href="https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb">talkmap.ipynb</a>, which mines the location fields in the .md files in _talks/.</p>
-<iframe src="/talkmap/map.html" height="700" width="850" style="border:none;"></iframe>
+<p>Research talks and posters, shown at approximate city locations. Presentation details and materials are available in the <a href="{{ '/talks/' | relative_url }}">talks archive</a>.</p>
+<iframe src="{{ '/talkmap/map.html' | relative_url }}" title="Map of research talk locations" loading="lazy" style="width:100%; height:42rem; max-height:85vh; border:0;"></iframe>
+
+<h2>Locations and presentations</h2>
+<ul>
+{% assign mapped_talks = site.talks | sort: 'date' | reverse %}
+{% for talk in mapped_talks %}
+  {% if talk.latitude and talk.longitude and talk.published != false and talk.map != false %}
+    <li><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a> — {{ talk.type }}, {{ talk.date | date: '%B %d, %Y' }}; {{ talk.location }}.</li>
+  {% endif %}
+{% endfor %}
+</ul>

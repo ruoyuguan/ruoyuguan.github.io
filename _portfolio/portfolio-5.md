@@ -2,6 +2,8 @@
 title: "Portfolio item number 1"
 excerpt: "<br/><img src='/images/portfolio/sa2.jpg'>"
 collection: portfolio
+published: false
+sitemap: false
 ---
 
 ![]({{ site.baseurl }}/images/portfolio/sa2.jpg)

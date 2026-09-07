@@ -1,13 +1,35 @@
 ---
 title: "Interpreting time-integrated polarization data of gamma-ray burst prompt emission"
 collection: publications
+layout: publication
 category: manuscripts
-permalink: /publication/2023-02-21-Interpreting time-integrated polarization data of gamma-ray burst prompt emission
+permalink: /publications/grb-time-integrated-polarization/
+redirect_from:
+  - /publication/2023-02-21-Interpreting time-integrated polarization data of gamma-ray burst prompt emission
 date: 2023-02-21
+status: published
+selected: true
+math: true
+authors:
+  - name: Ruo-Yu Guan
+    self: true
+  - name: Mi-Xiang Lan
 venue: 'Astronomy & Astrophysics'
+volume: '670'
+article_number: 'A160'
+doi: '10.1051/0004-6361/202243805'
+arxiv_id: '2208.03668'
+adsurl: 'https://ui.adsabs.harvard.edu/abs/2023A%26A...670A.160G'
 paperurl: 'https://doi.org/10.1051/0004-6361/202243805'
-bibtexurl: 'http://ruoyuguan.github.io/files/bibtex1.bib'
-citation: 'Guan, R. Y., and M. X. Lan. “Interpreting Time-Integrated Polarization Data of Gamma-Ray Burst Prompt Emission.” Astronomy & Astrophysics 670 (February 2023): A160. https://doi.org/10.1051/0004-6361/202243805.'
+pdfurl: 'https://arxiv.org/pdf/2208.03668'
+bibtexurl: /files/bibtex1.bib
+description: 'Time-integrated polarization predictions for 37 gamma-ray bursts test synchrotron emission in ordered magnetic fields and motivate multiband observations.'
+summary: 'We compare time-integrated polarization predictions with observations of 37 gamma-ray bursts. Ordered-field synchrotron emission explains most measurements, but two bursts challenge its predicted polarization upper limits; multiband measurements can further test the models.'
+citation: 'Ruo-Yu Guan and Mi-Xiang Lan (2023). “Interpreting time-integrated polarization data of gamma-ray burst prompt emission.” Astronomy & Astrophysics, 670, A160. https://doi.org/10.1051/0004-6361/202243805.'
+related_talks:
+  - title: 'PKU PhD Student Forum poster (2024)'
+    url: /talks/2024-12-01-pku-forum-poster
+posterurl: /files/2024_PKU_poster_Time_integrated_Polarizations_of_Gamma_ray_Burst_Prompt_Phase.pdf
 ---
 *Aims.* With the accumulation of polarization data in the gamma-ray burst (GRB) prompt phase, polarization models can be tested.\
 *Methods.* We predicted the time-integrated polarizations of 37 GRBs with polarization observation. We used their observed spectral parameters to do this. In the model, the emission mechanism is synchrotron radiation, and the magnetic field configuration in the emission region was assumed to be large-scale ordered. Therefore, the predicted polarization degrees (PDs) are upper limits.\
