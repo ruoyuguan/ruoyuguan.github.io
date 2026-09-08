@@ -198,6 +198,9 @@ exclude:
   - talkmap_out.ipynb
   - talkmap/leaflet_dist
   - images/portfolio
+  # Photography is temporarily offline; local draft preview restores these.
+  - _portfolio
+  - images/photography
   - files/IMG_0042.JPG
   - _config.preview.yml
   - output

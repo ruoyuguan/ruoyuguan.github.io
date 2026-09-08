@@ -180,12 +180,15 @@ def main():
                     errors.append(f"{name}:{line}: missing fragment {reference}")
 
     # These are maintenance or source assets, not public web pages.
+    photography_hidden = scalar_frontmatter(source / '_pages/portfolio.html', 'published') == 'false'
     forbidden = (
         "markdown_generator", "scripts", "talkmap.py", "talkmap.ipynb",
         "talkmap_out.ipynb", "talkmap/leaflet_dist", "images/portfolio",
         "photography-drafts", "MAINTENANCE.md", "AGENTS.md",
         "package.json", "package-lock.json", "Gemfile", "Gemfile.lock",
     )
+    if photography_hidden:
+        forbidden += ("portfolio", "images/photography")
     for relative in forbidden:
         if (root / relative).exists():
             errors.append(f"production build contains maintenance/draft asset: {relative}")
@@ -194,7 +197,7 @@ def main():
     for path in sorted((source / "_portfolio").glob("*")):
         if path.suffix not in (".md", ".html"):
             continue
-        if scalar_frontmatter(path, "published") == "false":
+        if photography_hidden or scalar_frontmatter(path, "published") == "false":
             route = scalar_frontmatter(path, "permalink") or f"/portfolio/{path.stem}/"
             draft_routes.append(route)
             if route_file(root, route):
@@ -245,7 +248,7 @@ def main():
             print(f"ERROR: {error}", file=sys.stderr)
         print(f"Failed with {len(set(errors))} issue(s).", file=sys.stderr)
         return 1
-    print(f"Validated {len(pages)} HTML pages, {references} internal references, {publications} scholarly articles, and {len(draft_routes)} excluded photography drafts.")
+    print(f"Validated {len(pages)} HTML pages, {references} internal references, {publications} scholarly articles, and {len(draft_routes)} excluded photography entries.")
     return 0
 
 

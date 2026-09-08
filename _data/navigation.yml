@@ -23,8 +23,5 @@ main:
   - title: "News"
     url: /year-archive/
 
-  - title: "Photography"
-    url: /portfolio/
-
 #  - title: "Guide"
 #   url: /markdown/

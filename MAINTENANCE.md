@@ -1,6 +1,6 @@
 # 网站维护
 
-这里是源码维护入口，不会发布成个人主页页面。网站页脚的 **Site maintenance**、摄影页的 **Manage photographs / Editing guide** 会链接到 GitHub 中的源码与本说明；修改时需使用你自己的 GitHub 登录。
+这里是源码维护入口，不会发布成个人主页页面。网站页脚的 **Site maintenance** 会链接到本说明；摄影目前暂时下线，可从下方源码链接或本地预览继续维护。修改 GitHub 源码时需使用你自己的 GitHub 登录。
 
 ## 常用入口
 
@@ -17,9 +17,11 @@
 
 ## Photography
 
-已完成的 `portfolio-1.md` 和 `portfolio-10.md` 继续公开。其余 10 个条目设置为 `published: false`；原有标题、文字和图片文件均保留，未代拟任何摄影标题或说明。原图目录不复制到发布产物；源码仓库若为公开仓库，源码本身仍可被访问，草稿机制不等于私密存储。
+摄影栏目自 2026-09-08 起暂时下线：导航入口已移除，列表页设置为 `published: false` / `sitemap: false`，整个 `_portfolio` 集合及摄影图片目录均排除在生产构建之外。旧摄影页面和图片地址不再由网站提供。
 
-新摄影条目默认不发布。完成自己的标题、正文和替代文字后：
+原有标题、文字、原图和 WebP 文件全部保留，未代拟任何摄影标题或说明。`portfolio-1.md` 和 `portfolio-10.md` 保留原来的 `published: true`，仅表示它们在本地预览中作为完整条目展示；集合整体排除期间不会上线。其余 10 个条目仍为草稿。源码仓库若为公开仓库，源码和历史记录仍可被访问；撤下网站栏目不等于私密存储，也不会清除搜索引擎或第三方缓存。
+
+新摄影条目默认不发布。下列步骤用于准备完整条目；栏目整体下线期间，完成它们也不会自动上线。完成自己的标题、正文和替代文字后：
 
 1. 设置 `published: true`，删除该条目的 `sitemap: false`。
 2. 设置真实拍摄日期 `date: YYYY-MM-DD`；列表按该日期倒序排列。
@@ -28,7 +30,7 @@
 5. 运行 `ruby scripts/build_images.rb` 生成 WebP 版本并检查外观。需要安装 `cwebp`（macOS：`brew install webp`）。
 6. 提交正文、元数据和对应的 `images/photography/` 文件。
 
-转换脚本只处理明确标记为已发布的照片和头像，不覆盖原图。图片生成后不应手工修改 WebP，重新运行脚本即可。
+转换脚本只处理明确标记为 `published: true` 的照片和头像，不覆盖原图。图片生成后不应手工修改 WebP，重新运行脚本即可。
 
 相机方向需要归一化的照片可填写 `image_rotation`（顺时针 90/180/270 度），此步骤使用 macOS 自带的 `sips`；当前 Victoria Peak 照片使用 90 度，以保持原 JPEG 在浏览器中显示的正确方向。宽高填写归一化后的尺寸。输出 WebP 不携带原始 EXIF 信息。
 
@@ -39,7 +41,15 @@ bundle install
 bundle exec ruby scripts/preview_drafts.rb
 ```
 
-打开 <http://127.0.0.1:4001/photography-drafts/>。它会显示所有未完成条目及源码编辑链接；本地摄影页也会出现草稿预览入口。该命令临时启用原图与未发布内容、关闭分析脚本，输出到 `_site-preview/`。停止服务按 Ctrl+C。不要把该预览目录用于部署。
+打开 <http://127.0.0.1:4001/photography-drafts/> 查看未完成条目及源码编辑链接；打开 <http://127.0.0.1:4001/portfolio/> 查看两篇完整条目及摄影管理入口。该命令仅在本地临时恢复摄影集合、摄影图片和未发布页面，关闭分析脚本，输出到 `_site-preview/`。停止服务按 Ctrl+C。不要把该预览目录用于部署。
+
+### 将来恢复公开栏目
+
+1. 先审阅 `_portfolio/` 中哪些条目确实愿意公开，不想公开的条目设为 `published: false`。
+2. 从 `_config.yml` 的 `exclude` 中移除 `_portfolio` 和 `images/photography`，继续排除 `images/portfolio` 原图目录。
+3. 将 `_pages/portfolio.html` 的 `published` 改为 `true`，删除该页的 `sitemap: false`。
+4. 在 `_data/navigation.yml` 的 `main` 列表末尾恢复 `title: "Photography"`、`url: /portfolio/` 导航项。
+5. 重新生成所选照片的 WebP，执行生产构建、站点检查和浏览器检查，通过后再提交推送。
 
 ## 论文
 
@@ -106,4 +116,4 @@ node scripts/check_browser.mjs http://127.0.0.1:4000
 
 页脚 Privacy 链接提供可选 GA4 分析开关，默认关闭。主题和分析选择保存在访客自己的浏览器中。Google Search Console 验证文件 `google0e0d4fbd93fdf402.html` 保留，不要删除。
 
-`markdown_generator/`、原始照片、旧地图 notebook、维护脚本及未完成摄影页面不进入生产站点。生成器 TSV 只保留表头；维护入口仍在仓库中。
+`markdown_generator/`、旧地图 notebook 和维护脚本不进入生产站点。摄影暂时下线期间，全部摄影页面、原图及 WebP 也不进入生产站点。生成器 TSV 只保留表头；维护入口仍在仓库中。

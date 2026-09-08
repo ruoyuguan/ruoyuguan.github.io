@@ -9,7 +9,7 @@ root = File.expand_path('..', __dir__)
 mode = ARGV.delete('--build') ? 'build' : 'serve'
 Dir.chdir(root) do
   config = YAML.safe_load_file('_config.yml', permitted_classes: [Date, Time], aliases: true)
-  config['exclude'] -= ['images/portfolio']
+  config['exclude'] -= ['_portfolio', 'images/portfolio', 'images/photography']
   config['unpublished'] = true
   config['future'] = true
   config['analytics'] = { 'provider' => false }
@@ -21,6 +21,7 @@ Dir.chdir(root) do
     file.write(YAML.dump(config))
     file.flush
     puts 'Drafts: http://127.0.0.1:4001/photography-drafts/'
+    puts 'Photography: http://127.0.0.1:4001/portfolio/'
     system(RbConfig.ruby, '-S', 'bundle', 'exec', 'jekyll', mode, '--config', file.path)
     exit($?.exitstatus || 1)
   end

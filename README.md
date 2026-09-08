@@ -16,7 +16,7 @@ Built with [Jekyll](https://jekyllrb.com/) using the [Academic Pages](https://gi
 | `_publications/` | Journal articles (`category: manuscripts`) and preprints (`category: preprints`) |
 | `_talks/` | Talks and posters |
 | `_posts/` | Blog posts |
-| `_portfolio/` | Gallery (photography) |
+| `_portfolio/` | Photography archive (temporarily offline; local preview retained) |
 | `files/` | Downloadable files (PDFs, BibTeX) — served at `/files/` |
 | `images/` | Images |
 | `_data/navigation.yml` | Header navigation links |
@@ -27,7 +27,7 @@ Built with [Jekyll](https://jekyllrb.com/) using the [Academic Pages](https://gi
 - **New publication**: add a Markdown file to `_publications/` following the existing entries' front matter (`category: manuscripts` for journal articles, `category: preprints` for arXiv preprints). Put the BibTeX file in `files/` and reference it with `bibtexurl`.
 - **New talk**: add a Markdown file to `_talks/` (filename must start with the talk date, `YYYY-MM-DD-...`). Slides/posters go to `files/`, preview images to `images/`.
 - **New blog post**: add a Markdown file to `_posts/` (filename `YYYY-MM-DD-....md`).
-- **Photography**: new entries default to unpublished. Complete your own title/caption, set `published: true`, add image metadata and run `ruby scripts/build_images.rb`. Original files and unfinished entries stay in the source repository. See the [editing and draft preview guide](MAINTENANCE.md#photography).
+- **Photography**: the public section is temporarily offline. Its pages, originals and WebP assets are excluded from production; source files and local preview remain available. An entry's `published: true` does not override the collection-wide exclusion. See the [maintenance, preview and restoration guide](MAINTENANCE.md#photography). Files in this public repository remain publicly accessible.
 
 ## Deployment
 
