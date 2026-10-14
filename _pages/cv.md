@@ -2,7 +2,7 @@
 layout: archive
 title: "CV"
 description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, talks, and professional activities."
-last_updated: 2026-09-05
+last_updated: 2026-10-14
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -114,7 +114,7 @@ redirect_from:
   </div>
   <div class="cv-sub">
     <span class="cv-sub-left">Department of Physics, Faculty of Science</span>
-    <span class="cv-sub-right">Sep. 2023 – Jul. 2024; degree conferred Nov. 2024</span>
+    <span class="cv-sub-right">Nov. 2024</span>
   </div>
   <div class="cv-sub">
     <span class="cv-sub-left">M.Sc. in Physics</span>
@@ -131,12 +131,8 @@ redirect_from:
     <span class="cv-right">Changchun, China</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">Department of Materials Science, School of Materials Science and Engineering</span>
-    <span class="cv-sub-right">Sep. 2018 – Jun. 2022</span>
-  </div>
-  <div class="cv-sub">
-    <span class="cv-sub-left">B.Sc. in Materials Physics</span>
-    <span class="cv-sub-right"></span>
+    <span class="cv-sub-left">B.Sc.</span>
+    <span class="cv-sub-right">Jun. 2022</span>
   </div>
   <ul class="cv-list">
     <li>Graduation thesis: <em>Study on the Prompt Emission of Gamma-ray Bursts and its Polarization</em>.</li>
@@ -184,7 +180,7 @@ redirect_from:
 
 ## Research Experience
 
-Project dates below describe the period of research activity; degree enrolment and employment dates are listed separately above.
+Project dates below describe the period of research activity; degree and employment dates are listed separately above.
 
 <div class="cv-block">
   <div class="cv-row">
