@@ -76,6 +76,13 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
+# Publication Category - The following the list of publication categories and their headings
+publication_category:
+  preprints:
+    title: 'Preprints'
+  manuscripts:
+    title: 'Journal Articles'
+
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
@@ -195,6 +202,7 @@ exclude:
   - _portfolio
   - images/photography
   - files/IMG_0042.JPG
+  - _config.preview.yml
   - output
   - _site-preview
   - tmp
