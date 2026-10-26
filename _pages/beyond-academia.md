@@ -6,22 +6,22 @@ description: "Life beyond research for Ruo-Yu Guan: distance running, specialty 
 author_profile: true
 ---
 
-Research is only part of my life. Outside the lab, I spend much of my time on endurance sports, coffee, and filming the world from a first-person perspective.
+Research is a central part of my life, but not the whole of it. This is the part of my website for the pursuits beyond academic work: endurance running, specialty coffee, and first-person filmmaking.
 
 ## Running
 
-I am a dedicated long-distance runner. I have completed multiple full marathons and half marathons, as well as trail-running races, and I am a registered athlete with the International Trail Running Association (ITRA).
+I am a dedicated long-distance runner with experience in full marathons, half marathons, and trail-running races. I am also a registered athlete with the International Trail Running Association (ITRA).
 
-[TODO: ITRA profile link, race list, and personal bests to be added.]
+Running is a sustained practice for me rather than an occasional hobby. Road and trail running are both part of that practice, bringing together distance, terrain, and the discipline of showing up consistently.
 
 ## Specialty Coffee
 
-I am a specialty-coffee enthusiast and a former part-time barista. My main focus is pour-over brewing, and I care deeply about the craft of extraction. Beyond brewing, I enjoy developing my own framework for tasting and evaluating coffee.
+I am a specialty-coffee enthusiast and a former part-time barista, with pour-over as my main brewing focus. I care about the details of extraction, but also about what happens after brewing: learning to recognize, describe, and evaluate what is in the cup.
 
-[TODO: add notes on tasting philosophy and favorite origins/roasters.]
+My interest in coffee goes beyond making a reliable brew. I enjoy developing my own approach to tasting—one shaped by curiosity and repeated experience rather than by scores alone.
 
 ## Action-Camera Photography
 
-I document runs, travels, and everyday life in first-person POV with my DJI Nano and DJI Action 5 Pro action cameras.
+I document runs, travels, and everyday life from a first-person perspective. My current setup includes the DJI Nano and DJI Action 5 Pro, which let me record POV footage while staying immersed in the activity itself.
 
-[TODO: add links to videos or channel.]
+For me, action-camera photography is a way of keeping the texture of an experience: not only where I went, but what it looked like to be there.
