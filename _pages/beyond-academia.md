@@ -14,6 +14,13 @@ I am a dedicated distance runner with experience in marathons, half marathons, a
 
 Running is a sustained practice for me rather than an occasional hobby. Road and trail running are both part of that practice, bringing together distance, terrain, and the discipline of showing up consistently.
 
+### Selected Road Race Results
+
+- **2025 Xiantao Marathon** — Marathon, March 30, 2025; net time 4:52:51.
+- **2024 Changchun Marathon** — Marathon, September 1, 2024; net time 5:12:27.
+- **Standard Chartered Hong Kong Marathon 2024** — Marathon, January 21, 2024; chip time 05:02:22 ([official result](https://sporthive.com/events/s/7146031303728157696/race/7146031303728158720/bib/B1712)).
+- **32nd Dalian International Marathon** — Half Marathon, May 12, 2019; net time 1:56:21. For this performance, I also earned a Level 2 certificate in the Chinese Athletics Association's grading system for mass runners (men's half marathon, 29-and-under age group).
+
 ## Specialty Coffee
 
 I am a specialty-coffee enthusiast and a former part-time barista, with pour-over as my main brewing focus. I care about the details of extraction, but also about what happens after brewing: learning to recognize, describe, and evaluate what is in the cup.
