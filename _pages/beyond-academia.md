@@ -10,7 +10,7 @@ Research is a central part of my life, but not the whole of it. This is the part
 
 ## Running
 
-I am a dedicated long-distance runner with experience in full marathons, half marathons, and trail-running races. I am also a registered athlete with the International Trail Running Association (ITRA).
+I am a dedicated distance runner with experience in marathons, half marathons, and trail races. In April 2024, I completed the Hong Kong 5 Peaks – 30km Solo, finishing the 29.7 km course with 1,560 m of elevation gain in 6:36:38. My recorded trail race results are available on my [ITRA profile](https://itra.run/RunnerSpace/guan.ruoyu.5315435).
 
 Running is a sustained practice for me rather than an occasional hobby. Road and trail running are both part of that practice, bringing together distance, terrain, and the discipline of showing up consistently.
 
