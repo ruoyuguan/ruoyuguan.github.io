@@ -11,17 +11,14 @@ main:
   - title: "Research"
     url: /research/
 
+  - title: "Blog"
+    url: /year-archive/
+
   - title: "Publications"
     url: /publications/
 
-  - title: "Presentations"
-    url: /talks/
-
   - title: "CV"
     url: /cv/
-
-  - title: "Blog"
-    url: /year-archive/
 
   - title: "Beyond Academia"
     url: /beyond-academia/
