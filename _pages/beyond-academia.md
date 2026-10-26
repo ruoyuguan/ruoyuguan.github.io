@@ -2,11 +2,11 @@
 layout: archive
 title: "Beyond Academia"
 permalink: /beyond-academia/
-description: "Life beyond research for Ruo-Yu Guan: distance running, specialty coffee, and action-camera photography."
+description: "Life beyond research for Ruo-Yu Guan: distance running, specialty coffee, and action-camera videography and photography."
 author_profile: true
 ---
 
-Research is a central part of my life, but not the whole of it. This is the part of my website for the pursuits beyond academic work: endurance running, specialty coffee, and first-person filmmaking.
+Research is a central part of my life, but not the whole of it. This is the part of my website for the pursuits beyond academic work: endurance running, specialty coffee, and first-person videography and photography.
 
 ## Running
 
@@ -20,8 +20,10 @@ I am a specialty-coffee enthusiast and a former part-time barista, with pour-ove
 
 My interest in coffee goes beyond making a reliable brew. I enjoy developing my own approach to tasting—one shaped by curiosity and repeated experience rather than by scores alone.
 
-## Action-Camera Photography
+Alongside espresso made with a Flair 58 Plus 2, I brew filter coffee most often with a stainless-steel Kalita Wave 155 and a Hario V60 Switch. I enjoy comparing how different brewers and extraction approaches shape clarity, sweetness, and texture in the cup.
 
-I document runs, travels, and everyday life from a first-person perspective. My current setup includes the DJI Nano and DJI Action 5 Pro, which let me record POV footage while staying immersed in the activity itself.
+## Action-Camera Videography and Photography
 
-For me, action-camera photography is a way of keeping the texture of an experience: not only where I went, but what it looked like to be there.
+I document runs, travels, and everyday life from a first-person perspective, primarily through video and sometimes through still photographs. My current setup includes the DJI Osmo Nano and DJI Osmo Action 5 Pro, which let me record POV footage and take photos while staying immersed in the activity itself.
+
+For me, action-camera videography and photography are ways of keeping the texture of an experience: not only where I went, but what it looked like to be there.

@@ -1,8 +1,8 @@
 ---
 layout: archive
 title: "CV"
-description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, talks, and professional activities."
-last_updated: 2026-10-14
+description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, presentations, and professional activities."
+last_updated: 2026-10-26
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -197,7 +197,7 @@ Project dates below describe the period of research activity; degree and employm
   </div>
   <ul class="cv-list">
     <li>Research focus: gravitational-wave astrophysics and Milky Way structure inference using Galactic double white dwarf binaries.</li>
-    <li>Building a simulation-based inference pipeline integrating population synthesis (COSMIC) with hierarchical Bayesian inference (GWpopulation).</li>
+    <li>Building a simulation-based inference pipeline integrating population synthesis (COSMIC) with hierarchical Bayesian inference (GWPopulation).</li>
     <li>Quantifying selection effects, detector response, and observational uncertainties for space-based gravitational-wave observations (Laser Interferometer Space Antenna / TianQin context).</li>
     <li>First-author preprint on residual Galactic binary foregrounds (arXiv:2607.25349, with Prof. Yan Wang); presented at the 2026 Mid-Year Workshop in Yangzhou.</li>
   </ul>
@@ -217,7 +217,7 @@ Project dates below describe the period of research activity; degree and employm
     <span class="cv-sub-right"></span>
   </div>
   <ul class="cv-list">
-    <li>Conducted gamma-ray burst light-curve analysis using detrended fluctuation analysis and Hurst exponent estimation; performed statistical correlation studies in Python.</li>
+    <li>Conducted gamma-ray burst light-curve analysis using detrended fluctuation analysis and Hurst index estimation; performed statistical correlation studies in Python.</li>
     <li>Maintained Python-based workflows for preprocessing, feature extraction, statistical analysis, and visualization.</li>
     <li>Resulted in a first-author refereed journal article.</li>
     <li>Supported by the National Square Kilometre Array Program of China (Grant No. 2022SKA0130100).</li>
@@ -259,7 +259,7 @@ Project dates below describe the period of research activity; degree and employm
   </div>
   <ul class="cv-list">
     <li>Collected and organized spectral parameters and polarization measurements of gamma-ray burst prompt emission from the literature.</li>
-    <li>Computed time-integrated polarization degrees for ~37 gamma-ray bursts under a synchrotron-emission framework using Interactive Data Language.</li>
+    <li>Computed time-integrated polarization degrees for 37 gamma-ray bursts under a synchrotron-emission framework using Interactive Data Language.</li>
     <li>Resulted in a first-author refereed journal article.</li>
     <li>Supported by the National Natural Science Foundation of China (Grant Nos. 11903014 and 12147217).</li>
   </ul>
@@ -268,7 +268,7 @@ Project dates below describe the period of research activity; degree and employm
 ## Skills
 
 * **Programming:** <span class="cv-code">Python</span> (primary); <span class="cv-code">MATLAB</span>, <span class="cv-code">Mathematica</span>, <span class="cv-code">R</span> (familiar); <span class="cv-code">IDL</span>, <span class="cv-code">C++</span> (prior experience).
-* **Methods:** time-series analysis; statistical correlation analysis; hierarchical Bayesian inference (<span class="cv-code">GWpopulation</span>; Markov chain Monte Carlo); Monte Carlo simulation and mock-catalog generation.
+* **Methods:** time-series analysis; statistical correlation analysis; hierarchical Bayesian inference (<span class="cv-code">GWPopulation</span>; Markov chain Monte Carlo); Monte Carlo simulation and mock-catalog generation.
 * **Scientific computing:** <span class="cv-code">NumPy</span>, <span class="cv-code">SciPy</span>, <span class="cv-code">pandas</span>, <span class="cv-code">Matplotlib</span>; <span class="cv-code">Jupyter</span>; Flexible Image Transport System data handling; pipeline automation (<span class="cv-code">bash</span>/<span class="cv-code">Python</span> scripts).
 * **Astrophysics & gravitational-wave:** population synthesis (<span class="cv-code">COSMIC</span>); gravitational-wave population inference; catalog-based population studies.
 * **Scholarly writing:** <span class="cv-code">LaTeX</span>; <span class="cv-code">BibTeX</span>.
@@ -278,7 +278,7 @@ Project dates below describe the period of research activity; degree and employm
 
 * **[Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill)** — Open-source pre-release for structured scientific textbook proofreading and errata auditing (May 2026). Includes report templates, a JSON schema, synthetic examples, evaluation cases, and CI checks; produces candidate errata for human expert review.
 
-## Talks and Presentations
+## Presentations
 
 <div class="cv-block">
   <div class="cv-row">
@@ -289,7 +289,7 @@ Project dates below describe the period of research activity; degree and employm
     <span class="cv-sub-left">Oral presentation: “Galactic Binary Residuals in LISA SGWB Amplitude Inference: Source Power Concentration and Spectral Degeneracy”</span>
     <span class="cv-sub-right"></span>
   </div>
-  <div class="cv-note"><em>Yangzhou, Jiangsu, China</em> · <a href="{{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}">Talk and slides</a></div>
+  <div class="cv-note"><em>Yangzhou, Jiangsu, China</em> · <a href="{{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}">Presentation and slides</a></div>
 </div>
 
 <div class="cv-block">

@@ -21,7 +21,7 @@ doi: '10.48550/arXiv.2607.25349'
 paperurl: 'https://arxiv.org/abs/2607.25349'
 pdfurl: 'https://arxiv.org/pdf/2607.25349'
 bibtexurl: /files/bibtex3.bib
-description: 'A catalog-level study of residual Galactic binary power, source concentration, and spectral degeneracy in LISA stochastic gravitational-wave inference.'
+description: 'A catalog-level study of residual Galactic binary power, source power concentration, and spectral degeneracy in LISA stochastic gravitational-wave background inference.'
 summary: 'Using LISA Data Challenge 2A Sangria injections, we study residual Galactic binary power and its degeneracy with a stochastic background. The forecasted uncertainty increases and residual-induced shifts are conditional on a catalog-level scalar power model and fixed covariance; they are not detection significances.'
 citation: 'Ruo-Yu Guan and Yan Wang (2026). “Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy.” arXiv:2607.25349 [astro-ph.HE]. https://doi.org/10.48550/arXiv.2607.25349.'
 related_talks:

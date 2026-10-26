@@ -1,6 +1,6 @@
 # ruoyuguan.github.io
 
-Source code of Ruo-Yu Guan's personal academic website: <https://ruoyuguan.github.io>
+Source code of Ruo-Yu Guan's personal website: <https://ruoyuguan.github.io>
 
 Built with [Jekyll](https://jekyllrb.com/) using the [Academic Pages](https://github.com/academicpages/academicpages.github.io) template, hosted on GitHub Pages.
 
@@ -10,11 +10,11 @@ Built with [Jekyll](https://jekyllrb.com/) using the [Academic Pages](https://gi
 
 | Directory | Content |
 |---|---|
-| `_pages/about.md` | Homepage: research, selected work, latest news |
+| `_pages/about.md` | Homepage: personal introduction |
 | `_pages/research.md` | Research overview |
 | `_pages/cv.md` | CV |
 | `_publications/` | Journal articles (`category: manuscripts`) and preprints (`category: preprints`) |
-| `_talks/` | Talks and posters |
+| `_talks/` | Oral and poster presentations |
 | `_posts/` | Blog posts |
 | `_portfolio/` | Photography archive (temporarily offline; local preview retained) |
 | `files/` | Downloadable files (PDFs, BibTeX) — served at `/files/` |
@@ -25,7 +25,7 @@ Built with [Jekyll](https://jekyllrb.com/) using the [Academic Pages](https://gi
 ## Updating content
 
 - **New publication**: add a Markdown file to `_publications/` following the existing entries' front matter (`category: manuscripts` for journal articles, `category: preprints` for arXiv preprints). Put the BibTeX file in `files/` and reference it with `bibtexurl`.
-- **New talk**: add a Markdown file to `_talks/` (filename must start with the talk date, `YYYY-MM-DD-...`). Slides/posters go to `files/`, preview images to `images/`.
+- **New presentation**: add a Markdown file to `_talks/` (filename must start with the presentation date, `YYYY-MM-DD-...`). Slides/posters go to `files/`, preview images to `images/`.
 - **New blog post**: add a Markdown file to `_posts/` (filename `YYYY-MM-DD-....md`).
 - **Photography**: the public section is temporarily offline. Its pages, originals and WebP assets are excluded from production; source files and local preview remain available. An entry's `published: true` does not override the collection-wide exclusion. See the [maintenance, preview and restoration guide](MAINTENANCE.md#photography). Files in this public repository remain publicly accessible.
 

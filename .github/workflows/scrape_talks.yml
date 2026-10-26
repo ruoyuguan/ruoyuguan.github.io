@@ -29,7 +29,7 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Check deterministic talk map
+      - name: Check deterministic presentation map
         run: python3 talkmap.py --check
 
       - name: Build production site

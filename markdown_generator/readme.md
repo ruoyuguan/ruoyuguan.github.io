@@ -20,7 +20,7 @@ permalinks, or retain the old address in `redirect_from` when changing a slug.
 Provide the actual authors, publication status, a short description, and verified
 DOI/arXiv/BibTeX links. Add code and data links only when public resources exist.
 
-## Talks and map
+## Presentations and map
 
 Keep the title, date, type, venue, location, and presentation links in
 `_talks/*.md`. For the map, add one-line `latitude`, `longitude`, and
@@ -36,7 +36,7 @@ python3 talkmap.py --check
 ```
 
 The first command regenerates `talkmap/org-locations.js`; the second checks that
-it matches the published talks without writing anything. Both use only Python's
+it matches the published presentations without writing anything. Both use only Python's
 standard library. The original `talkmap.ipynb` and output notebook are preserved
 as historical maintenance material and are no longer used by CI.
 

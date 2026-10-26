@@ -9,7 +9,7 @@ sitemap: false
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow">
-  <title>Research talk locations — Ruo-Yu Guan</title>
+  <title>Research presentation locations — Ruo-Yu Guan</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <style>
@@ -30,11 +30,11 @@ sitemap: false
   </style>
 </head>
 <body>
-  <div id="map" role="region" aria-label="Interactive map of research talk locations" aria-describedby="map-help" tabindex="0"></div>
-  <p id="map-help" class="map-note">Markers show approximate city locations, not exact venues. Select a marker or a talk below for details. Map tiles: © <a href="https://www.openstreetmap.org/copyright" target="_top">OpenStreetMap contributors</a>.</p>
+  <div id="map" role="region" aria-label="Interactive map of research presentation locations" aria-describedby="map-help" tabindex="0"></div>
+  <p id="map-help" class="map-note">Markers show approximate city locations, not exact venues. Select a marker or a presentation below for details. Map tiles: © <a href="https://www.openstreetmap.org/copyright" target="_top">OpenStreetMap contributors</a>.</p>
   <p id="map-status" class="map-note" role="status"></p>
-  <ul id="talk-list" class="talk-list" aria-label="Talks shown on this map"></ul>
-  <noscript><p class="map-note">The interactive map requires JavaScript. See the <a href="../talks/" target="_top">talks list</a> for all presentations and locations.</p></noscript>
+  <ul id="talk-list" class="talk-list" aria-label="Presentations shown on this map"></ul>
+  <noscript><p class="map-note">The interactive map requires JavaScript. See the <a href="../talks/" target="_top">presentation list</a> for all presentations and locations.</p></noscript>
   <script src="org-locations.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -58,7 +58,7 @@ sitemap: false
         list.appendChild(item);
       });
       if (!window.L) {
-        document.getElementById("map-status").textContent = "The map could not load. All talk links remain available below.";
+        document.getElementById("map-status").textContent = "The map could not load. All presentation links remain available below.";
         document.getElementById("map").hidden = true;
         return;
       }
@@ -68,7 +68,7 @@ sitemap: false
         attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_top">OpenStreetMap</a>'
       }).addTo(map);
       tiles.on("tileerror", function () {
-        document.getElementById("map-status").textContent = "Some map tiles could not load. Talk locations and links are listed below.";
+        document.getElementById("map-status").textContent = "Some map tiles could not load. Presentation locations and links are listed below.";
       });
       var positions = [];
       talks.forEach(function (talk) {
@@ -87,7 +87,7 @@ sitemap: false
         map.fitBounds(positions, {padding: [35, 35], maxZoom: 7});
       } else {
         map.setView([30, 110], 3);
-        document.getElementById("map-status").textContent = "No mapped talks yet.";
+        document.getElementById("map-status").textContent = "No mapped presentations yet.";
       }
     }());
   </script>

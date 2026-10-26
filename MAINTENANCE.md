@@ -77,12 +77,19 @@ python3 talkmap.py --check
 
 ## 动态与 CV
 
-科研动态使用 `news: true`，首页只显示最近 3 条；个人随笔保留在 News & Notes 中。用 `excerpt` 和 `description` 控制列表和搜索摘要。
+动态与随笔统一保留在 Blog 中。`news: true` 用于标记动态条目，个人随笔使用 `news: false`；用 `excerpt` 和 `description` 控制列表和搜索摘要。
 
-CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`，在本地启动站点，再运行：
+CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`。为避免把本地预览地址写入 PDF，先运行生产构建并启动静态预览：
 
 ```sh
 npm ci
+JEKYLL_ENV=production bundle exec jekyll build
+python3 -m http.server 4000 --directory _site
+```
+
+然后在另一个终端运行：
+
+```sh
 node scripts/export_cv.mjs http://127.0.0.1:4000
 ```
 

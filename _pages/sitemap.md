@@ -2,7 +2,7 @@
 layout: archive
 title: "Sitemap"
 permalink: /sitemap/
-description: "Pages and research outputs on Ruo-Yu Guan's academic website."
+description: "Pages and collections on Ruo-Yu Guan's personal website."
 author_profile: true
 ---
 
@@ -20,7 +20,7 @@ Browse the site below, or use the [XML sitemap]({{ '/sitemap.xml' | relative_url
 
 {% for collection in site.collections %}
   {% if collection.output and collection.docs.size > 0 %}
-  <h2>{% case collection.label %}{% when 'portfolio' %}Photography{% when 'posts' %}News &amp; notes{% else %}{{ collection.label | capitalize }}{% endcase %}</h2>
+  <h2>{% case collection.label %}{% when 'portfolio' %}Photography{% when 'talks' %}Presentations{% when 'posts' %}Blog{% else %}{{ collection.label | capitalize }}{% endcase %}</h2>
   <ul>
   {% for item in collection.docs reversed %}
     {% if item.sitemap != false and item.published != false %}
