@@ -43,3 +43,9 @@ I am a PhD Candidate in Theoretical Physics at Huazhong University of Science an
 I am a member of the Gravitational-Wave Physics Group at the National Gravitation Laboratory, School of Physics, HUST. I am also a Core Member of the LISA Consortium, with the Astrophysics Working Group (AstroWG) as my primary working group.
 
 [Google Scholar]({{ site.author.googlescholar }}) · [ORCID]({{ site.author.orcid }}) · [GitHub](https://github.com/{{ site.author.github }}) · [Contact](mailto:{{ site.author.email }})
+
+## Beyond Academia
+
+Outside research, I am a **long-distance runner** (marathons, half marathons, trail races, ITRA), a **specialty-coffee enthusiast** and former part-time barista focused on pour-over, and an **action-camera photographer** filming first-person POV with DJI Nano and DJI Action 5 Pro.
+
+[More about my life beyond research]({{ '/beyond-academia/' | relative_url }})

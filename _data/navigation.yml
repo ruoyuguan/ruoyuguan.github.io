@@ -23,5 +23,8 @@ main:
   - title: "News"
     url: /year-archive/
 
+  - title: "Beyond Academia"
+    url: /beyond-academia/
+
 #  - title: "Guide"
 #   url: /markdown/
