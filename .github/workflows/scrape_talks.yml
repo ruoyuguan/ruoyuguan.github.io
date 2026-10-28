@@ -29,6 +29,9 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
+      - name: Check analytics consent state transitions
+        run: node scripts/test_analytics_consent.mjs
+
       - name: Check deterministic presentation map
         run: python3 talkmap.py --check
 

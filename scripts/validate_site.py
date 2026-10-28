@@ -42,9 +42,20 @@ class Page(HTMLParser):
         self.in_style = False
         self.canonical = None
         self.redirect = False
+        self.html_doctype = False
+        self.in_toc = False
+        self.toc_links = []
+
+    def handle_decl(self, declaration):
+        if declaration.lower() == "doctype html":
+            self.html_doctype = True
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "nav" and "page__toc" in attrs.get("class", "").split():
+            self.in_toc = True
+        if tag == "a" and self.in_toc and attrs.get("href"):
+            self.toc_links.append(attrs["href"])
         if attrs.get("id"):
             if attrs["id"] in self.ids:
                 self.problems.append(f"duplicate HTML id: {attrs['id']}")
@@ -86,6 +97,8 @@ class Page(HTMLParser):
         self.handle_endtag(tag)
 
     def handle_endtag(self, tag):
+        if tag == "nav":
+            self.in_toc = False
         if tag == "script":
             if self.script_type == "application/ld+json":
                 try:
@@ -204,6 +217,26 @@ def main():
                 errors.append(f"unpublished photography route was generated: {route}")
 
     publications = 0
+    # TOCs must be present in the HTML, including when JavaScript is disabled.
+    for path in sorted((source / "_posts").glob("*.md")):
+        if scalar_frontmatter(path, "toc") != "true" or scalar_frontmatter(path, "published") == "false":
+            continue
+        route = scalar_frontmatter(path, "permalink")
+        output = route_file(root, route) if route else None
+        # Future posts may legitimately be omitted from a production build.
+        if output in pages and not pages[output].toc_links:
+            errors.append(f"{path.name}: toc: true needs a rendered table of contents")
+
+    map_path = root / "talkmap/map.html"
+    map_page = pages.get(map_path)
+    if map_page is None:
+        errors.append("missing presentation map document")
+    else:
+        if not map_page.html_doctype or not map_path.read_text(encoding="utf-8").lstrip().lower().startswith("<!doctype html>"):
+            errors.append("presentation map must start with an HTML doctype, not unparsed front matter")
+        if not any("noindex" in value.lower() for value in map_page.metadata["robots"]):
+            errors.append("embedded presentation map needs noindex metadata")
+
     for path in sorted((source / "_publications").glob("*.md")):
         if scalar_frontmatter(path, "published") == "false":
             continue
@@ -238,7 +271,7 @@ def main():
                 route = urlsplit(element.text).path
                 if route_file(root, route) is None:
                     errors.append(f"sitemap references a missing route: {route}")
-                if route in draft_routes or route.startswith(("/markdown_generator/", "/photography-drafts/")):
+                if route == "/talkmap/map.html" or route in draft_routes or route.startswith(("/markdown_generator/", "/photography-drafts/")):
                     errors.append(f"sitemap includes unpublished/maintenance route: {route}")
         except ET.ParseError as error:
             errors.append(f"invalid sitemap XML: {error}")

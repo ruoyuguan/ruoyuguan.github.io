@@ -9,7 +9,7 @@ const photoNames = (await readdir('_portfolio')).filter(name => /\.(md|html)$/.t
 const photoSources = await Promise.all(photoNames.map(name => readFile('_portfolio/' + name, 'utf8')));
 const expectedPhotos = photoSources.filter(source => /^published: true\s*$/m.test(source.split(/^---\s*$/m)[1])).length;
 const photographyHidden = /^published: false\s*$/m.test((await readFile('_pages/portfolio.html', 'utf8')).split(/^---\s*$/m)[1]);
-const pagePaths = ['/', '/publications/', '/cv/', '/talks/', '/research/'];
+const pagePaths = ['/', '/publications/', '/cv/', '/talks/', '/research/', '/year-archive/', '/beyond-academia/'];
 if (!photographyHidden) pagePaths.push('/portfolio/');
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -27,8 +27,9 @@ try {
     await context.close();
   }
   for (const colorScheme of ['light', 'dark']) {
-    for (const width of [1365, 390]) {
+    for (const width of [1365, 390, 320]) {
       const context = await browser.newContext({ viewport: { width, height: 900 }, colorScheme });
+      await context.route(/googletagmanager|google-analytics/, route => route.fulfill({ status: 200, body: '' }));
       const page = await context.newPage();
       page.on('pageerror', error => failures.push(error.message));
       for (const path of pagePaths) {
@@ -56,7 +57,7 @@ try {
         await page.evaluate(() => window.scrollTo(0, 0));
         await page.screenshot({ path: `${output}/${path.replaceAll('/', '') || 'home'}-${width}-${colorScheme}.png`, fullPage: true });
       }
-      if (width === 390) {
+      if (width <= 390) {
         const menu = page.getByRole('button', { name: 'More navigation links' });
         await menu.focus();
         await page.keyboard.press('Enter');
@@ -65,6 +66,46 @@ try {
         await page.screenshot({ path: `${output}/menu-${colorScheme}.png` });
         await page.keyboard.press('Escape');
         assert.equal(await menu.getAttribute('aria-expanded'), 'false');
+
+        const contact = page.locator('.author__urls-wrapper button');
+        const contactLinks = page.locator('#author-links');
+        async function checkContact(visible) {
+          assert.equal(await contactLinks.isVisible(), visible, 'Contact menu visibility');
+          assert.equal(await contact.getAttribute('aria-expanded'), String(visible), 'Contact menu accessibility state');
+          assert.equal(await contact.evaluate(button => button.classList.contains('open')), visible, 'Contact menu button state');
+        }
+        await checkContact(false);
+        await contact.click();
+        await checkContact(true);
+        await contact.click();
+        await checkContact(false);
+        await page.setViewportSize({ width: 1365, height: 900 });
+        await page.waitForFunction(() => document.querySelector('.author__urls-wrapper button').getAttribute('aria-expanded') === 'true');
+        await checkContact(true);
+        assert.equal(await contactLinks.evaluate(links => links.style.display), '', 'Desktop display belongs to CSS');
+        await page.setViewportSize({ width, height: 900 });
+        await page.waitForFunction(() => document.querySelector('.author__urls-wrapper button').getAttribute('aria-expanded') === 'false');
+        await checkContact(false);
+        for (const [boundaryWidth, visible] of [[925, true], [924, false], [width, false]]) {
+          await page.setViewportSize({ width: boundaryWidth, height: 900 });
+          await page.waitForFunction(expected => document.querySelector('.author__urls-wrapper button').getAttribute('aria-expanded') === String(expected), visible);
+          await checkContact(visible);
+        }
+        await contact.focus();
+        await contact.evaluate(button => { for (let count = 0; count < 21; count++) button.click(); });
+        await checkContact(true);
+        await page.keyboard.press('Escape');
+        await checkContact(false);
+        assert.ok(await contact.evaluate(button => button === document.activeElement), 'Escape restores contact-button focus');
+        await page.keyboard.press('Space');
+        await checkContact(true);
+        await contactLinks.locator('a').first().focus();
+        await page.keyboard.press('Escape');
+        await checkContact(false);
+        await page.keyboard.press('Enter');
+        await checkContact(true);
+        await page.keyboard.press('Escape');
+        await checkContact(false);
       }
       const toggle = page.locator('#theme-toggle-button');
       const before = await toggle.getAttribute('aria-pressed');
@@ -84,6 +125,29 @@ try {
   await page.getByRole('button', { name: 'Enable optional analytics' }).click();
   assert.equal(await page.evaluate(() => localStorage.getItem('analytics-consent')), 'granted');
   assert.equal(await page.locator('script[src*="googletagmanager.com"]').count(), 1);
+  const secondTab = await context.newPage();
+  await secondTab.goto(site + '/terms/', { waitUntil: 'networkidle' });
+  await context.addCookies([{ name: '_ga', value: 'test-cookie', url: site }]);
+  await secondTab.getByRole('button', { name: 'Disable analytics' }).click();
+  await page.waitForFunction(() => window['ga-disable-G-PQFJ9TQXB7'] === true);
+  assert.equal(await page.locator('#analytics-status').textContent(), 'Analytics is off in this browser.');
+  assert.equal((await context.cookies()).filter(cookie => /^_ga(?:_|$)/.test(cookie.name)).length, 0, 'Withdrawal clears accessible analytics cookies');
+  await page.getByRole('button', { name: 'Enable optional analytics' }).click();
+  await secondTab.waitForFunction(() => window['ga-disable-G-PQFJ9TQXB7'] === false);
+  assert.equal(await page.locator('script[src*="googletagmanager.com"]').count(), 1, 'Re-grant does not duplicate the tag');
+  await secondTab.evaluate(() => localStorage.removeItem('analytics-consent'));
+  await page.waitForFunction(() => window['ga-disable-G-PQFJ9TQXB7'] === true);
+  await page.getByRole('button', { name: 'Enable optional analytics' }).click();
+  await secondTab.waitForFunction(() => window['ga-disable-G-PQFJ9TQXB7'] === false);
+  await secondTab.evaluate(() => localStorage.clear());
+  await page.waitForFunction(() => window['ga-disable-G-PQFJ9TQXB7'] === true);
+  await page.getByRole('button', { name: 'Enable optional analytics' }).click();
+  await page.evaluate(() => {
+    localStorage.setItem('analytics-consent', 'denied');
+    window.dispatchEvent(new Event('pageshow'));
+  });
+  assert.equal(await page.evaluate(() => window['ga-disable-G-PQFJ9TQXB7']), true, 'Restored pages re-read consent');
+  await secondTab.close();
   await page.getByRole('button', { name: 'Disable analytics' }).click();
   assert.equal(await page.evaluate(() => window['ga-disable-G-PQFJ9TQXB7']), true);
   await page.getByRole('button', { name: 'Enable optional analytics' }).click();
@@ -92,6 +156,55 @@ try {
   await page.reload({ waitUntil: 'networkidle' });
   assert.equal(await page.locator('script[src*="googletagmanager.com"]').count(), 0);
   await context.close();
+  for (const signal of ['doNotTrack', 'globalPrivacyControl']) {
+    const privacyContext = await browser.newContext();
+    await privacyContext.route(/googletagmanager|google-analytics/, route => route.fulfill({ status: 200, body: '' }));
+    await privacyContext.addInitScript(signal => {
+      localStorage.setItem('analytics-consent', 'granted');
+      Object.defineProperty(navigator, signal, { get: () => signal === 'doNotTrack' ? '1' : true });
+    }, signal);
+    const privacyPage = await privacyContext.newPage();
+    await privacyPage.goto(site + '/terms/', { waitUntil: 'networkidle' });
+    await privacyPage.getByRole('button', { name: 'Enable optional analytics' }).click();
+    assert.equal(await privacyPage.evaluate(() => window['ga-disable-G-PQFJ9TQXB7']), true, signal);
+    assert.equal(await privacyPage.locator('script[src*="googletagmanager.com"]').count(), 0, `${signal}: no analytics tag`);
+    await privacyContext.close();
+  }
+  const noScriptContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  const noScriptPage = await noScriptContext.newPage();
+  for (const path of ['/posts/2025/07/formless-freedom/', '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/']) {
+    await noScriptPage.setViewportSize({ width: 390, height: 844 });
+    await noScriptPage.goto(site + path, { waitUntil: 'networkidle' });
+    assert.ok(await noScriptPage.locator('.page__toc').isVisible(), `${path}: TOC without JavaScript`);
+    const toc = await noScriptPage.evaluate(() => ({
+      links: [...document.querySelectorAll('.page__toc a')].map(link => ({
+        text: link.textContent.trim(), target: !!document.getElementById(decodeURIComponent(link.hash.slice(1)))
+      })),
+      headings: document.querySelectorAll('.page__content h2[id], .page__content h3[id]').length,
+      overflow: document.documentElement.scrollWidth > innerWidth
+    }));
+    assert.equal(toc.links.length, toc.headings, `${path}: every section has a TOC link`);
+    assert.ok(toc.links.every(link => link.text && link.target), `${path}: valid TOC text and targets`);
+    assert.equal(toc.overflow, false, `${path}: mobile TOC layout`);
+    await noScriptPage.screenshot({ path: `${output}/toc-${path.includes('formless-freedom') ? 'essay' : 'skill'}-390-no-js.png` });
+    if (path.includes('formless-freedom')) {
+      await noScriptPage.locator('.page__toc a[href="#english-version"]').click();
+      assert.equal(new URL(noScriptPage.url()).hash, '#english-version', 'Custom bilingual anchors remain usable');
+      const anchorPosition = await noScriptPage.evaluate(() => ({
+        heading: document.getElementById('english-version').getBoundingClientRect().top,
+        masthead: document.querySelector('.masthead').getBoundingClientRect().bottom
+      }));
+      assert.ok(anchorPosition.heading >= Math.max(0, anchorPosition.masthead), 'Native TOC jumps keep headings visible below navigation');
+    }
+    await noScriptPage.setViewportSize({ width: 320, height: 844 });
+    assert.ok(await noScriptPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${path}: narrow no-JavaScript layout`);
+    for (const link of await noScriptPage.locator('#site-nav .visible-links a').all()) {
+      assert.ok(await link.isVisible(), 'All main navigation links remain available without JavaScript');
+    }
+    assert.equal(await noScriptPage.locator('#navigation-toggle').isVisible(), false, 'No inactive navigation toggle without JavaScript');
+    assert.equal(await noScriptPage.locator('#theme-toggle-button').isVisible(), false, 'No inactive theme toggle without JavaScript');
+  }
+  await noScriptContext.close();
   const researchContext = await browser.newContext({ viewport: { width: 390, height: 844 }, colorScheme: 'dark' });
   const research = await researchContext.newPage();
   research.on('pageerror', error => failures.push(error.message));
@@ -100,12 +213,26 @@ try {
   assert.ok(await research.locator('mjx-container').count() > 5, 'Publication equations render');
   assert.ok(await research.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Publication mobile layout');
   await research.screenshot({ path: `${output}/preprint-390-dark.png`, fullPage: true });
+  await research.goto(site + '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/', { waitUntil: 'networkidle' });
+  assert.ok(await research.locator('.page__toc').isVisible(), 'TOC in dark theme');
+  assert.ok(await research.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Dark mobile TOC layout');
+  await research.screenshot({ path: `${output}/toc-skill-390-dark.png` });
   await research.goto(site + '/talkmap.html', { waitUntil: 'networkidle' });
+  await research.locator('iframe').scrollIntoViewIfNeeded();
   const mapFrame = research.frameLocator('iframe');
   await mapFrame.locator('.leaflet-marker-icon').first().waitFor({ timeout: 20000 });
   assert.equal(await mapFrame.locator('.leaflet-marker-icon').count(), 2);
+  assert.equal(await mapFrame.locator('body').evaluate(body => body.ownerDocument.compatMode), 'CSS1Compat', 'Map uses standards mode');
+  assert.ok(!(await mapFrame.locator('body').innerText()).trimStart().startsWith('---'), 'No unparsed map front matter');
+  assert.ok(!(await (await researchContext.request.get(site + '/sitemap.xml')).text()).includes('/talkmap/map.html'), 'Embedded map stays out of the sitemap');
   await research.screenshot({ path: `${output}/talkmap-390-dark.png`, fullPage: true });
+  // Use the generated filename so this also works with a basic static preview.
+  const posterResponse = await research.goto(site + '/talks/2024-12-01-pku-forum-poster.html', { waitUntil: 'networkidle' });
+  assert.equal(posterResponse.status(), 200, 'Poster document loads');
+  const email = await research.locator('.page__content a[href^="mailto:"]').first().getAttribute('href');
+  assert.ok(email && email.slice('mailto:'.length).includes('@'), 'Poster has a usable direct contact link');
+  assert.ok(!(await research.locator('.page__content').innerText()).includes('email address shown in the sidebar'), 'Poster does not refer to a missing sidebar');
   await researchContext.close();
   assert.deepEqual(failures, [], 'JavaScript runtime errors');
-  console.log(`Passed: ${pagePaths.length * 4} desktop/mobile page renders, photography visibility, light/dark menus, keyboard theme control, persistence, images, analytics consent, publication equations and real map markers.`);
+  console.log(`Passed: ${pagePaths.length * 6} desktop/mobile page renders, photography visibility, keyboard menus and breakpoint transitions, theme persistence, images, cross-tab analytics and privacy signals, no-JavaScript TOCs, equations, standards-mode map and poster contact.`);
 } finally { await browser.close(); }

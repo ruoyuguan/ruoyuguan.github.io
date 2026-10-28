@@ -44,6 +44,8 @@ layout: default
         </header>
       {% endunless %}
 
+      {% if page.toc %}{% include toc html=content %}{% endif %}
+
       <section class="page__content" itemprop="text">
         {{ content }}
 

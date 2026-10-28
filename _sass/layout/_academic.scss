@@ -28,6 +28,26 @@ ul.publication-links { list-style: none; display: flex; flex-wrap: wrap; gap: .4
 .cv-print-heading { display: none; }
 .privacy-controls { display: flex; flex-wrap: wrap; gap: .7rem; }
 .privacy-controls button { cursor: pointer; }
+// Without JavaScript the navigation can wrap, so keep it in normal flow.
+.no-js .masthead { position: static; }
+.no-js body { padding-top: 0; }
+.no-js .greedy-nav { min-width: 0; }
+.no-js .greedy-nav .visible-links { display: flex; flex-wrap: wrap; align-items: center; }
+.no-js .greedy-nav .visible-links > li { display: block; max-width: 100%; }
+.no-js .greedy-nav .visible-links a { white-space: normal; overflow-wrap: anywhere; }
+.no-js #navigation-toggle, .no-js #theme-toggle { display: none; }
+.page__content h2[id], .page__content h3[id] { scroll-margin-top: calc(#{$masthead-height} + 1rem); }
+.page__toc {
+  margin: 1.25rem 0 1.75rem;
+  background: var(--global-bg-color);
+  text-transform: none;
+  letter-spacing: normal;
+  .nav__title { margin: 0; padding: .65rem 1rem; }
+  .toc__menu { font-size: 1rem; }
+  .toc__menu a { color: var(--global-link-color); font-size: 1em; overflow-wrap: anywhere; }
+  .toc__menu a:hover { color: var(--global-link-color); background: var(--global-bg-color); text-decoration-line: underline !important; }
+  .toc__entry--h3 a { padding-left: 2rem; font-weight: normal; }
+}
 @media (max-width: 640px) {
   .photography-grid { grid-template-columns: 1fr; }
   .photography-card img { height: auto; max-height: 440px; object-fit: contain; }
@@ -39,7 +59,7 @@ ul.publication-links { list-style: none; display: flex; flex-wrap: wrap; gap: .4
 @media print {
   @page { size: A4; margin: 16mm 15mm; }
   html, body { background: white !important; color: #202020 !important; font-size: 10pt !important; padding: 0 !important; margin: 0 !important; }
-  .masthead, .sidebar, .page__footer, .skip-link, .cv-download, .page__meta, .pagination { display: none !important; }
+  .masthead, .sidebar, .page__footer, .skip-link, .cv-download, .page__meta, .pagination, .page__toc { display: none !important; }
   #main, .archive, .page { float: none !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
   a { color: #24465a !important; text-decoration: none !important; }
   h1 { font-size: 20pt !important; }

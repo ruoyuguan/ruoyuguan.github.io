@@ -76,18 +76,37 @@ $(document).ready(function () {
   // FitVids init
   fitvids();
 
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function () {
-    $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
-    $(this).attr('aria-expanded', $(this).hasClass('open'));
-  });
+  // Keep the contact menu and its accessibility state in sync at both layouts.
+  const contactDesktop = window.matchMedia('(min-width: ' + scssLarge + 'px)');
+  $('.author__urls-wrapper').each(function () {
+    const wrapper = $(this);
+    const button = wrapper.children('button').first();
+    const links = wrapper.children('.author__urls').first();
+    var mobileOpen = false;
 
-  // Restore the follow menu if toggled on a window resize
-  jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
+    function setContactMenu(open) {
+      mobileOpen = !contactDesktop.matches && open;
+      const visible = contactDesktop.matches || mobileOpen;
+      // CSS owns desktop visibility; no inline display survives a breakpoint.
+      // Immediate updates also avoid rapid clicks queuing stale animations.
+      links.stop(true, true).css('display', mobileOpen ? 'block' : '');
+      button.toggleClass('open', visible).attr('aria-expanded', String(visible));
     }
+
+    button.on('click', function () {
+      setContactMenu(!mobileOpen);
+    });
+    wrapper.on('keydown', function (event) {
+      if (event.key === 'Escape' && mobileOpen) {
+        event.preventDefault();
+        setContactMenu(false);
+        button.trigger('focus');
+      }
+    });
+    contactDesktop.addEventListener('change', function () {
+      setContactMenu(false);
+    });
+    setContactMenu(false);
   });
 
   // init smooth scroll, this needs to be slightly more than then fixed masthead height

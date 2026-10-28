@@ -79,6 +79,8 @@ python3 talkmap.py --check
 
 动态与随笔统一保留在 Blog 中。`news: true` 用于标记动态条目，个人随笔使用 `news: false`；用 `excerpt` 和 `description` 控制列表和搜索摘要。
 
+文章设置 `toc: true` 时，构建会在正文前生成二、三级标题目录，保留标题现有锚点；关闭 JavaScript 也可使用。标题应使用 Markdown 的 `##` / `###` 或带 `id` 的 HTML 标题。
+
 CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`。为避免把本地预览地址写入 PDF，先运行生产构建并启动静态预览：
 
 ```sh
@@ -104,6 +106,7 @@ bundle install
 npm ci
 npm run build:js
 python3 talkmap.py --check
+node scripts/test_analytics_consent.mjs
 JEKYLL_ENV=production bundle exec jekyll build
 python3 scripts/validate_site.py _site
 bundle exec jekyll serve --host 127.0.0.1
