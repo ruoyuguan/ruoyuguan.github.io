@@ -3,6 +3,10 @@
 # Script to update the CV JSON file from the markdown CV
 # Author: Yuan Chen
 
+# Archived wrapper: stop before resolving paths or invoking the old converter.
+printf '%s\n' 'Retired: JSON-CV conversion is disabled. Maintain _pages/cv.md and export the PDF with scripts/export_cv.mjs; see MAINTENANCE.md.' >&2
+exit 1
+
 # Set the base directory to the repository root
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 

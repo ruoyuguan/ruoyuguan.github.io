@@ -40,13 +40,18 @@ try {
           math: !!document.querySelector('#MathJax-script'),
           analytics: !!document.querySelector('script[src*="googletagmanager.com"]'),
           headings: document.querySelectorAll('h1').length,
-          images: [...document.images].filter(img => !img.loading || img.loading !== 'lazy').every(img => img.complete && img.naturalWidth > 0)
+          images: [...document.images].filter(img => !img.loading || img.loading !== 'lazy').every(img => img.complete && img.naturalWidth > 0),
+          colors: ['--global-fig-caption-color', '--global-link-color-hover', '--global-masthead-link-color-hover'].map(name => ({
+            name, value: getComputedStyle(document.documentElement).getPropertyValue(name).trim(),
+            valid: CSS.supports('color', getComputedStyle(document.documentElement).getPropertyValue(name).trim())
+          }))
         }));
         assert.ok(metrics.scrollWidth <= metrics.width, `${path}: horizontal overflow ${JSON.stringify(metrics)}`);
         assert.equal(metrics.headings, 1, `${path}: exactly one H1`);
         assert.equal(metrics.math, false, `${path}: unnecessary MathJax`);
         assert.equal(metrics.analytics, false, `${path}: analytics loaded without consent`);
         assert.ok(metrics.images, `${path}: broken image`);
+        assert.ok(metrics.colors.every(color => color.valid), `${path}: resolved theme colors ${JSON.stringify(metrics.colors)}`);
         if (photographyHidden) assert.equal(await page.locator('a[href="/portfolio/"]').count(), 0, `${path}: removed photography link`);
         if (path === '/portfolio/') {
           assert.equal(await page.locator('.photography-card').count(), expectedPhotos);
@@ -172,6 +177,23 @@ try {
   }
   const noScriptContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const noScriptPage = await noScriptContext.newPage();
+  await noScriptPage.goto(site + '/', { waitUntil: 'networkidle' });
+  for (const width of [320, 390, 924, 925, 1365]) {
+    await noScriptPage.setViewportSize({ width, height: 844 });
+    assert.ok(await noScriptPage.locator('#author-links').isVisible(), `${width}px: contacts available without JavaScript`);
+    assert.equal(await noScriptPage.locator('.author__urls-wrapper button').isVisible(), false, `${width}px: inactive contact button hidden`);
+    const profileLinks = await noScriptPage.locator('#author-links a').all();
+    assert.ok(profileLinks.length > 0, 'Contact and profile links exist');
+    await profileLinks[0].focus();
+    for (let index = 0; index < profileLinks.length; index++) {
+      const link = profileLinks[index];
+      assert.ok(await link.isVisible(), `${width}px: visible profile link`);
+      assert.ok(await link.evaluate(element => document.activeElement === element), `${width}px: profile links reachable with Tab`);
+      if (index + 1 < profileLinks.length) await noScriptPage.keyboard.press('Tab');
+    }
+    assert.ok(await noScriptPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${width}px: no-JavaScript contact layout`);
+    await noScriptPage.screenshot({ path: `${output}/contacts-${width}-no-js.png` });
+  }
   for (const path of ['/posts/2025/07/formless-freedom/', '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/']) {
     await noScriptPage.setViewportSize({ width: 390, height: 844 });
     await noScriptPage.goto(site + path, { waitUntil: 'networkidle' });
@@ -234,5 +256,5 @@ try {
   assert.ok(!(await research.locator('.page__content').innerText()).includes('email address shown in the sidebar'), 'Poster does not refer to a missing sidebar');
   await researchContext.close();
   assert.deepEqual(failures, [], 'JavaScript runtime errors');
-  console.log(`Passed: ${pagePaths.length * 6} desktop/mobile page renders, photography visibility, keyboard menus and breakpoint transitions, theme persistence, images, cross-tab analytics and privacy signals, no-JavaScript TOCs, equations, standards-mode map and poster contact.`);
+  console.log(`Passed: ${pagePaths.length * 6} desktop/mobile page renders, resolved theme colors, photography visibility, keyboard menus and breakpoint transitions, theme persistence, images, cross-tab analytics and privacy signals, no-JavaScript contacts at five widths and TOCs, equations, standards-mode map and poster contact.`);
 } finally { await browser.close(); }

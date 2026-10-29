@@ -1,8 +1,8 @@
-Contributions are welcome! 
+This repository contains Ruo-Yu Guan's personal website, based on Academic Pages.
 
-Please add issues and make pull requests. There are no stupid questions. All ideas are welcome. This is a volunteer project. Be excellent to each other.
+Report broken links, rendering problems, or other issues specific to this website to [the site owner](mailto:ruoyuguan.physics@gmail.com). Include the affected URL, browser, and steps to reproduce the problem. This repository does not currently use GitHub Issues. Do not include passwords, tokens, or other sensitive information in a report.
 
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+For local development, content locations, and checks required before publishing, see [MAINTENANCE.md](MAINTENANCE.md). Keep changes focused and preserve existing public URLs. Biographical details, research claims, and unpublished material require the site owner's review.
 
-Fork from master and go from there. Remember that this repository is intended to remain a generic, ready-to-fork template that demonstrates the features of academicpages.
+Issues that can be reproduced in the unmodified Academic Pages template belong in the [upstream issue tracker](https://github.com/academicpages/academicpages.github.io/issues/new/choose); general template questions can use [upstream discussions](https://github.com/academicpages/academicpages.github.io/discussions).
 

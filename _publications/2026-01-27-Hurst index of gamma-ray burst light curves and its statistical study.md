@@ -8,7 +8,6 @@ redirect_from:
   - /publication/2026-01-27-Hurst index of gamma-ray burst light curves and its statistical study
 date: 2026-01-27
 status: published
-selected: true
 math: true
 authors:
   - name: Ruo-Yu Guan

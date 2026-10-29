@@ -58,7 +58,6 @@ bundle exec ruby scripts/preview_drafts.rb
 - `status: preprint` 与 `status: published` 分开；只记录已确认状态。
 - 本人的作者项标记 `self: true`；卡片会自动强调姓名。
 - `summary` 是列表中的短介绍，完整摘要放在正文中。
-- `selected: true` 用于首页代表作；首页最多展示最新 3 篇。
 - 使用稳定的短 `permalink`。更改已经公开的 URL 时，把旧地址加入 `redirect_from`，不要移除现有重定向。
 - 资源支持 arXiv、DOI、ADS、PDF、BibTeX、code、data，只有实际存在的链接才填写。
 - 论文页面默认启用公式；其它含公式页面需手动加 `math: true`。
@@ -73,7 +72,7 @@ python3 talkmap.py
 python3 talkmap.py --check
 ```
 
-这会从源文件生成 `talkmap/org-locations.js`，不联网、不地理编码。旧 notebook 保留供参考；日常维护使用该脚本。CI 只检查，不会自动提交文件。
+这会从源文件生成 `talkmap/org-locations.js`，不联网、不地理编码。旧地图 notebook 已停用，仅保留供参考；日常维护使用该脚本。CI 只检查，不会自动提交文件。
 
 ## 动态与 CV
 
@@ -99,7 +98,7 @@ node scripts/export_cv.mjs http://127.0.0.1:4000
 
 ## 本地构建与检查
 
-使用 Ruby 3.3 或更高的兼容版本、Node.js 20+、Python 3.9+。`Gemfile.lock` 和 `package-lock.json` 应随依赖更新一起提交。
+使用 Ruby 3.3 或更高的兼容版本、受支持的 Node.js LTS（CI 使用 24）、Python 3.9+。`Gemfile.lock` 和 `package-lock.json` 应随依赖更新一起提交。
 
 ```sh
 bundle install
@@ -107,18 +106,34 @@ npm ci
 npm run build:js
 python3 talkmap.py --check
 node scripts/test_analytics_consent.mjs
+python3 -B scripts/test_legacy_archives.py
 JEKYLL_ENV=production bundle exec jekyll build
 python3 scripts/validate_site.py _site
 bundle exec jekyll serve --host 127.0.0.1
 ```
 
-浏览器检查（需要本机 Google Chrome，页面截图保存到忽略的 `output/browser-check/`）：
+CI 使用锁定依赖重新生成 `assets/js/main.min.js`，并检查与已提交文件一致。修改 JS 源码或依赖后，运行 `npm run build:js`，将生成文件与源码一起提交。
+
+浏览器检查覆盖响应式布局、键盘操作、分析隐私状态，以及关闭 JavaScript 时的导航、联系方式和文章目录（需要本机 Google Chrome，页面截图保存到忽略的 `output/browser-check/`）：
 
 ```sh
 node scripts/check_browser.mjs http://127.0.0.1:4000
 ```
 
 也可使用现有 Docker：`docker compose up --build`。容器使用 Ruby 3.3 和锁定依赖。
+
+## 已停用的历史工具
+
+以下源码保留供查阅，不再作为维护入口。旧转换逻辑与当前元数据、CV 和构建架构不兼容；本轮没有继续维护这些旧算法。
+
+| 历史入口 | 当前维护方式 |
+| --- | --- |
+| `scripts/cv_markdown_to_json.py`、`scripts/update_cv_json.sh` | 编辑 `_pages/cv.md`，按上文导出网页对应的 PDF |
+| `markdown_generator/` 中的 Python 和 notebook 导入器，包括 ORCID/BibTeX 工具 | 直接维护 `_publications/`、`_talks/` 的结构化字段和已核实资源 |
+| `talkmap.ipynb`、`talkmap_out.ipynb` | 使用 `python3 talkmap.py` 生成地图数据 |
+| `_layouts/cv-layout.html` | 当前 CV 使用 `archive` 布局；旧布局仅显示停用提示 |
+
+旧脚本启动即返回非零退出码；旧 notebook 每个代码单元格都在历史代码前主动停止，避免直接运行后续单元格触发安装、联网或写文件。原代码和已有 notebook 输出是历史资料，不代表当前站点结果。`scripts/test_legacy_archives.py` 验证这些入口保持停用，CI 会运行该检查。需要批量导入时，应另行设计适配当前数据格式并经过验证的工具。
 
 ## 发布与隐私
 

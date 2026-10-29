@@ -4,6 +4,13 @@ Script to convert markdown CV to JSON format
 Author: Yuan Chen
 """
 
+# Archived source only. Fail before importing dependencies or reading/writing data,
+# including when another script attempts to import this module.
+raise SystemExit(
+    "Retired: JSON-CV conversion is disabled. Maintain _pages/cv.md and export "
+    "the PDF with scripts/export_cv.mjs; see MAINTENANCE.md."
+)
+
 import os
 import re
 import json

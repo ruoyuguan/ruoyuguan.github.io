@@ -36,6 +36,20 @@ ul.publication-links { list-style: none; display: flex; flex-wrap: wrap; gap: .4
 .no-js .greedy-nav .visible-links > li { display: block; max-width: 100%; }
 .no-js .greedy-nav .visible-links a { white-space: normal; overflow-wrap: anywhere; }
 .no-js #navigation-toggle, .no-js #theme-toggle { display: none; }
+// Contact links must remain available when the disclosure script cannot run.
+.no-js .author__urls-wrapper { display: block; position: static; z-index: auto; cursor: default; }
+.no-js .author__urls-wrapper > button { display: none; }
+.no-js .author__urls {
+  display: block;
+  position: static;
+  z-index: auto;
+  margin: .75rem 0 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+.no-js .author__urls::before, .no-js .author__urls::after { display: none; }
+.no-js .author__urls li { white-space: normal; overflow-wrap: anywhere; }
 .page__content h2[id], .page__content h3[id] { scroll-margin-top: calc(#{$masthead-height} + 1rem); }
 .page__toc {
   margin: 1.25rem 0 1.75rem;

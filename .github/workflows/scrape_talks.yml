@@ -23,6 +23,18 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Check reproducible frontend bundle
+        run: |
+          npm ci --ignore-scripts
+          npm run build:js
+          git diff --exit-code -- assets/js/main.min.js
+
       - name: Set up Ruby and locked dependencies
         uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1.321.0
         with:
@@ -31,6 +43,9 @@ jobs:
 
       - name: Check analytics consent state transitions
         run: node scripts/test_analytics_consent.mjs
+
+      - name: Check retired tool execution guards
+        run: python3 -B scripts/test_legacy_archives.py
 
       - name: Check deterministic presentation map
         run: python3 talkmap.py --check

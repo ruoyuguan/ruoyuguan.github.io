@@ -8,7 +8,6 @@ redirect_from:
   - /publication/2026-07-28-Residual Galactic binary foreground in LISA SGWB inference
 date: 2026-07-28
 status: preprint
-selected: true
 math: true
 authors:
   - name: Ruo-Yu Guan

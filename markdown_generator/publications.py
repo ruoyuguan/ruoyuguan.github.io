@@ -1,6 +1,12 @@
 
 # coding: utf-8
 
+# Archived source only: stop before dependencies, input reads, or collection writes.
+raise SystemExit(
+    "Retired: the TSV publications importer is disabled. Maintain _publications/*.md "
+    "directly; see MAINTENANCE.md and markdown_generator/readme.md."
+)
+
 # # Publications markdown generator for academicpages
 # 
 # Takes a TSV of publications with metadata and converts them for use with [academicpages.github.io](academicpages.github.io). This is an interactive Jupyter notebook, with the core python code in publications.py. Run either from the `markdown_generator` folder after replacing `publications.tsv` with one that fits your format.

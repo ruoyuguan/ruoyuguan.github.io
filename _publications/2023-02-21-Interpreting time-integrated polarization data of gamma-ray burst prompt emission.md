@@ -8,7 +8,6 @@ redirect_from:
   - /publication/2023-02-21-Interpreting time-integrated polarization data of gamma-ray burst prompt emission
 date: 2023-02-21
 status: published
-selected: true
 math: true
 authors:
   - name: Ruo-Yu Guan
