@@ -7,11 +7,14 @@ const site = process.argv[2] || 'http://127.0.0.1:4000';
 const output = resolve(process.argv[3] || 'files/ruoyu-guan-cv.pdf');
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 try {
-  const page = await browser.newPage({ colorScheme: 'light' });
+  // Print without entrance animations, which can otherwise capture invisible content.
+  const page = await browser.newPage({ colorScheme: 'light', reducedMotion: 'reduce' });
+  await page.emulateMedia({ media: 'print' });
   // Never send analytics while exporting a document.
   await page.route(/googletagmanager|google-analytics/, route => route.abort());
   const response = await page.goto(new URL('/cv/', site).href, { waitUntil: 'networkidle' });
   if (!response.ok()) throw new Error('The local CV page could not be loaded.');
+  await page.locator('.cv-print-heading').waitFor({ state: 'visible' });
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => {
     document.querySelectorAll('a[href]').forEach(link => {

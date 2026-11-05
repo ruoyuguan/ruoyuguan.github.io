@@ -13,7 +13,7 @@ Double white dwarf binaries are an important population in the millihertz gravit
 
 ## Foregrounds and Stochastic Background Inference
 
-Unresolved and imperfectly recovered Galactic binaries leave residual power that can affect stochastic gravitational-wave background inference. In our [2026 preprint]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), we use LISA Data Challenge 2A Sangria injections and the Erebor comparison table to study source power concentration and spectral degeneracy.
+Unresolved and imperfectly recovered Galactic binaries leave residual power that can affect stochastic gravitational-wave background inference. In our [2026 paper]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D*, we use LISA Data Challenge 2A Sangria injections and the Erebor comparison table to study source power concentration and spectral degeneracy.
 
 Under the paper's catalog-level scalar power model and fixed-noise assumptions, the distribution of residual power across Fourier frequencies changes how strongly foreground uncertainty affects background-amplitude inference. The [Yangzhou workshop presentation]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}) provides slides and an overview of this work.
 

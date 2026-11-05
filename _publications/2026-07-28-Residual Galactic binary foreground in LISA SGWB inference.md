@@ -2,27 +2,27 @@
 title: "Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy"
 collection: publications
 layout: publication
-category: preprints
+category: manuscripts
 permalink: /publications/residual-galactic-binary-foreground-lisa/
 redirect_from:
   - /publication/2026-07-28-Residual Galactic binary foreground in LISA SGWB inference
 date: 2026-07-28
-status: preprint
+status: accepted
 math: true
 authors:
   - name: Ruo-Yu Guan
     self: true
   - name: Yan Wang
-venue: 'arXiv'
+venue: 'Physical Review D'
 arxiv_id: '2607.25349'
 arxiv_category: 'astro-ph.HE'
-doi: '10.48550/arXiv.2607.25349'
-paperurl: 'https://arxiv.org/abs/2607.25349'
+doi: '10.1103/4779-jw6l'
+paperurl: 'https://doi.org/10.1103/4779-jw6l'
 pdfurl: 'https://arxiv.org/pdf/2607.25349'
 bibtexurl: /files/bibtex3.bib
 description: 'A catalog-level study of residual Galactic binary power, source power concentration, and spectral degeneracy in LISA stochastic gravitational-wave background inference.'
 summary: 'Using LISA Data Challenge 2A Sangria injections, we study residual Galactic binary power and its degeneracy with a stochastic background. The forecasted uncertainty increases and residual-induced shifts are conditional on a catalog-level scalar power model and fixed covariance; they are not detection significances.'
-citation: 'Ruo-Yu Guan and Yan Wang (2026). “Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy.” arXiv:2607.25349 [astro-ph.HE]. https://doi.org/10.48550/arXiv.2607.25349.'
+citation: 'Ruo-Yu Guan and Yan Wang (2026). “Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy.” Accepted for publication in Physical Review D. https://doi.org/10.1103/4779-jw6l. arXiv:2607.25349 [astro-ph.HE].'
 related_talks:
   - title: 'Yangzhou workshop oral presentation (2026)'
     url: /talks/2026-07-31-yangzhou-sgwforeground-talk

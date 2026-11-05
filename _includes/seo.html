@@ -122,7 +122,7 @@
   {% for author in page.authors %}<meta name="citation_author" content="{{ author.name | escape }}">
   {% endfor %}
   <meta name="citation_publication_date" content="{{ page.date | date: '%Y' }}">
-  {% if page.status == 'published' %}
+  {% if page.status == 'published' or page.status == 'accepted' %}
     <meta name="citation_journal_title" content="{{ page.venue | escape }}">
     {% if page.volume %}<meta name="citation_volume" content="{{ page.volume | escape }}">{% endif %}
     {% if page.article_number %}<meta name="citation_firstpage" content="{{ page.article_number | escape }}">{% endif %}
@@ -142,7 +142,7 @@
       "headline": {{ page.title | jsonify }},
       "name": {{ page.title | jsonify }},
       "description": {{ page.description | default: page.summary | jsonify }},
-      "datePublished": {{ page.date | date: '%Y-%m-%d' | jsonify }},
+      {% unless page.status == 'accepted' %}"datePublished": {{ page.date | date: '%Y-%m-%d' | jsonify }},{% endunless %}
       "creativeWorkStatus": {{ page.status | capitalize | jsonify }},
       "author": [
         {% for author in page.authors %}
@@ -151,7 +151,7 @@
       ]
       {% if page.doi %}, "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": {{ page.doi | jsonify }}}{% endif %}
       {% if page.paperurl %}, "sameAs": {{ page.paperurl | jsonify }}{% endif %}
-      {% if page.status == 'published' %}
+      {% if page.status == 'published' or page.status == 'accepted' %}
       , "isPartOf": {
         {% if page.volume %}
         "@type": "PublicationVolume",

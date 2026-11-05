@@ -2,7 +2,7 @@
 layout: archive
 title: "CV"
 description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, presentations, and professional activities."
-last_updated: 2026-10-26
+last_updated: 2026-11-06
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -159,21 +159,19 @@ redirect_from:
 
 ## Publications
 
-### Preprints
+### Refereed Journal Articles
 
 1. **Ruo-Yu Guan** and Yan Wang (2026).<br>
    “[Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}).”<br>
-   arXiv:2607.25349 [astro-ph.HE].<br>
-   [arXiv](https://arxiv.org/abs/2607.25349)
+   Accepted for publication in *Physical Review D*.<br>
+   DOI: [10.1103/4779-jw6l](https://doi.org/10.1103/4779-jw6l) · [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
 
-### Refereed Journal Articles
-
-1. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou (2026).<br>
+2. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou (2026).<br>
    “[Hurst index of gamma-ray burst light curves and its statistical study]({{ '/publications/grb-hurst-index/' | relative_url }}).”<br>
    *Journal of High Energy Astrophysics*, **51**, 100559.<br>
    DOI: [10.1016/j.jheap.2026.100559](https://doi.org/10.1016/j.jheap.2026.100559)
 
-2. **Ruo-Yu Guan** and Mi-Xiang Lan (2023).<br>
+3. **Ruo-Yu Guan** and Mi-Xiang Lan (2023).<br>
    “[Interpreting time-integrated polarization data of gamma-ray burst prompt emission]({{ '/publications/grb-time-integrated-polarization/' | relative_url }}).”<br>
    *Astronomy & Astrophysics*, **670**, A160.<br>
    DOI: [10.1051/0004-6361/202243805](https://doi.org/10.1051/0004-6361/202243805)
@@ -199,7 +197,7 @@ Project dates below describe the period of research activity; degree and employm
     <li>Research focus: gravitational-wave astrophysics and Milky Way structure inference using Galactic double white dwarf binaries.</li>
     <li>Building a simulation-based inference pipeline integrating population synthesis (COSMIC) with hierarchical Bayesian inference (GWPopulation).</li>
     <li>Quantifying selection effects, detector response, and observational uncertainties for space-based gravitational-wave observations (Laser Interferometer Space Antenna / TianQin context).</li>
-    <li>First-author preprint on residual Galactic binary foregrounds (arXiv:2607.25349, with Prof. Yan Wang); presented at the 2026 Mid-Year Workshop in Yangzhou.</li>
+    <li>First-author paper on residual Galactic binary foregrounds, accepted for publication in <em>Physical Review D</em> (DOI: <a href="https://doi.org/10.1103/4779-jw6l">10.1103/4779-jw6l</a>; arXiv:2607.25349, with Prof. Yan Wang); presented at the 2026 Mid-Year Workshop in Yangzhou.</li>
   </ul>
 </div>
 

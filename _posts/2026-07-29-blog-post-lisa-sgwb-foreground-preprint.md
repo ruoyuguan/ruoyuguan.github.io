@@ -2,8 +2,8 @@
 title: "New Preprint: How Accurately Must the Residual Galactic-Binary Foreground Be Characterized for LISA SGWB Inference?"
 date: 2026-07-29
 news: true
-description: "New preprint on residual Galactic binary foregrounds, source power concentration, and spectral degeneracy in LISA stochastic-background inference."
-excerpt: "Our new preprint studies how residual Galactic binary foregrounds affect LISA stochastic-background inference under a catalog-level power model."
+description: "Announcement of our preprint on residual Galactic binary foregrounds in LISA stochastic-background inference, with an update on its acceptance in Physical Review D."
+excerpt: "Our paper studies residual Galactic binary foregrounds in LISA stochastic-background inference under a catalog-level power model. Update (November 6, 2026): accepted for publication in Physical Review D."
 permalink: /posts/2026/07/lisa-sgwb-foreground-preprint/
 tags:
   - gravitational-waves
@@ -11,6 +11,8 @@ tags:
   - preprint
   - arXiv
 ---
+
+**Status update (November 6, 2026):** This paper has been accepted for publication in *Physical Review D* ([DOI:10.1103/4779-jw6l](https://doi.org/10.1103/4779-jw6l)). Volume and article number have not yet been assigned. The original preprint announcement follows.
 
 I'm pleased to share our new preprint on arXiv, written with my supervisor and co-author, Prof. Yan Wang.
 

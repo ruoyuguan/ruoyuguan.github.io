@@ -55,7 +55,7 @@ bundle exec ruby scripts/preview_drafts.rb
 
 参考现有文件维护结构化字段：`authors`、`status`、`venue`、`date`、`doi`、`arxiv_id`、`volume`、`article_number`、`summary`、`description` 和资源链接。
 
-- `status: preprint` 与 `status: published` 分开；只记录已确认状态。
+- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页与 PDF 及关联页面；历史新闻通过注明更新日期的补充说明记录状态变化。
 - 本人的作者项标记 `self: true`；卡片会自动强调姓名。
 - `summary` 是列表中的短介绍，完整摘要放在正文中。
 - 使用稳定的短 `permalink`。更改已经公开的 URL 时，把旧地址加入 `redirect_from`，不要移除现有重定向。
