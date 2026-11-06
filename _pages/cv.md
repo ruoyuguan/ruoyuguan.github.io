@@ -3,6 +3,8 @@ layout: archive
 title: "CV"
 description: "Curriculum vitae of Ruo-Yu Guan: education, research experience, publications, presentations, and professional activities."
 last_updated: 2026-11-06
+# Optional independently maintained PDF; leave blank to hide the download button.
+cv_pdf_url:
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -74,7 +76,8 @@ redirect_from:
 }
 </style>
 
-<p class="cv-download"><a class="btn" href="{{ '/files/ruoyu-guan-cv.pdf' | relative_url }}">Download CV (PDF)</a> <span>Last updated: {{ page.last_updated | date: "%B %d, %Y" }}</span></p>
+{% assign cv_pdf_url = page.cv_pdf_url | default: '' | strip %}
+<p class="cv-download">{% if cv_pdf_url != empty %}<a class="btn" href="{{ cv_pdf_url | relative_url | escape }}">Download CV (PDF)</a> {% endif %}<span>Last updated: {{ page.last_updated | date: "%B %d, %Y" }}</span></p>
 
 <div class="cv-print-heading">
   <div class="cv-print-name">Ruo-Yu Guan</div>

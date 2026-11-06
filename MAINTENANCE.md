@@ -55,7 +55,7 @@ bundle exec ruby scripts/preview_drafts.rb
 
 参考现有文件维护结构化字段：`authors`、`status`、`venue`、`date`、`doi`、`arxiv_id`、`volume`、`article_number`、`summary`、`description` 和资源链接。
 
-- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页与 PDF 及关联页面；历史新闻通过注明更新日期的补充说明记录状态变化。
+- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页及关联页面；如另有独立维护的 PDF CV，也需核对其中的论文状态。历史新闻通过注明更新日期的补充说明记录状态变化。
 - 本人的作者项标记 `self: true`；卡片会自动强调姓名。
 - `summary` 是列表中的短介绍，完整摘要放在正文中。
 - 使用稳定的短 `permalink`。更改已经公开的 URL 时，把旧地址加入 `redirect_from`，不要移除现有重定向。
@@ -80,7 +80,11 @@ python3 talkmap.py --check
 
 文章设置 `toc: true` 时，构建会在正文前生成二、三级标题目录，保留标题现有锚点；关闭 JavaScript 也可使用。标题应使用 Markdown 的 `##` / `###` 或带 `id` 的 HTML 标题。
 
-CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`。为避免把本地预览地址写入 PDF，先运行生产构建并启动静态预览：
+网页 CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`。
+
+PDF 下载按钮目前暂停显示：`cv_pdf_url` 留空。以后准备好自己独立排版的 PDF 后，将文件放到 `files/`，在该字段填写网站路径（例如 `/files/my-cv.pdf`），即可恢复下载按钮；再次留空即可关闭。现有 `files/ruoyu-guan-cv.pdf` 仅保留为旧的网页导出文件，页面不再默认链接它。隐藏按钮不会删除 PDF，也不会阻止通过旧地址直接访问。
+
+网页导出脚本仅作为可选的本地预览工具，不是更新独立 PDF CV 的步骤。需要预览网页打印效果时，为避免把本地地址写入 PDF，先运行生产构建并启动静态预览：
 
 ```sh
 npm ci
@@ -91,10 +95,10 @@ python3 -m http.server 4000 --directory _site
 然后在另一个终端运行：
 
 ```sh
-node scripts/export_cv.mjs http://127.0.0.1:4000
+node scripts/export_cv.mjs http://127.0.0.1:4000 output/cv/web-preview.pdf
 ```
 
-需要本机 Google Chrome。输出为 `files/ruoyu-guan-cv.pdf`；请检查分页、文字和链接，再提交此 PDF。导出读取 CV 网页，避免维护第二份履历内容。
+需要本机 Google Chrome。该命令输出到被 Git 忽略的 `output/cv/web-preview.pdf`，不要将网页导出文件覆盖到自己独立维护的 PDF CV 上。
 
 ## 本地构建与检查
 
