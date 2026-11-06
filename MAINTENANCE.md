@@ -82,6 +82,8 @@ python3 talkmap.py --check
 
 网页 CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`。
 
+CV 的论文按署名角色分为 `First-author Publications` 和 `Co-authored Publications`，各自再按 `Published Journal Articles`、`Accepted for Publication`、`Preprints` 区分状态；只展示已有条目的分类。目前只有第一作者论文，其中两篇已发表、一篇已接收。引文统一为“作者，题名，期刊名 卷号，文章号（年份）”，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。保留题名链接，DOI / arXiv 作为下一行资源链接。论文列表保留 `cv-publication-list` 类，以便统一排版和打印分页；同一署名角色下连续编号，调整条目后同步维护后续列表的 `start` 值。
+
 PDF 下载按钮目前暂停显示：`cv_pdf_url` 留空。以后准备好自己独立排版的 PDF 后，将文件放到 `files/`，在该字段填写网站路径（例如 `/files/my-cv.pdf`），即可恢复下载按钮；再次留空即可关闭。现有 `files/ruoyu-guan-cv.pdf` 仅保留为旧的网页导出文件，页面不再默认链接它。隐藏按钮不会删除 PDF，也不会阻止通过旧地址直接访问。
 
 网页导出脚本仅作为可选的本地预览工具，不是更新独立 PDF CV 的步骤。需要预览网页打印效果时，为避免把本地地址写入 PDF，先运行生产构建并启动静态预览：

@@ -162,22 +162,24 @@ redirect_from:
 
 ## Publications
 
-### Refereed Journal Articles
+### First-author Publications
 
-1. **Ruo-Yu Guan** and Yan Wang (2026).<br>
-   “[Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}).”<br>
-   Accepted for publication in *Physical Review D*.<br>
-   DOI: [10.1103/4779-jw6l](https://doi.org/10.1103/4779-jw6l) · [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
+#### Published Journal Articles
+{: .cv-publication-heading }
 
-2. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou (2026).<br>
-   “[Hurst index of gamma-ray burst light curves and its statistical study]({{ '/publications/grb-hurst-index/' | relative_url }}).”<br>
-   *Journal of High Energy Astrophysics*, **51**, 100559.<br>
+1. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou, [Hurst index of gamma-ray burst light curves and its statistical study]({{ '/publications/grb-hurst-index/' | relative_url }}), *Journal of High Energy Astrophysics* **51**, 100559 (2026).<br>
    DOI: [10.1016/j.jheap.2026.100559](https://doi.org/10.1016/j.jheap.2026.100559)
 
-3. **Ruo-Yu Guan** and Mi-Xiang Lan (2023).<br>
-   “[Interpreting time-integrated polarization data of gamma-ray burst prompt emission]({{ '/publications/grb-time-integrated-polarization/' | relative_url }}).”<br>
-   *Astronomy & Astrophysics*, **670**, A160.<br>
+2. **Ruo-Yu Guan** and Mi-Xiang Lan, [Interpreting time-integrated polarization data of gamma-ray burst prompt emission]({{ '/publications/grb-time-integrated-polarization/' | relative_url }}), *Astronomy & Astrophysics* **670**, A160 (2023).<br>
    DOI: [10.1051/0004-6361/202243805](https://doi.org/10.1051/0004-6361/202243805)
+{: .cv-publication-list }
+
+#### Accepted for Publication
+{: .cv-publication-heading }
+
+3. **Ruo-Yu Guan** and Yan Wang, [Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: source power concentration and spectral degeneracy]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), *Physical Review D*, accepted for publication (2026).<br>
+   DOI: [10.1103/4779-jw6l](https://doi.org/10.1103/4779-jw6l) · [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
+{: .cv-publication-list start="3" }
 
 ## Research Experience
 

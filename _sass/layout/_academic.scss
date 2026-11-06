@@ -26,6 +26,8 @@ ul.publication-links { list-style: none; display: flex; flex-wrap: wrap; gap: .4
 .maintenance-link { margin-top: 2rem; font-size: .75em; }
 .cv-download { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: .8em; }
 .cv-print-heading { display: none; }
+.cv-publication-heading { font-size: 1em; }
+.cv-publication-list > li { margin-bottom: .85em; }
 .privacy-controls { display: flex; flex-wrap: wrap; gap: .7rem; }
 .privacy-controls button { cursor: pointer; }
 // Without JavaScript the navigation can wrap, so keep it in normal flow.
@@ -84,7 +86,8 @@ ul.publication-links { list-style: none; display: flex; flex-wrap: wrap; gap: .4
   h2 { font-size: 13pt !important; margin-top: 1.2em !important; break-after: avoid; }
   h3, .cv-row, .cv-sub { break-after: avoid; }
   .cv-block, .publication-card { break-inside: avoid; }
-  #refereed-journal-articles + ol > li { break-inside: avoid; }
+  .cv-publication-heading { break-after: avoid; }
+  .cv-publication-list > li { break-inside: avoid; }
   .cv-sub { color: #333 !important; opacity: 1 !important; }
   .archive .cv-row, .archive .cv-sub { display: flex; flex-wrap: nowrap; gap: .6rem; }
   .cv-left, .cv-sub-left { flex: 1 1 auto; min-width: 0; }
