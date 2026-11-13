@@ -3,7 +3,7 @@ title: "Oral Presentation at the 2026 Mid-Year Workshop on Space Gravitational-W
 date: 2026-08-21
 news: true
 description: "Slides and notes from Ruo-Yu Guan's July 2026 Yangzhou workshop presentation on Galactic binary residuals in LISA stochastic-background inference; the related paper is now accepted in Physical Review D."
-excerpt: "On July 31, I presented our work on residual Galactic binary foregrounds and LISA SGWB inference in Yangzhou. Update (November 6, 2026): the related paper is accepted for publication in Physical Review D."
+excerpt: "On July 31, I presented our work on the residual Galactic-binary foreground and LISA SGWB inference in Yangzhou. Update (November 6, 2026): the related paper is accepted for publication in Physical Review D."
 permalink: /posts/2026/08/yangzhou-workshop-talk/
 tags:
   - gravitational-waves

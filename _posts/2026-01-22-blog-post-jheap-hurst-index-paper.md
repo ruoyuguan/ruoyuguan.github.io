@@ -14,7 +14,7 @@ tags:
 
 I'm happy to share our paper, "Hurst index of gamma-ray burst light curves and its statistical study," in the *Journal of High Energy Astrophysics*. The final journal citation is volume 51, article 100559 (March 2026); this post retains the date of the original announcement.
 
-In this work, we applied detrended fluctuation analysis (DFA) to the prompt-emission light curves of 163 long BATSE GRBs. We derived the Hurst index as a quantitative descriptor of temporal correlations in the light curves. We then tested how this DFA-based descriptor relates to 12 commonly used GRB observables, finding anti-correlations with the burst durations ($T_{50}$, $T_{90}$) and moderate positive correlations with peak photon-flux proxies ($P_{pk1}$–$P_{pk3}$), while standard spectral/hardness parameters show no statistically meaningful linear dependence in this sample.
+In this work, we applied detrended fluctuation analysis (DFA) to the prompt-emission light curves of 163 long BATSE GRBs. We derived the Hurst index as a quantitative descriptor of temporal correlations in the light curves. We then tested how this DFA-based descriptor relates to 12 commonly used GRB observables, finding anti-correlations with the burst durations ($T_{50}$, $T_{90}$) and moderate positive correlations with peak photon-flux proxies ($P_{pk1}$–$P_{pk3}$), while standard spectral parameters show no statistically significant linear correlation with the Hurst index in this sample.
 
 Many thanks to my co-authors. I'd love to hear thoughts or potential follow-up ideas.
 
