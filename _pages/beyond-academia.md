@@ -23,12 +23,10 @@ I value running as a steady practice, whether on roads or trails.
 
 ## Specialty Coffee
 
-I am a specialty-coffee enthusiast and former part-time barista. I enjoy preparing espresso, filter coffee, and cold brew, experimenting with different brewing methods and extraction parameters. For me, coffee is both a daily practice and an opportunity to learn more about flavor, technique, and repeatability.
-
-I currently make espresso with a Flair 58 Plus 2 and use a stainless-steel Kalita Wave 155 and a Hario V60 Switch for filter coffee. Comparing methods helps me understand how extraction shapes what is in the cup.
+I am a specialty-coffee enthusiast and former part-time barista. I enjoy preparing manual espresso, pour-over coffee, and cold brew, experimenting with different brewing methods and extraction parameters. For me, coffee is both a daily practice and an opportunity to learn more about flavor, technique, and repeatability.
 
 ## Photography and Videography
 
-I enjoy photographing everyday life, city streets, and places I visit, with an interest in documentary-style images and natural moments. I primarily use a Fujifilm X-T5 for digital photography and have recently begun exploring film photography with a Pentax 17.
+I enjoy street and documentary-style photography, capturing everyday life, city scenes, and places I visit. I mainly practice digital photography and have recently begun exploring half-frame film photography.
 
-I also record first-person videos of travel, running, and everyday experiences using DJI action cameras, with an emphasis on natural sound and environmental details. Photography and video offer different ways for me to observe and remember the places and moments that matter to me.
+I also use action cameras for still photography and first-person (POV) videography, particularly when documenting travel, running, and everyday experiences. I prefer natural perspectives, ambient sound, and an unobtrusive approach to recording the world around me.

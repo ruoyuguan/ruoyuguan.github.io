@@ -74,6 +74,8 @@ python3 talkmap.py --check
 
 这会从源文件生成 `talkmap/org-locations.js`，不联网、不地理编码。旧地图 notebook 已停用，仅保留供参考；日常维护使用该脚本。CI 只检查，不会自动提交文件。
 
+Presentation Map 目前暂时停用：`_config.yml` 中 `talkmap_link: false`，`_pages/talkmap.html` 设置 `published: false` 和 `sitemap: false`，并从生产构建排除 `talkmap/map.html`。公开页面和站点地图均不提供地图。`talkmap.py`、`talkmap/`、报告坐标及历史数据全部保留。将来需要恢复时，撤销上述停用设置并重新运行构建与浏览器检查。
+
 ## 动态与 CV
 
 动态与随笔统一保留在 Blog 中。`news: true` 用于标记动态条目，个人随笔使用 `news: false`；用 `excerpt` 和 `description` 控制列表和搜索摘要。

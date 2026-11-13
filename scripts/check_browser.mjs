@@ -9,6 +9,7 @@ const photoNames = (await readdir('_portfolio')).filter(name => /\.(md|html)$/.t
 const photoSources = await Promise.all(photoNames.map(name => readFile('_portfolio/' + name, 'utf8')));
 const expectedPhotos = photoSources.filter(source => /^published: true\s*$/m.test(source.split(/^---\s*$/m)[1])).length;
 const photographyHidden = /^published: false\s*$/m.test((await readFile('_pages/portfolio.html', 'utf8')).split(/^---\s*$/m)[1]);
+const presentationMapHidden = /^published: false\s*$/m.test((await readFile('_pages/talkmap.html', 'utf8')).split(/^---\s*$/m)[1]);
 const pagePaths = ['/', '/publications/', '/cv/', '/talks/', '/research/', '/year-archive/', '/beyond-academia/'];
 if (!photographyHidden) pagePaths.push('/portfolio/');
 await mkdir(output, { recursive: true });
@@ -239,15 +240,23 @@ try {
   assert.ok(await research.locator('.page__toc').isVisible(), 'TOC in dark theme');
   assert.ok(await research.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Dark mobile TOC layout');
   await research.screenshot({ path: `${output}/toc-skill-390-dark.png` });
-  await research.goto(site + '/talkmap.html', { waitUntil: 'networkidle' });
-  await research.locator('iframe').scrollIntoViewIfNeeded();
-  const mapFrame = research.frameLocator('iframe');
-  await mapFrame.locator('.leaflet-marker-icon').first().waitFor({ timeout: 20000 });
-  assert.equal(await mapFrame.locator('.leaflet-marker-icon').count(), 2);
-  assert.equal(await mapFrame.locator('body').evaluate(body => body.ownerDocument.compatMode), 'CSS1Compat', 'Map uses standards mode');
-  assert.ok(!(await mapFrame.locator('body').innerText()).trimStart().startsWith('---'), 'No unparsed map front matter');
-  assert.ok(!(await (await researchContext.request.get(site + '/sitemap.xml')).text()).includes('/talkmap/map.html'), 'Embedded map stays out of the sitemap');
-  await research.screenshot({ path: `${output}/talkmap-390-dark.png`, fullPage: true });
+  if (presentationMapHidden) {
+    for (const path of ['/talkmap.html', '/talkmap/map.html']) {
+      assert.equal((await researchContext.request.get(site + path)).status(), 404, `Presentation map is not public: ${path}`);
+    }
+    const sitemap = await (await researchContext.request.get(site + '/sitemap.xml')).text();
+    assert.ok(!sitemap.includes('/talkmap.html') && !sitemap.includes('/talkmap/map.html'), 'Presentation map stays out of the sitemap');
+  } else {
+    await research.goto(site + '/talkmap.html', { waitUntil: 'networkidle' });
+    await research.locator('iframe').scrollIntoViewIfNeeded();
+    const mapFrame = research.frameLocator('iframe');
+    await mapFrame.locator('.leaflet-marker-icon').first().waitFor({ timeout: 20000 });
+    assert.equal(await mapFrame.locator('.leaflet-marker-icon').count(), 2);
+    assert.equal(await mapFrame.locator('body').evaluate(body => body.ownerDocument.compatMode), 'CSS1Compat', 'Map uses standards mode');
+    assert.ok(!(await mapFrame.locator('body').innerText()).trimStart().startsWith('---'), 'No unparsed map front matter');
+    assert.ok(!(await (await researchContext.request.get(site + '/sitemap.xml')).text()).includes('/talkmap/map.html'), 'Embedded map stays out of the sitemap');
+    await research.screenshot({ path: `${output}/talkmap-390-dark.png`, fullPage: true });
+  }
   // Use the generated filename so this also works with a basic static preview.
   const posterResponse = await research.goto(site + '/talks/2024-12-01-pku-forum-poster.html', { waitUntil: 'networkidle' });
   assert.equal(posterResponse.status(), 200, 'Poster document loads');
@@ -256,5 +265,5 @@ try {
   assert.ok(!(await research.locator('.page__content').innerText()).includes('email address shown in the sidebar'), 'Poster does not refer to a missing sidebar');
   await researchContext.close();
   assert.deepEqual(failures, [], 'JavaScript runtime errors');
-  console.log(`Passed: ${pagePaths.length * 6} desktop/mobile page renders, resolved theme colors, photography visibility, keyboard menus and breakpoint transitions, theme persistence, images, cross-tab analytics and privacy signals, no-JavaScript contacts at five widths and TOCs, equations, standards-mode map and poster contact.`);
+  console.log(`Passed: ${pagePaths.length * 6} desktop/mobile page renders, resolved theme colors, photography visibility, keyboard menus and breakpoint transitions, theme persistence, images, cross-tab analytics and privacy signals, no-JavaScript contacts at five widths and TOCs, equations, presentation-map visibility and poster contact.`);
 } finally { await browser.close(); }

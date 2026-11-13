@@ -227,15 +227,21 @@ def main():
         if output in pages and not pages[output].toc_links:
             errors.append(f"{path.name}: toc: true needs a rendered table of contents")
 
+    presentation_map_hidden = scalar_frontmatter(source / '_pages/talkmap.html', 'published') == 'false'
     map_path = root / "talkmap/map.html"
-    map_page = pages.get(map_path)
-    if map_page is None:
-        errors.append("missing presentation map document")
+    if presentation_map_hidden:
+        for route in ("/talkmap.html", "/talkmap/map.html"):
+            if route_file(root, route):
+                errors.append(f"unpublished presentation map route was generated: {route}")
     else:
-        if not map_page.html_doctype or not map_path.read_text(encoding="utf-8").lstrip().lower().startswith("<!doctype html>"):
-            errors.append("presentation map must start with an HTML doctype, not unparsed front matter")
-        if not any("noindex" in value.lower() for value in map_page.metadata["robots"]):
-            errors.append("embedded presentation map needs noindex metadata")
+        map_page = pages.get(map_path)
+        if map_page is None:
+            errors.append("missing presentation map document")
+        else:
+            if not map_page.html_doctype or not map_path.read_text(encoding="utf-8").lstrip().lower().startswith("<!doctype html>"):
+                errors.append("presentation map must start with an HTML doctype, not unparsed front matter")
+            if not any("noindex" in value.lower() for value in map_page.metadata["robots"]):
+                errors.append("embedded presentation map needs noindex metadata")
 
     for path in sorted((source / "_publications").glob("*.md")):
         if scalar_frontmatter(path, "published") == "false":
@@ -271,7 +277,7 @@ def main():
                 route = urlsplit(element.text).path
                 if route_file(root, route) is None:
                     errors.append(f"sitemap references a missing route: {route}")
-                if route == "/talkmap/map.html" or route in draft_routes or route.startswith(("/markdown_generator/", "/photography-drafts/")):
+                if route == "/talkmap/map.html" or presentation_map_hidden and route == "/talkmap.html" or route in draft_routes or route.startswith(("/markdown_generator/", "/photography-drafts/")):
                     errors.append(f"sitemap includes unpublished/maintenance route: {route}")
         except ET.ParseError as error:
             errors.append(f"invalid sitemap XML: {error}")
