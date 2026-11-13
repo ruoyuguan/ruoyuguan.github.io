@@ -6,6 +6,12 @@ author_profile: true
 math: true
 ---
 
+## Research Interests
+
+- Space-based gravitational-wave astrophysics.
+- Galactic compact binaries, particularly double white dwarfs.
+- Stochastic gravitational-wave backgrounds, foreground statistics, and Bayesian inference.
+
 My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the unresolved gravitational-wave foreground they produce. I study foreground statistics and angular anisotropy, and examine how residual foreground power affects stochastic gravitational-wave background (SGWB) inference.
 
 ## Galactic-Binary Foreground and Anisotropy
@@ -14,25 +20,19 @@ My research focuses on space-based gravitational-wave astrophysics, particularly
 
 ## Residual Foreground and SGWB Inference
 
-**Completed research.** In our [2026 paper]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D*, Yan Wang and I use LISA Data Challenge 2A injections and the Erebor injection–recovery match to construct a catalog-level model of residual Galactic-binary foreground power.
+**Completed research.** In our [study of residual foreground power in LISA SGWB inference]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D* (2026), Yan Wang and I construct a catalog-level residual power spectrum using LISA Data Challenge 2A injections and the Erebor injection–recovery match.
 
 The study examines two distinct effects: non-Gaussianity arising from discrete sources and spectral degeneracy with an SGWB. For sums of source signals with independent random phases, excess kurtosis quantifies the departure from Gaussianity. Instrumental noise and fiducial SGWB power dilute this signature in most frequency bins. The residual spectrum also overlaps with an isotropic power-law SGWB in the mean binned power, and we quantify this spectral degeneracy using a local Fisher information matrix for the SGWB amplitude and residual-power factor.
 
-For a flat SGWB energy-density spectrum with fiducial amplitude $\Omega_0=10^{-11}$ and residual power distributed uniformly over the Fourier frequencies within each bin, marginalizing over the residual-power factor increases the $\Omega_0$ uncertainty by 13.6% under the Gaussian Fourier-amplitude covariance. This value is specific to the paper's catalog-level model and statistical assumptions, not a general forecast for all LISA analyses. The [accepted abstract]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), [supporting code and processed numerical results](https://doi.org/10.5281/zenodo.23979478), and [Yangzhou presentation slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}) are available.
+For a flat SGWB energy-density spectrum with fiducial amplitude $\Omega_0=10^{-11}$ and residual power distributed uniformly over the Fourier frequencies within each bin, marginalizing over the residual-power factor increases the $\Omega_0$ uncertainty by 13.6% under the Gaussian Fourier-amplitude covariance. This value is specific to the paper's catalog-level model and statistical assumptions, not a general forecast for all LISA analyses. The [paper abstract and details]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), [supporting code and processed numerical results](https://doi.org/10.5281/zenodo.23979478), and [Yangzhou presentation slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}) are available.
 
 ## Previous Research
 
 My earlier research also covered gamma-ray bursts (GRBs) and X-ray source identification:
 
-- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long-duration gamma-ray bursts observed by BATSE, followed by correlation studies with prompt-emission observables ([JHEAp paper]({{ '/publications/grb-hurst-index/' | relative_url }})).
-- **GRB prompt-emission polarization:** time-integrated polarization predictions for 37 bursts under synchrotron emission in ordered magnetic fields ([A&A paper]({{ '/publications/grb-time-integrated-polarization/' | relative_url }})).
+- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long-duration gamma-ray bursts observed by BATSE, followed by correlation studies with prompt-emission observables ([Hurst-index study of BATSE GRBs (JHEAp, 2026)]({{ '/publications/grb-hurst-index/' | relative_url }})).
+- **GRB prompt-emission polarization:** time-integrated polarization predictions for 37 bursts under synchrotron emission in ordered magnetic fields ([time-integrated GRB polarization study (A&A, 2023)]({{ '/publications/grb-time-integrated-polarization/' | relative_url }})).
 - **Cygnus OB2:** reduction and merging of 18 Chandra observations, X-ray source catalog construction, and cross-matching with Gaia counterparts during my M.Sc. project at the University of Hong Kong.
-
-## Research Interests
-
-- Space-based gravitational-wave astrophysics.
-- Galactic compact binaries, particularly double white dwarfs.
-- Stochastic gravitational-wave backgrounds, foreground statistics, and Bayesian inference.
 
 ## Software and Open Science
 

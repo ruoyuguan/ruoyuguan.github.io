@@ -24,7 +24,7 @@ Under our baseline assumptions, marginalizing over the dimensionless residual-po
 
 Preprint: [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
 
-[Publication details and BibTeX]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}) · [Code & Data (Zenodo)](https://doi.org/10.5281/zenodo.23979478) · [Related presentation and slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }})
+[Publication details and BibTeX]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}) · [Code & Data (Zenodo)](https://doi.org/10.5281/zenodo.23979478) · [Yangzhou workshop presentation and slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }})
 
 Comments and feedback are very welcome.
 
