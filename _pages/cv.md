@@ -3,7 +3,7 @@ layout: archive
 title: "CV"
 description: "Academic CV of Ruo-Yu Guan: research interests, education, publications, research experience, presentations, memberships, and skills."
 last_updated: 2026-11-13
-cv_pdf_url: /files/ruoyu-guan-cv.pdf
+cv_pdf_url: /files/ruoyuguan-cv.pdf
 permalink: /cv/
 author_profile: true
 redirect_from:

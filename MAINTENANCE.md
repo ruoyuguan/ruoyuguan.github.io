@@ -80,24 +80,11 @@ python3 talkmap.py --check
 
 文章设置 `toc: true` 时，构建会在正文前生成二、三级标题目录，保留标题现有锚点；关闭 JavaScript 也可使用。标题应使用 Markdown 的 `##` / `###` 或带 `id` 的 HTML 标题。
 
-网页 CV 和公开 PDF 均以 `_pages/cv.md` 为唯一内容源。更新后同时维护 `last_updated`，保留九个模块的顺序：Research Interests、Education、Research Positions、Publications、Research Experience、Conference Presentations、Academic Memberships、Skills（Header 由页面元数据生成）。论文按时间倒序列出，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。公共屏幕与打印样式位于 `_sass/layout/_academic.scss`，不要在 Markdown 中添加独立样式块。
+网页 CV 由 `_pages/cv.md` 维护。更新后同时维护 `last_updated`，保留九个模块的顺序：Research Interests、Education、Research Positions、Publications、Research Experience、Conference Presentations、Academic Memberships、Skills（Header 由页面元数据生成）。论文按时间倒序列出，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。公共屏幕与打印样式位于 `_sass/layout/_academic.scss`，不要在 Markdown 中添加独立样式块。
 
-更新 `files/ruoyu-guan-cv.pdf` 时，先运行生产构建并启动静态预览：
+公开 PDF 使用独立排版的 `files/ruoyuguan-cv.pdf`，更新时直接替换该文件，不再从网页导出。`_pages/cv.md` 的 `cv_pdf_url` 和首页下载链接均指向此文件；更改文件名时必须同步更新这两处。`scripts/export_cv.mjs` 仅用于可选的网页打印预览，应输出到 `output/cv/web-preview.pdf`，不要覆盖公开 PDF。
 
-```sh
-npm ci
-JEKYLL_ENV=production bundle exec jekyll build
-python3 -m http.server 4000 --directory _site
-```
-
-然后在另一个终端运行：
-
-```sh
-node scripts/export_cv.mjs http://127.0.0.1:4000 files/ruoyu-guan-cv.pdf
-pdfinfo files/ruoyu-guan-cv.pdf
-```
-
-需要本机 Google Chrome。确认 PDF 为两页、文字和链接可读、没有截断或异常分页，并检查 PDF 与网页内容一致。`cv_pdf_url` 指向该文件；如需暂时隐藏下载按钮才将其留空。
+替换后运行 `pdfinfo files/ruoyuguan-cv.pdf`，并实际打开下载链接。确认 PDF 页数符合预期、文字和链接可读、没有字体缺失或内容截断，且教育、论文、报告、会员身份和技能等事实与网页一致。
 
 ## 本地构建与检查
 
