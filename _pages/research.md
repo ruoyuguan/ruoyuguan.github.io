@@ -6,7 +6,7 @@ author_profile: true
 math: true
 ---
 
-My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the unresolved gravitational-wave foreground they produce. I am interested in what these populations reveal about the Milky Way and how residual foreground power affects stochastic gravitational-wave background (SGWB) inference.
+My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the unresolved gravitational-wave foreground they produce. I study foreground statistics and angular anisotropy, and examine how residual foreground power affects stochastic gravitational-wave background (SGWB) inference.
 
 ## Galactic-Binary Foreground and Anisotropy
 
@@ -36,4 +36,6 @@ My earlier research also covered gamma-ray bursts (GRBs) and X-ray source identi
 
 ## Software and Open Science
 
-I maintain [Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill), an open-source pre-release for structured scientific errata auditing. It produces traceable candidate errata for human expert review. [Read the project announcement]({{ '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/' | relative_url }}).
+**GW Research Copilot (GWRC).** I am developing [GW Research Copilot (GWRC)](https://github.com/ruoyuguan/gw-research-copilot), an early-stage open-source toolkit for gravitational-wave research. Its current prototype includes agent skills, covariance and power spectral density checks, a basic Gaussian Fisher-matrix demonstration, and reproducible run records.
+
+**Scientific Textbook Proofreading Skill.** I also maintain [Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill), an open-source pre-release for AI-assisted scientific proofreading and errata auditing. It provides a structured workflow designed to help generate traceable candidate errata for human expert review. [Read the project announcement]({{ '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/' | relative_url }}).
