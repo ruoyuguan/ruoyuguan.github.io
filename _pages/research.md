@@ -30,8 +30,8 @@ For a flat SGWB energy-density spectrum with fiducial amplitude $\Omega_0=10^{-1
 
 My earlier research also covered gamma-ray bursts (GRBs) and X-ray source identification:
 
-- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long-duration gamma-ray bursts observed by BATSE, followed by correlation studies with prompt-emission observables ([Hurst-index study of BATSE GRBs (JHEAp, 2026)]({{ '/publications/grb-hurst-index/' | relative_url }})).
-- **GRB prompt-emission polarization:** time-integrated polarization predictions for 37 bursts under synchrotron emission in ordered magnetic fields ([time-integrated GRB polarization study (A&A, 2023)]({{ '/publications/grb-time-integrated-polarization/' | relative_url }})).
+- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long-duration gamma-ray bursts observed by BATSE, followed by correlation studies with prompt-emission observables ([Hurst-index study, JHEAp 2026]({{ '/publications/grb-hurst-index/' | relative_url }})).
+- **GRB prompt-emission polarization:** time-integrated polarization predictions for 37 bursts under synchrotron emission in ordered magnetic fields ([GRB polarization study, A&A 2023]({{ '/publications/grb-time-integrated-polarization/' | relative_url }})).
 - **Cygnus OB2:** reduction and merging of 18 Chandra observations, X-ray source catalog construction, and cross-matching with Gaia counterparts during my M.Sc. project at the University of Hong Kong.
 
 ## Software and Open Science

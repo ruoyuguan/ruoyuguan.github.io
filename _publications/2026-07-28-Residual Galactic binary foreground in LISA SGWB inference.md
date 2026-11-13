@@ -23,7 +23,7 @@ bibtexurl: /files/bibtex3.bib
 zenodourl: 'https://doi.org/10.5281/zenodo.23979478'
 code_data_availability: 'The analysis and plotting code, tests, and processed numerical results supporting this article are openly available through Zenodo (version 1.0.1). The release does not redistribute the original LISA Data Challenge 2A Sangria or Erebor input files; those input catalogs are available from their respective original records.'
 description: 'A catalog-level study of residual Galactic binary power, source discreteness, non-Gaussianity, and spectral degeneracy in LISA stochastic gravitational-wave background inference.'
-summary: 'Using LISA Data Challenge 2A injections and the Erebor injection–recovery match, we study residual Galactic binary power, non-Gaussian source-discreteness signatures, and spectral degeneracy with an isotropic stochastic background. Numerical forecasts are conditional on the catalog-level model and adopted covariance assumptions.'
+summary: 'Using LISA Data Challenge 2A injections and the Erebor injection–recovery match, we study residual Galactic binary power, non-Gaussian signatures of source discreteness, and spectral degeneracy with an isotropic stochastic background. Numerical forecasts are conditional on the catalog-level model and adopted covariance assumptions.'
 citation: 'Ruo-Yu Guan and Yan Wang (2026). “Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: Source power concentration and spectral degeneracy.” Accepted for publication in Physical Review D. https://doi.org/10.1103/4779-jw6l. arXiv:2607.25349 [astro-ph.HE].'
 related_talks:
   - title: 'ISRA 2026 scheduled poster presentation'

@@ -5,6 +5,7 @@ type: "Oral Presentation"
 permalink: /talks/2026-07-31-yangzhou-sgwforeground-talk
 venue: "2026 Mid-Year Workshop of the National Key R&D Program Project on Space Gravitational-Wave Detection Signal Simulation, Processing, and Verification"
 date: 2026-07-31
+event_date: 2026-07-31
 location: "Yangzhou, Jiangsu, China"
 latitude: 32.3936
 longitude: 119.4129

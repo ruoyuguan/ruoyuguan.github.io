@@ -65,7 +65,7 @@ bundle exec ruby scripts/preview_drafts.rb
 
 ## 报告与地图
 
-在 `_talks/` 填写 `type`、`venue`、`location`、`date`、`latitude`、`longitude`。目前坐标为城市级，`map_precision: city`；没有确认的坐标时设置 `map: false`。尚未实际完成的报告也设置 `map: false`，并在 `type` 中明确标记为 `Scheduled`。`event_date: YYYY-MM-DD` 记录会议开始日期；若开始日期不是个人报告的确切日期，用 `event_date_display` 展示已确认的会期或日期区间，列表、详情页与地图均优先使用该字段。为保留全站 `future: false`，未来报告的 `date` 记录条目发布日期；报告完成后再合并为实际 `date`。
+在 `_talks/` 填写 `type`、`venue`、`location`、`date`、`latitude`、`longitude`。目前坐标为城市级，`map_precision: city`；没有确认的坐标时设置 `map: false`。尚未实际完成的报告也设置 `map: false`，并在 `type` 中明确标记为 `Scheduled`。`event_date: YYYY-MM-DD` 记录会议开始日期；若开始日期不是个人报告的确切日期，用 `event_date_display` 展示已确认的会期或日期区间，列表、详情页与地图均优先使用该字段。Presentations 列表按 `event_date` 倒序排列，因此每个报告条目都应填写 `event_date`。为保留全站 `future: false`，未来报告的 `date` 记录条目发布日期；报告完成后再合并为实际 `date`。
 
 ```sh
 python3 talkmap.py

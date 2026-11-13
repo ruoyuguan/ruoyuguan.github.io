@@ -6,7 +6,7 @@ permalink: /talks/
 author_profile: true
 ---
 
-{% assign talks = site.talks | sort: 'date' | reverse %}
+{% assign talks = site.talks | sort: 'event_date' | reverse %}
 {% for post in talks %}
   {% include archive-single-talk.html %}
 {% endfor %}
