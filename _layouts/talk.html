@@ -32,8 +32,9 @@ layout: default
           {% endif %}
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        {% elsif page.event_date or page.date %}
+          {% assign presentation_date = page.event_date | default: page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ presentation_date | date_to_xmlschema }}">{{ presentation_date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         {% assign talk_type = page.type | default: page.talk_type %}
         {% if talk_type or page.venue or page.location %}

@@ -20,6 +20,14 @@ layout: default
         {{ content }}
       </section>
 
+      {% if page.code_data_availability %}
+      <section class="publication-data-availability" aria-labelledby="code-data-availability">
+        <h2 id="code-data-availability">Code and Data Availability</h2>
+        <p>{{ page.code_data_availability | escape }}</p>
+        {% if page.zenodourl %}<p><a href="{{ page.zenodourl | escape }}">Code &amp; Data (Zenodo)</a></p>{% endif %}
+      </section>
+      {% endif %}
+
       {% if page.related_talks %}
       <section class="publication-related" aria-labelledby="related-presentations">
         <h2 id="related-presentations">Related presentations</h2>

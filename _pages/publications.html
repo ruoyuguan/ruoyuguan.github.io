@@ -1,12 +1,12 @@
 ---
 layout: archive
 title: "Publications"
-description: "Journal articles and preprints by Ruo-Yu Guan: gamma-ray burst astrophysics and gravitational-wave astrophysics."
+description: "First-author journal articles by Ruo-Yu Guan on gravitational-wave astrophysics, Galactic-binary foregrounds, and gamma-ray bursts."
 permalink: /publications/
 author_profile: true
 ---
 
-<p>Journal articles and preprints on gravitational-wave and gamma-ray burst astrophysics. Open a title for the full abstract and citation.{% if site.author.googlescholar %} See also <a href="{{ site.author.googlescholar }}">Google Scholar</a>.{% endif %}</p>
+<p>Three first-author journal articles on gravitational-wave and gamma-ray burst astrophysics. Open a title for the official abstract, citation, and supporting resources.{% if site.author.googlescholar %} See also <a href="{{ site.author.googlescholar }}">Google Scholar</a>.{% endif %}</p>
 
 {% assign publications = site.publications | sort: 'date' | reverse %}
 {% assign preprints = publications | where: 'status', 'preprint' %}
@@ -20,7 +20,7 @@ author_profile: true
 {% assign journal_articles = publications | where_exp: 'publication', 'publication.status != "preprint"' %}
 {% if journal_articles.size > 0 %}
 <section aria-labelledby="journal-articles">
-  <h2 id="journal-articles">Journal articles</h2>
+  <h2 id="journal-articles">Journal Articles</h2>
   {% for post in journal_articles %}{% include publication-card.html post=post %}{% endfor %}
 </section>
 {% endif %}

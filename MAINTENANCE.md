@@ -55,17 +55,17 @@ bundle exec ruby scripts/preview_drafts.rb
 
 参考现有文件维护结构化字段：`authors`、`status`、`venue`、`date`、`doi`、`arxiv_id`、`volume`、`article_number`、`summary`、`description` 和资源链接。
 
-- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页及关联页面；如另有独立维护的 PDF CV，也需核对其中的论文状态。历史新闻通过注明更新日期的补充说明记录状态变化。
+- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页及关联页面，并重新导出 PDF CV。历史新闻通过注明更新日期的补充说明记录状态变化。
 - 本人的作者项标记 `self: true`；卡片会自动强调姓名。
-- `summary` 是列表中的短介绍，完整摘要放在正文中。
+- `summary` 是列表中的短介绍，正式摘要放在正文中。
 - 使用稳定的短 `permalink`。更改已经公开的 URL 时，把旧地址加入 `redirect_from`，不要移除现有重定向。
-- 资源支持 arXiv、DOI、ADS、PDF、BibTeX、code、data，只有实际存在的链接才填写。
+- 资源支持 arXiv、DOI、ADS、PDF、BibTeX、code、data，只有实际存在的链接才填写。论文配套的 Zenodo 记录使用 `zenodourl`，详情页说明放在 `code_data_availability`；公开范围必须与记录一致，不声称包含未再分发的原始输入。
 - 论文页面默认启用公式；其它含公式页面需手动加 `math: true`。
 - 期刊在线日期与卷期日期不同，分别用已确认字段/文字说明，不推断未知日期。
 
 ## 报告与地图
 
-在 `_talks/` 填写 `type`、`venue`、`location`、`date`、`latitude`、`longitude`。目前坐标为城市级，`map_precision: city`；没有确认的坐标时设置 `map: false`。
+在 `_talks/` 填写 `type`、`venue`、`location`、`date`、`latitude`、`longitude`。目前坐标为城市级，`map_precision: city`；没有确认的坐标时设置 `map: false`。尚未实际完成的报告也设置 `map: false`，并在 `type` 中明确标记为 `Scheduled`。为保留全站 `future: false`，未来报告的 `date` 记录条目发布日期，另用 `event_date: YYYY-MM-DD` 记录实际开始日期；列表和详情页优先展示 `event_date`，报告完成后再合并为实际 `date`。
 
 ```sh
 python3 talkmap.py
@@ -80,13 +80,9 @@ python3 talkmap.py --check
 
 文章设置 `toc: true` 时，构建会在正文前生成二、三级标题目录，保留标题现有锚点；关闭 JavaScript 也可使用。标题应使用 Markdown 的 `##` / `###` 或带 `id` 的 HTML 标题。
 
-网页 CV 的源文件为 `_pages/cv.md`。更新后同时维护 `last_updated`。
+网页 CV 和公开 PDF 均以 `_pages/cv.md` 为唯一内容源。更新后同时维护 `last_updated`，保留九个模块的顺序：Research Interests、Education、Research Positions、Publications、Research Experience、Conference Presentations、Academic Memberships、Skills（Header 由页面元数据生成）。论文按时间倒序列出，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。公共屏幕与打印样式位于 `_sass/layout/_academic.scss`，不要在 Markdown 中添加独立样式块。
 
-CV 的论文按署名角色分为 `First-author Publications` 和 `Co-authored Publications`，各自再按 `Published Journal Articles`、`Accepted for Publication`、`Preprints` 区分状态；只展示已有条目的分类。目前只有第一作者论文，其中两篇已发表、一篇已接收。引文统一为“作者，题名，期刊名 卷号，文章号（年份）”，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。保留题名链接，DOI / arXiv 作为下一行资源链接。论文列表保留 `cv-publication-list` 类，以便统一排版和打印分页；同一署名角色下连续编号，调整条目后同步维护后续列表的 `start` 值。
-
-PDF 下载按钮目前暂停显示：`cv_pdf_url` 留空。以后准备好自己独立排版的 PDF 后，将文件放到 `files/`，在该字段填写网站路径（例如 `/files/my-cv.pdf`），即可恢复下载按钮；再次留空即可关闭。现有 `files/ruoyu-guan-cv.pdf` 仅保留为旧的网页导出文件，页面不再默认链接它。隐藏按钮不会删除 PDF，也不会阻止通过旧地址直接访问。
-
-网页导出脚本仅作为可选的本地预览工具，不是更新独立 PDF CV 的步骤。需要预览网页打印效果时，为避免把本地地址写入 PDF，先运行生产构建并启动静态预览：
+更新 `files/ruoyu-guan-cv.pdf` 时，先运行生产构建并启动静态预览：
 
 ```sh
 npm ci
@@ -97,10 +93,11 @@ python3 -m http.server 4000 --directory _site
 然后在另一个终端运行：
 
 ```sh
-node scripts/export_cv.mjs http://127.0.0.1:4000 output/cv/web-preview.pdf
+node scripts/export_cv.mjs http://127.0.0.1:4000 files/ruoyu-guan-cv.pdf
+pdfinfo files/ruoyu-guan-cv.pdf
 ```
 
-需要本机 Google Chrome。该命令输出到被 Git 忽略的 `output/cv/web-preview.pdf`，不要将网页导出文件覆盖到自己独立维护的 PDF CV 上。
+需要本机 Google Chrome。确认 PDF 为两页、文字和链接可读、没有截断或异常分页，并检查 PDF 与网页内容一致。`cv_pdf_url` 指向该文件；如需暂时隐藏下载按钮才将其留空。
 
 ## 本地构建与检查
 

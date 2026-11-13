@@ -1,17 +1,16 @@
 ---
 layout: archive
 title: "Presentations"
-description: "Oral and poster presentations by Ruo-Yu Guan, with slides and posters available for download."
+description: "Oral and poster presentations by Ruo-Yu Guan on gravitational-wave astrophysics and gamma-ray bursts, with available slides and posters."
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
-
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places where I've given presentations!</a></p>
-
-{% endif %}
-
-{% for post in site.talks reversed %}
+{% assign talks = site.talks | sort: 'date' | reverse %}
+{% for post in talks %}
   {% include archive-single-talk.html %}
 {% endfor %}
+
+{% if site.talkmap_link == true %}
+<p class="presentation-map-link"><a href="{{ '/talkmap.html' | relative_url }}">View the map of completed presentation locations</a>. The scheduled Shanghai presentation will be added after it takes place.</p>
+{% endif %}

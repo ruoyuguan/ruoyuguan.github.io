@@ -5,6 +5,7 @@
   {% if publication.pdfurl %}<li><a href="{{ publication.pdfurl | relative_url }}">{% if publication.pdfurl contains 'arxiv.org' %}arXiv PDF{% else %}PDF{% endif %}</a></li>{% endif %}
   {% if publication.adsurl %}<li><a href="{{ publication.adsurl | escape }}">ADS</a></li>{% endif %}
   {% if publication.bibtexurl %}<li><a href="{{ publication.bibtexurl | relative_url }}">BibTeX</a></li>{% endif %}
+  {% if publication.zenodourl %}<li><a href="{{ publication.zenodourl | escape }}">Code &amp; Data (Zenodo)</a></li>{% endif %}
   {% if publication.codeurl %}<li><a href="{{ publication.codeurl | relative_url }}">Code</a></li>{% endif %}
   {% if publication.dataurl %}<li><a href="{{ publication.dataurl | relative_url }}">Data</a></li>{% endif %}
   {% if publication.slidesurl %}<li><a href="{{ publication.slidesurl | relative_url }}">Slides (PDF)</a></li>{% endif %}

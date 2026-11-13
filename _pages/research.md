@@ -1,28 +1,38 @@
 ---
 title: "Research"
-description: "Research by Ruo-Yu Guan on Galactic double white dwarfs, LISA foregrounds, stochastic backgrounds, and gamma-ray burst observations."
+description: "Research by Ruo-Yu Guan on Galactic-binary foregrounds, angular anisotropy, stochastic gravitational-wave backgrounds, and gamma-ray bursts."
 permalink: /research/
 author_profile: true
 ---
 
-My research connects astrophysical source populations with the statistical information in gravitational-wave and electromagnetic observations. My current focus is Galactic compact binaries and their role in space-based gravitational-wave inference.
+My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the statistical properties of their unresolved foregrounds. I am interested in what these populations reveal about the Milky Way and in how their residual signals affect stochastic gravitational-wave background (SGWB) inference.
 
-## Galactic Compact Binaries and the Milky Way
+## Galactic Binary Foregrounds and Anisotropy
 
-Double white dwarf binaries are an important population in the millihertz gravitational-wave band. I am developing a simulation-based inference pipeline that combines population synthesis with hierarchical Bayesian methods to study these systems and their connection to Galactic structure. This work considers selection effects, detector response, and observational uncertainties in the LISA and TianQin context.
+**Ongoing research.** I am studying the angular anisotropy of the unresolved Galactic-binary gravitational-wave foreground, with an emphasis on double white dwarf populations. The work concerns how the spatial distribution of Galactic sources shapes the sky-dependent foreground observed by space-based detectors. This is an ongoing investigation; no quantitative results are claimed here.
 
-## Foregrounds and Stochastic Background Inference
+## Residual Foregrounds and SGWB Inference
 
-Unresolved and imperfectly recovered Galactic binaries leave residual power that can affect stochastic gravitational-wave background inference. In our [2026 paper]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D*, we use LISA Data Challenge 2A Sangria injections and the Erebor comparison table to study source power concentration and spectral degeneracy.
+**Completed research.** In our [2026 paper]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D*, Yan Wang and I use LISA Data Challenge 2A injections and the Erebor injection–recovery match to estimate the catalog-level residual foreground left by unresolved or imperfectly recovered Galactic binaries.
 
-Under the paper's catalog-level scalar power model and fixed-noise assumptions, the distribution of residual power across Fourier frequencies changes how strongly foreground uncertainty affects background-amplitude inference. The [Yangzhou workshop presentation]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}) provides slides and an overview of this work.
+The study distinguishes source-discreteness effects from spectral degeneracy. Random-phase sums of discrete source signals can have non-Gaussian statistics, quantified by excess kurtosis, although instrumental noise and the fiducial SGWB dilute this signature in most frequency bins. The residual spectrum also overlaps with an isotropic power-law SGWB in the mean binned power, creating uncertainty in background-amplitude inference.
 
-## Earlier Work: Gamma-Ray Bursts and X-Ray Astronomy
+For a frequency-independent SGWB with fiducial amplitude $\Omega_0=10^{-11}$ and residual power distributed uniformly over the Fourier frequencies within each bin, marginalizing over the residual-power factor increases the $\Omega_0$ uncertainty by 13.6% under the Gaussian Fourier-amplitude covariance. This value is specific to the paper's catalog-level model and statistical assumptions, not a general forecast for all LISA analyses. The [accepted abstract]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), [supporting code and processed numerical results](https://doi.org/10.5281/zenodo.23979478), and [Yangzhou presentation slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}) are available.
 
-My earlier work investigated gamma-ray burst prompt-emission polarization and temporal correlations. We compared [time-integrated polarization predictions with observations]({{ '/publications/grb-time-integrated-polarization/' | relative_url }}) and studied the [Hurst index of 163 long BATSE bursts]({{ '/publications/grb-hurst-index/' | relative_url }}). During my master's project at the University of Hong Kong, I also analysed Chandra observations of Cygnus OB2 and cross-matched X-ray sources with Gaia counterparts.
+## Previous Research
+
+Before beginning my doctoral work, I studied gamma-ray bursts (GRBs) and X-ray sources:
+
+- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long BATSE bursts, followed by correlation studies with prompt-emission observables ([JHEAp paper]({{ '/publications/grb-hurst-index/' | relative_url }})).
+- **GRB prompt-emission polarization:** time-integrated polarization predictions for 37 bursts under synchrotron emission in ordered magnetic fields ([A&A paper]({{ '/publications/grb-time-integrated-polarization/' | relative_url }})).
+- **Cygnus OB2:** reduction and merging of 18 Chandra observations, X-ray source catalog construction, and cross-matching with Gaia counterparts during my M.Sc. project at the University of Hong Kong.
+
+## Research Interests
+
+I am also interested in future applications of space-based gravitational-wave observations and compact-binary populations to Galactic dynamics, dark matter, and unusual astrophysical environments. These are prospective research interests rather than completed projects.
 
 ## Software and Open Science
 
-I maintain [Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill), an open-source pre-release for structured scientific errata auditing. It helps produce traceable candidate errata for human expert review, with attention to formula correctness, dimensional consistency, physical assumptions, and notation. [Read the project announcement]({{ '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/' | relative_url }}).
+I maintain [Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill), an open-source pre-release for structured scientific errata auditing. It produces traceable candidate errata for human expert review. [Read the project announcement]({{ '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/' | relative_url }}).
 
 Research outputs and available supporting material are linked from [Publications]({{ '/publications/' | relative_url }}) and [Presentations]({{ '/talks/' | relative_url }}).

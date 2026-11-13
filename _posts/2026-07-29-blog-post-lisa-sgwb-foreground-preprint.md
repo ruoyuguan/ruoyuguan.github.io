@@ -20,11 +20,11 @@ How accurately must the residual Galactic-binary foreground be characterized bef
 
 Using the LISA Data Challenge 2A Sangria injections and the Erebor injection–recovery comparison table, we construct a catalog-level residual power spectrum over 0.4–6.0 mHz. We then examine two related but distinct effects: source power concentration and spectral degeneracy between the residual foreground and an isotropic power-law stochastic background.
 
-Under our baseline assumptions, marginalizing over the dimensionless residual-power factor increases the uncertainty in the fiducial amplitude of a frequency-independent stochastic gravitational-wave background by 13.6% when the residual power is distributed uniformly over the Fourier frequencies in each bin. More concentrated distributions reduce this increase.
+Under our baseline assumptions, marginalizing over the dimensionless residual-power factor increases the uncertainty in the fiducial amplitude of a frequency-independent stochastic gravitational-wave background by 13.6% under the Gaussian Fourier-amplitude covariance when the residual power is distributed uniformly over the Fourier frequencies in each bin. More concentrated distributions reduce this increase.
 
 Preprint: [arXiv:2607.25349](https://arxiv.org/abs/2607.25349)
 
-[Publication details and BibTeX]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}) · [Related presentation and slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }})
+[Publication details and BibTeX]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}) · [Code & Data (Zenodo)](https://doi.org/10.5281/zenodo.23979478) · [Related presentation and slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }})
 
 Comments and feedback are very welcome.
 
