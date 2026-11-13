@@ -1,6 +1,6 @@
 ---
 title: "Research"
-description: "Research by Ruo-Yu Guan on the Galactic-binary gravitational-wave foreground, its angular anisotropy, stochastic gravitational-wave backgrounds, and gamma-ray bursts."
+description: "Research by Ruo-Yu Guan on the Galactic-binary foreground, angular anisotropy, stochastic gravitational-wave background inference, and gamma-ray bursts."
 permalink: /research/
 author_profile: true
 math: true
@@ -30,7 +30,9 @@ My earlier research also covered gamma-ray bursts (GRBs) and X-ray source identi
 
 ## Research Interests
 
-I am also interested in future applications of space-based gravitational-wave observations and compact-binary populations to Galactic dynamics, dark matter, and unusual astrophysical environments.
+- Space-based gravitational-wave astrophysics.
+- Galactic compact binaries, particularly double white dwarfs.
+- Stochastic gravitational-wave backgrounds, foreground statistics, and Bayesian inference.
 
 ## Software and Open Science
 
