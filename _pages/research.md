@@ -35,5 +35,3 @@ I am also interested in future applications of space-based gravitational-wave ob
 ## Software and Open Science
 
 I maintain [Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill), an open-source pre-release for structured scientific errata auditing. It produces traceable candidate errata for human expert review. [Read the project announcement]({{ '/posts/2026/05/scientific-textbook-proofreading-skill-pre-release/' | relative_url }}).
-
-Research outputs and available supporting material are linked from [Publications]({{ '/publications/' | relative_url }}) and [Presentations]({{ '/talks/' | relative_url }}).

@@ -54,7 +54,7 @@ sitemap: false
       talks.forEach(function (talk) {
         var item = document.createElement("li");
         item.appendChild(talkLink(talk));
-        item.appendChild(document.createTextNode(" — " + talk.type + ", " + talk.date + "; " + talk.location));
+        item.appendChild(document.createTextNode(" — " + talk.type + ", " + (talk.date_display || talk.date) + "; " + talk.location));
         list.appendChild(item);
       });
       if (!window.L) {
@@ -77,7 +77,7 @@ sitemap: false
         var popup = document.createElement("div");
         popup.appendChild(talkLink(talk));
         popup.appendChild(document.createElement("br"));
-        popup.appendChild(document.createTextNode(talk.type + " · " + talk.date));
+        popup.appendChild(document.createTextNode(talk.type + " · " + (talk.date_display || talk.date)));
         popup.appendChild(document.createElement("br"));
         popup.appendChild(document.createTextNode(talk.venue + "; " + talk.location));
         L.marker(position, {title: talk.title, alt: talk.location + ": " + talk.title})

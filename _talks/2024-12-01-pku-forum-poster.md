@@ -4,7 +4,9 @@ collection: talks
 type: "Poster Presentation"
 permalink: /talks/2024-12-01-pku-forum-poster
 venue: "2024 PKU International PhD Student Forum on the Frontiers of Modern Astronomy, Kavli Institute for Astronomy and Astrophysics, Peking University"
-date: 2024-12-01
+date: 2024-12-05
+event_date: 2024-12-05
+event_date_display: "December 5–10, 2024"
 location: "Beijing, China"
 latitude: 39.9042
 longitude: 116.4074

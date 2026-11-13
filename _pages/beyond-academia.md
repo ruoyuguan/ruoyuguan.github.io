@@ -2,17 +2,17 @@
 layout: archive
 title: "Beyond Academia"
 permalink: /beyond-academia/
-description: "Life beyond research for Ruo-Yu Guan: distance running, specialty coffee, and action-camera videography and photography."
+description: "Life beyond research for Ruo-Yu Guan: distance running, specialty coffee, photography, and videography."
 author_profile: true
 ---
 
-Research is a central part of my life, but not the whole of it. This is the part of my website for the pursuits beyond academic work: endurance running, specialty coffee, and first-person videography and photography.
+Research is a central part of my life, but not the whole of it. I also spend time on endurance running, specialty coffee, photography, and videography.
 
 ## Running
 
 I am a dedicated distance runner with experience in marathons, half marathons, and trail races. In April 2024, I completed the Hong Kong 5 Peaks – 30km Solo, finishing the 29.7 km course with 1,560 m of elevation gain in 6:36:38. My recorded trail race results are available on my [ITRA profile](https://itra.run/RunnerSpace/guan.ruoyu.5315435).
 
-Running is a sustained practice for me rather than an occasional hobby. Road and trail running are both part of that practice, bringing together distance, terrain, and the discipline of showing up consistently.
+I value running as a steady practice, whether on roads or trails.
 
 ### Selected Road Race Results
 
@@ -23,14 +23,12 @@ Running is a sustained practice for me rather than an occasional hobby. Road and
 
 ## Specialty Coffee
 
-I am a specialty-coffee enthusiast and a former part-time barista, with pour-over as my main brewing focus. I care about the details of extraction, but also about what happens after brewing: learning to recognize, describe, and evaluate what is in the cup.
+I am a specialty-coffee enthusiast and former part-time barista. I enjoy preparing espresso, filter coffee, and cold brew, experimenting with different brewing methods and extraction parameters. For me, coffee is both a daily practice and an opportunity to learn more about flavor, technique, and repeatability.
 
-My interest in coffee goes beyond making a reliable brew. I enjoy developing my own approach to tasting—one shaped by curiosity and repeated experience rather than by scores alone.
+I currently make espresso with a Flair 58 Plus 2 and use a stainless-steel Kalita Wave 155 and a Hario V60 Switch for filter coffee. Comparing methods helps me understand how extraction shapes what is in the cup.
 
-Alongside espresso made with a Flair 58 Plus 2, I brew filter coffee most often with a stainless-steel Kalita Wave 155 and a Hario V60 Switch. I enjoy comparing how different brewers and extraction approaches shape clarity, sweetness, and texture in the cup.
+## Photography and Videography
 
-## Action-Camera Videography and Photography
+I enjoy photographing everyday life, city streets, and places I visit, with an interest in documentary-style images and natural moments. I primarily use a Fujifilm X-T5 for digital photography and have recently begun exploring film photography with a Pentax 17.
 
-I document runs, travels, and everyday life from a first-person perspective, primarily through video and sometimes through still photographs. My current setup includes the DJI Osmo Nano and DJI Osmo Action 5 Pro, which let me record POV footage and take photos while staying immersed in the activity itself.
-
-For me, action-camera videography and photography are ways of keeping the texture of an experience: not only where I went, but what it looked like to be there.
+I also record first-person videos of travel, running, and everyday experiences using DJI action cameras, with an emphasis on natural sound and environmental details. Photography and video offer different ways for me to observe and remember the places and moments that matter to me.

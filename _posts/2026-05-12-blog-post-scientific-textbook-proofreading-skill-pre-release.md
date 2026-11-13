@@ -14,27 +14,15 @@ tags:
 toc: true
 ---
 
-> **TL;DR:** I have released a pre-release version of **Scientific Textbook Proofreading Skill**, an open-source AI-agent skill for structured scientific textbook proofreading and errata auditing. It is designed to help produce traceable candidate errata for human expert review, with particular attention to formula correctness, dimensional consistency, physical assumptions, notation consistency, outdated scientific claims, and misleading scientific prose.
-
 <a id="top"></a>
 
-## Scientific Textbook Proofreading Skill: A Pre-release of an AI-agent Skill for Scientific Errata Auditing
+## Project overview
 
-I have been working on an open-source project called **Scientific Textbook Proofreading Skill**, now available as a pre-release.
-
-It is a reusable AI-agent skill for scientific textbook proofreading and errata auditing, with an emphasis on formula correctness, dimensional consistency, physical assumptions, notation consistency, outdated scientific claims, and misleading scientific prose.
+**Scientific Textbook Proofreading Skill** is an open-source AI-agent skill for scientific textbook proofreading and errata auditing, now available as a pre-release. It supports structured checks of formula correctness, dimensional consistency, physical assumptions, notation consistency, outdated scientific claims, and misleading scientific prose, with the aim of producing traceable candidate errata for human expert review.
 
 The project was motivated by a real proofreading task. During the spring semester, I took the **High-Energy Astrophysics** course at **Huazhong University of Science and Technology (HUST)**, and assisted **Prof. Yuan-Chuan Zou** and his colleagues in proofreading a Chinese textbook manuscript on high-energy astrophysics led by faculty members of the Department of Astronomy at HUST.
 
-My goal is to make AI-assisted scientific proofreading more structured and conservative: not replacing expert judgment, but helping produce traceable candidate errata for human review.
-
-The current version includes structured report templates, output contracts, a JSON schema, synthetic examples, lightweight evaluation cases, and CI checks.
-
-GitHub repository:
-
-[Scientific Textbook Proofreading Skill](https://github.com/ruoyuguan/scientific-textbook-proofreading-skill)
-
-I would be grateful for feedback from researchers, educators, textbook authors, and anyone interested in reliable AI-assisted scientific workflows.
+The goal is to make AI-assisted scientific proofreading more structured and conservative.
 
 ---
 

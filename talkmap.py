@@ -19,8 +19,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 FIELDS = {
-    "title", "venue", "location", "permalink", "date", "type", "latitude",
-    "longitude", "map_precision", "published", "map",
+    "title", "venue", "location", "permalink", "date", "event_date",
+    "event_date_display", "type", "latitude", "longitude", "map_precision",
+    "published", "map",
 }
 
 
@@ -76,13 +77,14 @@ def build_data(source):
         permalink = meta["permalink"]
         if not permalink.startswith("/") or permalink.startswith("//") or ".." in permalink.split("/"):
             raise ValueError(f"{path}: permalink must be a site-relative path")
-        date = dt.date.fromisoformat(meta["date"]).isoformat()
+        date = dt.date.fromisoformat(meta.get("event_date", meta["date"])).isoformat()
+        date_display = meta.get("event_date_display", date)
         precision = meta.get("map_precision", "city")
         if precision not in ("city", "venue"):
             raise ValueError(f"{path}: map_precision must be city or venue")
         talks.append({
             "title": meta["title"], "venue": meta["venue"],
-            "location": meta["location"], "date": date,
+            "location": meta["location"], "date": date, "date_display": date_display,
             "type": meta.get("type", "Talk"), "url": permalink,
             "latitude": lat, "longitude": lon, "precision": precision,
         })

@@ -23,7 +23,7 @@ paperurl: 'https://doi.org/10.1051/0004-6361/202243805'
 pdfurl: 'https://arxiv.org/pdf/2208.03668'
 bibtexurl: /files/bibtex1.bib
 description: 'Time-integrated polarization predictions for 37 gamma-ray bursts test synchrotron emission in ordered magnetic fields and motivate multiband observations.'
-summary: 'We compare time-integrated polarization predictions with observations of 37 gamma-ray bursts. Ordered-field synchrotron emission explains most measurements, but two bursts challenge its predicted polarization upper limits; multiband measurements can further test the models.'
+summary: 'We compare time-integrated polarization predictions with observations of 37 gamma-ray bursts. The model predictions are consistent with most of the observed polarization measurements, but two bursts exceed the predicted upper limits; multiband measurements can further test the models.'
 citation: 'Ruo-Yu Guan and Mi-Xiang Lan (2023). “Interpreting time-integrated polarization data of gamma-ray burst prompt emission.” Astronomy & Astrophysics, 670, A160. https://doi.org/10.1051/0004-6361/202243805.'
 related_talks:
   - title: 'PKU PhD Student Forum poster (2024)'

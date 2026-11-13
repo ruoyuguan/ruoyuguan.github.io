@@ -14,7 +14,8 @@ author_profile: true
 {% assign mapped_talks = site.talks | sort: 'date' | reverse %}
 {% for talk in mapped_talks %}
   {% if talk.latitude and talk.longitude and talk.published != false and talk.map != false %}
-    <li><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a> — {{ talk.type }}, {{ talk.date | date: '%B %d, %Y' }}; {{ talk.location }}.</li>
+    {% assign presentation_date = talk.event_date | default: talk.date %}
+    <li><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a> — {{ talk.type }}, {% if talk.event_date_display %}{{ talk.event_date_display | escape }}{% else %}{{ presentation_date | date: '%B %d, %Y' }}{% endif %}; {{ talk.location }}.</li>
   {% endif %}
 {% endfor %}
 </ul>
