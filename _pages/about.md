@@ -18,7 +18,7 @@ You can find my papers and supporting materials in [Publications]({{ '/publicati
 
 ## Recent Updates
 
-- **December 2026:** Scheduled poster presentation at the [Shanghai International Symposium on Relativistic Astrophysics]({{ '/talks/2026-12-07-isra-2026-poster' | relative_url }}).
+- **November 2026:** Scheduled to present a poster at the [Shanghai International Symposium on Relativistic Astrophysics]({{ '/talks/2026-12-07-isra-2026-poster' | relative_url }}) (December 7–11, 2026).
 - **November 2026:** My paper with Yan Wang was accepted for publication in *Physical Review D*; [analysis code and processed numerical results](https://doi.org/10.5281/zenodo.23979478) are available through Zenodo.
 - **March 2026:** Joined the LISA Consortium as a Core Member in the Astrophysics Working Group.
 

@@ -55,7 +55,7 @@ bundle exec ruby scripts/preview_drafts.rb
 
 参考现有文件维护结构化字段：`authors`、`status`、`venue`、`date`、`doi`、`arxiv_id`、`volume`、`article_number`、`summary`、`description` 和资源链接。
 
-- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页及关联页面，并重新导出 PDF CV。历史新闻通过注明更新日期的补充说明记录状态变化。
+- `status: preprint`、`status: accepted` 和 `status: published` 分开；只记录已确认状态。期刊接收后填写真实 `venue`、期刊 `doi` / `paperurl`，归入 `category: manuscripts`，保留 arXiv 链接；未分配的卷号、期号和文章号留空，不用预印本日期冒充期刊正式发表日期。同步更新引文、BibTeX、CV 网页及关联页面，并核对独立维护的 PDF CV 中的对应事实。历史新闻通过注明更新日期的补充说明记录状态变化。
 - 本人的作者项标记 `self: true`；卡片会自动强调姓名。
 - `summary` 是列表中的短介绍，正式摘要放在正文中。
 - 使用稳定的短 `permalink`。更改已经公开的 URL 时，把旧地址加入 `redirect_from`，不要移除现有重定向。
@@ -65,7 +65,7 @@ bundle exec ruby scripts/preview_drafts.rb
 
 ## 报告与地图
 
-在 `_talks/` 填写 `type`、`venue`、`location`、`date`、`latitude`、`longitude`。目前坐标为城市级，`map_precision: city`；没有确认的坐标时设置 `map: false`。尚未实际完成的报告也设置 `map: false`，并在 `type` 中明确标记为 `Scheduled`。为保留全站 `future: false`，未来报告的 `date` 记录条目发布日期，另用 `event_date: YYYY-MM-DD` 记录实际开始日期；列表和详情页优先展示 `event_date`，报告完成后再合并为实际 `date`。
+在 `_talks/` 填写 `type`、`venue`、`location`、`date`、`latitude`、`longitude`。目前坐标为城市级，`map_precision: city`；没有确认的坐标时设置 `map: false`。尚未实际完成的报告也设置 `map: false`，并在 `type` 中明确标记为 `Scheduled`。为保留全站 `future: false`，未来报告的 `date` 记录条目发布日期，`event_date: YYYY-MM-DD` 记录会议开始日期；若开始日期不是个人报告的确切日期，用 `event_date_display` 提供已确认的展示日期或日期区间。列表和详情页优先展示 `event_date_display`，否则格式化 `event_date`；报告完成后再合并为实际 `date`。
 
 ```sh
 python3 talkmap.py
@@ -118,7 +118,7 @@ node scripts/check_browser.mjs http://127.0.0.1:4000
 
 | 历史入口 | 当前维护方式 |
 | --- | --- |
-| `scripts/cv_markdown_to_json.py`、`scripts/update_cv_json.sh` | 编辑 `_pages/cv.md`，按上文导出网页对应的 PDF |
+| `scripts/cv_markdown_to_json.py`、`scripts/update_cv_json.sh` | 编辑 `_pages/cv.md`；公开 PDF 按上文独立维护 |
 | `markdown_generator/` 中的 Python 和 notebook 导入器，包括 ORCID/BibTeX 工具 | 直接维护 `_publications/`、`_talks/` 的结构化字段和已核实资源 |
 | `talkmap.ipynb`、`talkmap_out.ipynb` | 使用 `python3 talkmap.py` 生成地图数据 |
 | `_layouts/cv-layout.html` | 当前 CV 使用 `archive` 布局；旧布局仅显示停用提示 |

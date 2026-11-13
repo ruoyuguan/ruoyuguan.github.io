@@ -48,7 +48,7 @@ try {
         }));
         assert.ok(metrics.scrollWidth <= metrics.width, `${path}: horizontal overflow ${JSON.stringify(metrics)}`);
         assert.equal(metrics.headings, 1, `${path}: exactly one H1`);
-        assert.equal(metrics.math, false, `${path}: unnecessary MathJax`);
+        assert.equal(metrics.math, path === '/research/', `${path}: unexpected MathJax loading state`);
         assert.equal(metrics.analytics, false, `${path}: analytics loaded without consent`);
         assert.ok(metrics.images, `${path}: broken image`);
         assert.ok(metrics.colors.every(color => color.valid), `${path}: resolved theme colors ${JSON.stringify(metrics.colors)}`);

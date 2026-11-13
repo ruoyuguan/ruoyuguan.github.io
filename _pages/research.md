@@ -3,19 +3,20 @@ title: "Research"
 description: "Research by Ruo-Yu Guan on Galactic-binary foregrounds, angular anisotropy, stochastic gravitational-wave backgrounds, and gamma-ray bursts."
 permalink: /research/
 author_profile: true
+math: true
 ---
 
 My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the statistical properties of their unresolved foregrounds. I am interested in what these populations reveal about the Milky Way and in how their residual signals affect stochastic gravitational-wave background (SGWB) inference.
 
 ## Galactic Binary Foregrounds and Anisotropy
 
-**Ongoing research.** I am studying the angular anisotropy of the unresolved Galactic-binary gravitational-wave foreground, with an emphasis on double white dwarf populations. The work concerns how the spatial distribution of Galactic sources shapes the sky-dependent foreground observed by space-based detectors. This is an ongoing investigation; no quantitative results are claimed here.
+**Ongoing research.** I am studying the angular anisotropy of the unresolved Galactic-binary gravitational-wave foreground, with an emphasis on double white dwarf populations. The work concerns how the spatial distribution of Galactic sources shapes the sky-dependent foreground observed by space-based detectors.
 
 ## Residual Foregrounds and SGWB Inference
 
 **Completed research.** In our [2026 paper]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D*, Yan Wang and I use LISA Data Challenge 2A injections and the Erebor injection–recovery match to estimate the catalog-level residual foreground left by unresolved or imperfectly recovered Galactic binaries.
 
-The study distinguishes source-discreteness effects from spectral degeneracy. Random-phase sums of discrete source signals can have non-Gaussian statistics, quantified by excess kurtosis, although instrumental noise and the fiducial SGWB dilute this signature in most frequency bins. The residual spectrum also overlaps with an isotropic power-law SGWB in the mean binned power, creating uncertainty in background-amplitude inference.
+The study distinguishes source-discreteness effects from spectral degeneracy. Random-phase sums of discrete source signals can have non-Gaussian statistics, quantified by excess kurtosis, although instrumental noise and the fiducial SGWB dilute this signature in most frequency bins. The residual spectrum also overlaps with an isotropic power-law SGWB in the mean binned power. We quantify this spectral degeneracy with a local Fisher information matrix for the SGWB amplitude and residual-power factor.
 
 For a frequency-independent SGWB with fiducial amplitude $\Omega_0=10^{-11}$ and residual power distributed uniformly over the Fourier frequencies within each bin, marginalizing over the residual-power factor increases the $\Omega_0$ uncertainty by 13.6% under the Gaussian Fourier-amplitude covariance. This value is specific to the paper's catalog-level model and statistical assumptions, not a general forecast for all LISA analyses. The [accepted abstract]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), [supporting code and processed numerical results](https://doi.org/10.5281/zenodo.23979478), and [Yangzhou presentation slides]({{ '/talks/2026-07-31-yangzhou-sgwforeground-talk' | relative_url }}) are available.
 
@@ -29,7 +30,7 @@ Before beginning my doctoral work, I studied gamma-ray bursts (GRBs) and X-ray s
 
 ## Research Interests
 
-I am also interested in future applications of space-based gravitational-wave observations and compact-binary populations to Galactic dynamics, dark matter, and unusual astrophysical environments. These are prospective research interests rather than completed projects.
+I am also interested in future applications of space-based gravitational-wave observations and compact-binary populations to Galactic dynamics, dark matter, and unusual astrophysical environments.
 
 ## Software and Open Science
 

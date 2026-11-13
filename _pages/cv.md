@@ -21,27 +21,24 @@ redirect_from:
 
 ## Research Interests
 
-- Space-based gravitational-wave astrophysics; Galactic compact binaries, particularly double white dwarfs.
-- Unresolved Galactic-binary gravitational-wave foregrounds and angular anisotropy; residual foreground statistics and non-Gaussianity.
-- Stochastic gravitational-wave backgrounds and statistical inference.
-- Potential applications to Galactic dynamics, dark matter, and unusual astrophysical environments.
+- Space-based gravitational-wave astrophysics.
+- Galactic compact binaries, particularly double white dwarfs.
+- Stochastic gravitational-wave backgrounds, foreground statistics, and Bayesian inference.
 
 ## Education
 
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">Huazhong University of Science and Technology</span>
-    <span class="cv-right">Wuhan, China</span>
+    <span class="cv-left">Ph.D. in Physics (Theoretical Physics)</span>
+    <span class="cv-right">Sep. 2025 – Jun. 2029 (expected)</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">School of Physics; National Gravitation Laboratory</span>
-    <span class="cv-sub-right">Sep. 2025 – Jun. 2029 (expected)</span>
+    <span class="cv-sub-left">School of Physics, Huazhong University of Science and Technology (HUST)</span>
+    <span class="cv-sub-right">Wuhan, China</span>
   </div>
-  <div class="cv-sub">
-    <span class="cv-sub-left">Ph.D. in Physics (Theoretical Physics)</span>
-    <span class="cv-sub-right">Supervisor: <a href="http://faculty.hust.edu.cn/wangyan11/zh_CN/index.htm">Prof. Yan Wang</a></span>
-  </div>
+  <div class="cv-sub">National Gravitation Laboratory</div>
   <ul class="cv-list">
+    <li>Supervisor: <a href="http://faculty.hust.edu.cn/wangyan11/zh_CN/index.htm">Prof. Yan Wang</a>.</li>
     <li>Doctoral coursework completed; thesis proposal successfully defended.</li>
     <li>Ranked 2nd of 138 Ph.D. students based on course grades.</li>
   </ul>
@@ -49,29 +46,31 @@ redirect_from:
 
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">The University of Hong Kong</span>
-    <span class="cv-right">Hong Kong SAR, China</span>
+    <span class="cv-left">M.Sc. in Physics</span>
+    <span class="cv-right">Nov. 2024</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">M.Sc. in Physics, Department of Physics, Faculty of Science</span>
-    <span class="cv-sub-right">Degree conferred: Nov. 2024</span>
+    <span class="cv-sub-left">Department of Physics, The University of Hong Kong (HKU)</span>
+    <span class="cv-sub-right">Hong Kong SAR, China</span>
   </div>
   <ul class="cv-list">
-    <li>Capstone project: <em>Identifying Sources in Cygnus OB2 Using Multiwavelength Observations</em>, supervised by Assoc. Prof. Stephen Chi-Yung Ng.</li>
+    <li>Capstone project: <em>Identifying Sources in Cygnus OB2 Using Multiwavelength Observations</em>.</li>
+    <li>Supervisor: <a href="https://astro.physics.hku.hk/~ncy/">Assoc. Prof. Stephen Chi-Yung Ng</a>.</li>
   </ul>
 </div>
 
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">Jilin University</span>
-    <span class="cv-right">Changchun, China</span>
+    <span class="cv-left">B.Sc.</span>
+    <span class="cv-right">Jun. 2022</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">B.Sc.</span>
-    <span class="cv-sub-right">Degree conferred: Jun. 2022</span>
+    <span class="cv-sub-left">Jilin University</span>
+    <span class="cv-sub-right">Changchun, China</span>
   </div>
   <ul class="cv-list">
-    <li>Graduation thesis: <em>Study on the Prompt Emission of Gamma-ray Bursts and its Polarization</em>; research mentor: Prof. Mi-Xiang Lan.</li>
+    <li>Graduation thesis: <em>Study on the Prompt Emission of Gamma-Ray Bursts and Its Polarization</em>.</li>
+    <li>Research mentor: Prof. Mi-Xiang Lan.</li>
   </ul>
 </div>
 
@@ -79,21 +78,21 @@ redirect_from:
 
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">Huazhong University of Science and Technology</span>
-    <span class="cv-right">Wuhan, China</span>
+    <span class="cv-left">Research Assistant</span>
+    <span class="cv-right">Nov. 2024 – Jun. 2025</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">Research Assistant (contract), Department of Astronomy</span>
-    <span class="cv-sub-right">Nov. 2024 – Jun. 2025</span>
+    <span class="cv-sub-left">Department of Astronomy, Huazhong University of Science and Technology</span>
+    <span class="cv-sub-right">Wuhan, China</span>
   </div>
   <ul class="cv-list">
-    <li>Gamma-ray burst research with Prof. Yuan-Chuan Zou.</li>
+    <li>Research supervisor: <a href="http://faculty.hust.edu.cn/zouyc/zh_CN/index/1489801/list/index.htm">Prof. Yuan-Chuan Zou</a>.</li>
   </ul>
 </div>
 
 ## Publications
 
-1. **Ruo-Yu Guan** and Yan Wang, [Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: Source power concentration and spectral degeneracy]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), *Physical Review D*, accepted for publication (2026).<br>
+1. **Ruo-Yu Guan** and Yan Wang, [Residual Galactic binary foreground in LISA stochastic gravitational-wave background inference: Source power concentration and spectral degeneracy]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), *Physical Review D*, accepted (2026).<br>
    DOI: [10.1103/4779-jw6l](https://doi.org/10.1103/4779-jw6l) · [arXiv:2607.25349](https://arxiv.org/abs/2607.25349) · [Code &amp; Data (Zenodo)](https://doi.org/10.5281/zenodo.23979478)
 2. **Ruo-Yu Guan**, Fei-Fei Wang, and Yuan-Chuan Zou, [Hurst index of gamma-ray burst light curves and its statistical study]({{ '/publications/grb-hurst-index/' | relative_url }}), *Journal of High Energy Astrophysics* **51**, 100559 (2026).<br>
    DOI: [10.1016/j.jheap.2026.100559](https://doi.org/10.1016/j.jheap.2026.100559)
@@ -105,34 +104,31 @@ redirect_from:
 
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">Angular Anisotropy of the Unresolved Galactic-Binary Foreground</span>
-    <span class="cv-right">Ongoing</span>
+    <span class="cv-left">Galactic-Binary Gravitational-Wave Foregrounds</span>
+    <span class="cv-right">Jul. 2025 – Present</span>
   </div>
   <div class="cv-sub">
     <span class="cv-sub-left">National Gravitation Laboratory and School of Physics, Huazhong University of Science and Technology</span>
     <span class="cv-sub-right">Wuhan, China</span>
   </div>
-  <div class="cv-sub">Research with Prof. Yan Wang</div>
   <ul class="cv-list">
-    <li>Studying the angular anisotropy of the unresolved Galactic-binary gravitational-wave foreground, with an emphasis on double white dwarf populations.</li>
-    <li>Investigating how the spatial distribution of Galactic sources shapes the sky-dependent foreground for space-based detectors.</li>
+    <li>Investigating the angular anisotropy of the unresolved Galactic-binary gravitational-wave foreground.</li>
   </ul>
 </div>
 
 <div class="cv-block">
   <div class="cv-row">
-    <span class="cv-left">Residual Galactic Binary Foreground and SGWB Inference</span>
-    <span class="cv-right">Completed</span>
+    <span class="cv-left">Residual Galactic Binary Foregrounds in LISA SGWB Inference</span>
+    <span class="cv-right">2026</span>
   </div>
   <div class="cv-sub">
     <span class="cv-sub-left">National Gravitation Laboratory and School of Physics, Huazhong University of Science and Technology</span>
     <span class="cv-sub-right">Wuhan, China</span>
   </div>
-  <div class="cv-sub">Research with Prof. Yan Wang</div>
   <ul class="cv-list">
-    <li>Estimated the catalog-level residual foreground using LISA Data Challenge 2A injections and the Erebor injection–recovery match.</li>
-    <li>Quantified source-discreteness signatures through excess kurtosis, including their dilution by instrumental noise, and analyzed spectral degeneracy with an isotropic stochastic gravitational-wave background.</li>
-    <li>First-author paper accepted for publication in <em>Physical Review D</em> (2026); supporting analysis code and processed numerical results released through Zenodo.</li>
+    <li>Estimated the residual Galactic-binary power spectrum using injection–recovery catalogs.</li>
+    <li>Quantified non-Gaussianity from source discreteness using excess kurtosis. Instrumental noise and SGWB power largely suppress this signature.</li>
+    <li>Assessed spectral degeneracy with an isotropic SGWB using Fisher analysis. Marginalizing over the residual-power normalization increased the SGWB-amplitude uncertainty by 13.6% in the fiducial Gaussian-covariance model.</li>
   </ul>
 </div>
 
@@ -145,10 +141,9 @@ redirect_from:
     <span class="cv-sub-left">Department of Astronomy, Huazhong University of Science and Technology</span>
     <span class="cv-sub-right">Wuhan, China</span>
   </div>
-  <div class="cv-sub">Research with Prof. Yuan-Chuan Zou</div>
   <ul class="cv-list">
-    <li>Analyzed 163 long BATSE bursts using detrended fluctuation analysis and Hurst-index estimation; performed statistical correlation studies in Python.</li>
-    <li>Resulted in a first-author refereed article in the <em>Journal of High Energy Astrophysics</em>.</li>
+    <li>Measured Hurst indices for 163 long-duration BATSE gamma-ray bursts using detrended fluctuation analysis.</li>
+    <li>Found anti-correlations with burst durations and moderate positive correlations with peak photon flux. Standard spectral parameters showed no significant linear correlations.</li>
   </ul>
 </div>
 
@@ -158,29 +153,28 @@ redirect_from:
     <span class="cv-right">Sep. 2023 – Jun. 2024</span>
   </div>
   <div class="cv-sub">
-    <span class="cv-sub-left">Department of Physics, Faculty of Science, The University of Hong Kong</span>
+    <span class="cv-sub-left">Department of Physics, The University of Hong Kong</span>
     <span class="cv-sub-right">Hong Kong SAR, China</span>
   </div>
-  <div class="cv-sub">M.Sc. capstone project supervised by Assoc. Prof. Stephen Chi-Yung Ng</div>
   <ul class="cv-list">
-    <li>Reduced and merged 18 Chandra observations and assembled a catalog of detected X-ray sources.</li>
-    <li>Cross-matched X-ray sources with Gaia counterparts to distinguish association members from foreground and background objects.</li>
+    <li>Analyzed Chandra X-ray observations of Cygnus OB2 and cross-matched the detected sources with Gaia.</li>
+    <li>Identified optical counterparts for 106 of 148 X-ray sources. Hardness ratios suggested that 12 unmatched sources might be background galaxies.</li>
   </ul>
 </div>
 
 <div class="cv-block">
   <div class="cv-row">
     <span class="cv-left">Gamma-Ray Burst Prompt Emission and Polarization</span>
-    <span class="cv-right">2022 – Feb. 2023</span>
+    <span class="cv-right">2022</span>
   </div>
   <div class="cv-sub">
     <span class="cv-sub-left">Center for Theoretical Physics and College of Physics, Jilin University</span>
     <span class="cv-sub-right">Changchun, China</span>
   </div>
-  <div class="cv-sub">Research with Prof. Mi-Xiang Lan, originating in the B.Sc. thesis project</div>
   <ul class="cv-list">
-    <li>Computed time-integrated polarization degrees for 37 gamma-ray bursts under a synchrotron-emission framework and compared the predictions with observations.</li>
-    <li>Resulted in a first-author refereed article in <em>Astronomy &amp; Astrophysics</em>.</li>
+    <li>Predicted upper limits on time-integrated polarization for 37 GRBs using synchrotron emission in ordered magnetic fields.</li>
+    <li>Most polarization observations were consistent with the model, while two bursts exceeded the predicted limits.</li>
+    <li>Predicted energy-dependent polarization signatures for POLAR-2 to test competing prompt-emission models.</li>
   </ul>
 </div>
 
