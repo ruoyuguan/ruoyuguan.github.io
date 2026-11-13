@@ -1,18 +1,18 @@
 ---
 title: "Research"
-description: "Research by Ruo-Yu Guan on Galactic-binary foregrounds, angular anisotropy, stochastic gravitational-wave backgrounds, and gamma-ray bursts."
+description: "Research by Ruo-Yu Guan on the Galactic-binary gravitational-wave foreground, its angular anisotropy, stochastic gravitational-wave backgrounds, and gamma-ray bursts."
 permalink: /research/
 author_profile: true
 math: true
 ---
 
-My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the statistical properties of their unresolved foregrounds. I am interested in what these populations reveal about the Milky Way and in how their residual signals affect stochastic gravitational-wave background (SGWB) inference.
+My research focuses on space-based gravitational-wave astrophysics, particularly Galactic compact binaries and the unresolved gravitational-wave foreground they produce. I am interested in what these populations reveal about the Milky Way and how residual foreground power affects stochastic gravitational-wave background (SGWB) inference.
 
-## Galactic Binary Foregrounds and Anisotropy
+## Galactic-Binary Foreground and Anisotropy
 
 **Ongoing research.** I am studying the angular anisotropy of the unresolved Galactic-binary gravitational-wave foreground, with an emphasis on double white dwarf populations. The work concerns how the spatial distribution of Galactic sources shapes the sky-dependent foreground observed by space-based detectors.
 
-## Residual Foregrounds and SGWB Inference
+## Residual Foreground and SGWB Inference
 
 **Completed research.** In our [2026 paper]({{ '/publications/residual-galactic-binary-foreground-lisa/' | relative_url }}), accepted for publication in *Physical Review D*, Yan Wang and I use LISA Data Challenge 2A injections and the Erebor injection–recovery match to estimate the catalog-level residual foreground left by unresolved or imperfectly recovered Galactic binaries.
 

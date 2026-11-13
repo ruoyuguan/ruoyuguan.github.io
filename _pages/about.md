@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About Me"
-description: "Ruo-Yu Guan is a PhD candidate at HUST studying Galactic-binary foregrounds and stochastic gravitational-wave backgrounds for space-based detectors."
+description: "Ruo-Yu Guan is a PhD candidate at HUST studying the Galactic-binary gravitational-wave foreground and stochastic gravitational-wave background inference."
 author_profile: true
 redirect_from:
   - /about/

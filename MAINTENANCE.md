@@ -82,7 +82,7 @@ Presentation Map 目前暂时停用：`_config.yml` 中 `talkmap_link: false`，
 
 文章设置 `toc: true` 时，构建会在正文前生成二、三级标题目录，保留标题现有锚点；关闭 JavaScript 也可使用。标题应使用 Markdown 的 `##` / `###` 或带 `id` 的 HTML 标题。
 
-网页 CV 由 `_pages/cv.md` 维护。更新后同时维护 `last_updated`，保留九个模块的顺序：Research Interests、Education、Research Positions、Publications、Research Experience、Conference Presentations、Academic Memberships、Skills（Header 由页面元数据生成）。论文按时间倒序列出，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。公共屏幕与打印样式位于 `_sass/layout/_academic.scss`，不要在 Markdown 中添加独立样式块。
+网页 CV 由 `_pages/cv.md` 维护。更新后同时维护 `last_updated`，保留八个正文模块的顺序：Research Interests、Education、Research Positions、Publications、Research Experience、Conference Presentations、Academic Memberships、Skills。页面 Header 独立生成。论文按时间倒序列出，本人姓名加粗；已接收条目明确写出 `accepted for publication`，不填未知卷页。公共屏幕与打印样式位于 `_sass/layout/_academic.scss`，不要在 Markdown 中添加独立样式块。
 
 公开 PDF 使用独立排版的 `files/ruoyuguan-cv.pdf`，更新时直接替换该文件，不再从网页导出。`_pages/cv.md` 的 `cv_pdf_url` 和首页下载链接均指向此文件；更改文件名时必须同步更新这两处。`scripts/export_cv.mjs` 仅用于可选的网页打印预览，应输出到 `output/cv/web-preview.pdf`，不要覆盖公开 PDF。
 

@@ -1,7 +1,7 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-modified: 2026-09-05
+modified: 2026-11-13
 description: "Privacy information and analytics preferences for Ruo-Yu Guan's personal website."
 ---
 
