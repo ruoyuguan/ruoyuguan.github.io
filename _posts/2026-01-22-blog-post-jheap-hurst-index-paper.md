@@ -3,8 +3,8 @@ title: "New Paper in JHEAp: Hurst Index of Gamma-Ray Burst Light Curves and Its 
 date: 2026-01-22
 news: true
 math: true
-description: "New JHEAp paper on the Hurst index of 163 long BATSE gamma-ray bursts and its statistical relation to prompt-emission observables."
-excerpt: "Our JHEAp paper studies temporal correlations in 163 long BATSE gamma-ray bursts using detrended fluctuation analysis."
+description: "New JHEAp paper on the Hurst index of 163 long-duration gamma-ray bursts observed by BATSE and its statistical relationships with prompt-emission observables."
+excerpt: "Our JHEAp paper studies temporal correlations in 163 long-duration gamma-ray bursts observed by BATSE using detrended fluctuation analysis."
 permalink: /posts/2026/01/jheap-hurst-index-paper/
 tags:
   - gamma-ray-bursts

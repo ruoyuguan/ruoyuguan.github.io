@@ -22,9 +22,9 @@ For a frequency-independent SGWB with fiducial amplitude $\Omega_0=10^{-11}$ and
 
 ## Previous Research
 
-Before beginning my doctoral work, I studied gamma-ray bursts (GRBs) and X-ray sources:
+My earlier research also covered gamma-ray bursts (GRBs) and X-ray source identification:
 
-- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long BATSE bursts, followed by correlation studies with prompt-emission observables ([JHEAp paper]({{ '/publications/grb-hurst-index/' | relative_url }})).
+- **GRB time series:** detrended fluctuation analysis and Hurst-index estimation for 163 long-duration gamma-ray bursts observed by BATSE, followed by correlation studies with prompt-emission observables ([JHEAp paper]({{ '/publications/grb-hurst-index/' | relative_url }})).
 - **GRB prompt-emission polarization:** time-integrated polarization predictions for 37 bursts under synchrotron emission in ordered magnetic fields ([A&A paper]({{ '/publications/grb-time-integrated-polarization/' | relative_url }})).
 - **Cygnus OB2:** reduction and merging of 18 Chandra observations, X-ray source catalog construction, and cross-matching with Gaia counterparts during my M.Sc. project at the University of Hong Kong.
 

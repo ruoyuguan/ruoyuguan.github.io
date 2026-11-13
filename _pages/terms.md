@@ -25,7 +25,7 @@ Your choice is stored in this browser. You can change it here at any time. Disab
 
 ### Local preferences and external resources
 
-The theme preference and analytics choice use browser local storage. Pages containing equations load MathJax from jsDelivr. The presentation map uses Leaflet from unpkg and map tiles from OpenStreetMap. Those services receive the technical information needed to serve their resources when the relevant pages are visited.
+The theme preference and analytics choice use browser local storage. Pages containing equations load MathJax from jsDelivr. When MathJax is loaded, jsDelivr may receive technical information associated with the request.
 
 ### Hosting
 
